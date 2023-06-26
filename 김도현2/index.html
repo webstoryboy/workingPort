@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .split span {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="split">developer.kdh</div>
+    </div>
+
+    <main id="main">
+        <section id="section1">
+            <div class="img"></div>
+
+            <div class="title">
+                <a class="page-click" href="home.html">Home</a>
+                <a class="page-click" href="site.html">site</a>
+                <a class="page-click" href="work.html">work</a>
+                <a class="page-click" href="contact.html">contact</a>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="assets/js/three.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/hover-effect.umd.js"></script>
+    <script>
+        function pageClick() {
+            document.querySelectorAll(".page-click").forEach((el) => {
+                el.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const hrefName = el.getAttribute('href');
+                    // document.querySelector("body").classList.add("pageAnimation");
+
+                    let t2 = gsap.timeline();
+
+                    t2.to("#section1 .img", { autoAlpha: 0})
+                    t2.to("#section1 .title", {autoAlpha: 0})
+                    t2.to(".loading .split span", {
+                        y: 0,
+                        duration: 1.4,
+                        ease: "expo.out",
+                        stagger: {
+                            amount: 0.4,
+                            from : "center"
+                        }
+                    })
+
+                    setTimeout(() => {
+                        window.location.href = "http://127.0.0.1:62471/%EA%B9%80%EB%8F%84%ED%98%842/"+ hrefName;
+                    }, 4000);  
+                    
+                });
+            });
+        }
+        pageClick();
+
+        document.querySelectorAll(".split").forEach(text => {
+            let splitWrap = text.innerText.split('').join("</span><span aria-hidden='true'>");
+            text.innerHTML = "<span aria-hidden='true'>"+ splitWrap +"</span>";
+            text.setAttribute("aria-label", text.innerText);
+        });
+
+        gsap.set(".loading .split span", {autoAlpha: 0, y: 200})
+        gsap.set("#section1 .img", {autoAlpha: 0})
+        gsap.set("#section1 .title", {autoAlpha: 0})
+
+       
+        setTimeout(() => {
+            let tl = gsap.timeline();
+            tl.to(".loading .split span", {
+                autoAlpha: 1,
+                y: 0,
+                duration: 1.4,
+                ease: "back.out(4)",
+                stagger: {
+                    amount: 0.4,
+                    from : "center"
+                },
+            })
+            tl.to(".loading .split span", {
+                y: 250,
+                duration: 1.4,
+                ease: "expo.out",
+                stagger: {
+                    amount: 0.4,
+                    from : "center"
+                },
+                delay: 3
+            })
+            tl.to("#section1 .title", {
+                autoAlpha: 1
+            })
+            tl.to("#section1 .img", {
+                autoAlpha: 1
+            })
+
+        }, 2000)
+    </script>
+</body>
+</html>
