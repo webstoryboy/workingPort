@@ -8,14 +8,6 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        .split span {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(200px);
-        }
-    </style>
-
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -49,10 +41,10 @@
 
         <section id="section2">
             <h2 class="title">ABOUT ME</h2>
-            <div class="subTitle">
-                <div>WHERE STYLEENDURES:</div>
-                <div>TIMELESSFURNITURE </div>
-                <div>FORYOUR STORY</div>
+            <div class="subTitle split">
+                WHERE STYLEENDURES:
+                TIMELESSFURNITURE 
+                FORYOUR STORY
             </div>
             <div class="aboutBox1">
                 <div class="imgWrap">
@@ -67,16 +59,31 @@
                     타인의 성장을 도모하여 협동심이 뛰어납니다. 
                 </div>
             </div>
-            <div class="aboutBox2"></div>
+            <div class="aboutBox2">
+                <div class="title">LEADERSHIP</div>
+                <div class="text">
+                    <div class="img"></div>
+                    <p class="desc">
+                        저는 평소 사람들과 어울려 어떤 일을 해내는 것을 좋아합니다.<br>
+                        그 속에서 얻어지는 긍정적인 시너지와 밝은 에너지를 통해 원동력을 얻기 때문입니다. <br>
+                        그렇기 때문에 새롭고 도전적인 것에 흥미를 느끼고 <br>
+                    </p>
+                </div>
+            </div>
             <div class="aboutBox3"></div>
         </section>
         <!-- //section2 -->
 
         <section id="section3">
-            <h3>이유나</h3>
-            <div class="box"></div>
+            <div class="box">
+           
+            </div>
+            <div class="text">
+                <span>It is more than just furniture; it is stories filled with inspiration, creativity, and passion that will bring life to your home.</span>
+            </div>
         </section>
         <!-- //section3 -->
+
         <section id="section4"></section>
         <section id="section5"></section>
         <section id="section6"></section>
@@ -86,7 +93,11 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
     <script>
+        const targets = gsap.utils.toArray(".split");
+        let SplitClient = new SplitType(targets, {type: "lines, words, chars"});
+
         const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
@@ -97,23 +108,48 @@
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
-
         requestAnimationFrame(raf);
 
-
-        document.querySelectorAll(".split").forEach(text => {
-            let splitWrap = text.innerText.split("").join("</span><span aria-hidddn='true'>");
-            text.innerHTML = "<span aria-hidddn='true'>" + splitWrap + "</span>";
-            text.setAttribute("aira-label", text.innerText)
-        });
+        gsap.set("#section1 .split .char", {yPercent: 50, autoAlpha: 0});
+        gsap.set("#section1 .desc1", {y: 30, autoAlpha: 0});
+        gsap.set("#header", {top: -200});
 
         setTimeout(() => {
-            gsap.to("#section1 .split span", {
+            gsap.to("#section1 .split .char", {
+                autoAlpha: 1,
+                yPercent: 0,
+                stagger: 0.1,
+                duration: 2,
+                ease: "circ.out"
+            });
+            gsap.to("#section1 .desc1", {
                 autoAlpha: 1,
                 y: 0,
-                stagger: 0.1
-            })
+                delay: 1
+            });
+            gsap.to("#header", {
+                autoAlpha: 1,
+                top: 0,
+                delay: 2
+            });
         }, 2000);
+
+
+        const showNav = gsap.from("#header", {
+            yPercent: -200,
+            paused: true,
+            duration: 0.2
+        }).progress(1);
+
+        ScrollTrigger.create({
+            start: "top top",
+            end: 99999,
+            onUpdate: (self) => {
+                self.direction === -1 ? showNav.play() : showNav.reverse();
+            }
+        });
+
+
 
 
         gsap.to("#section1 .desc2", {
@@ -168,22 +204,59 @@
             },  
         });
 
-        const ani9 = gsap.timeline();
-        ani9.to("#section3 .box", {x: 1000})
-            .to("#section3 .box", {y: 10})
-            .to("#section3 .box", {x: 0})
+
+        gsap.to(".aboutBox2 .img", {
+            yPercent: -30,
+            ease: "none",
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: ".aboutBox2 .img",
+                start: "top bottom", 
+                end: "bottom top",
+                markers: true,
+                scrub: true
+            },  
+        });
+
+        gsap.to(".aboutBox2 .title", {
+            xPercent: 10,
+            ease: "none",
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: ".aboutBox2 .title",
+                start: "top bottom", 
+                end: "bottom top",
+                markers: true,
+                scrub: true
+            },  
+        });
+
+        gsap.to(".aboutBox2 .desc", {
+            yPercent: -10,
+            ease: "none",
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: ".aboutBox2 .desc",
+                start: "top bottom", 
+                end: "bottom top",
+                markers: true,
+                scrub: true
+            },  
+        });
+
+        const ani3 = gsap.timeline();
+        ani3.to("#section3 .text", {xPercent: -50})
 
         ScrollTrigger.create({
-            animation: ani9,
+            animation: ani3,
             trigger: "#section3",
-            start: "top 20%",
+            start: "top top",
             end: "+=4000",
             scrub: true,
             pin: true,
             markers: true,
             anticipatePin: 1
         });
-
     </script>
 </body>
 </html>

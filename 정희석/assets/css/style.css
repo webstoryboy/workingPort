@@ -77,9 +77,6 @@ body {
     height: 100%;
     z-index: 100;
 }
-
-
-
 #section2 {
     width: 200%;
 }
@@ -97,6 +94,7 @@ body {
 }
 #section7 {
     width: 100%;
+    background: #000;
 }
 
 .section-title {

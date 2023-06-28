@@ -51,6 +51,7 @@
 
         </section>
         <!-- //section2 -->
+
         <section id="section3" class="section">3</section>
         <section id="section4" class="section">4</section>
         <section id="section5" class="section">5</section>
@@ -94,14 +95,20 @@
         gsap.to(sections, {
             x: -(horizontal.offsetWidth - window.innerWidth),
             ease: "none",
+
             scrollTrigger: {
-                trigger: "#contents",
+                trigger: horizontal,
+                start: "top top",
+                end: () => "+=" + (horizontal.offsetWidth - innerWidth),
                 pin: true,
-                anticipatePin: 1,
                 scrub: 1,
-                end: () =>  "+=" + (horizontal.offsetWidth - innerWidth),
+                invalidateOnRefresh: true,
+                anticipatePin: 1
             }
-        })
+        });
+
+
+
     </script>
 
 
