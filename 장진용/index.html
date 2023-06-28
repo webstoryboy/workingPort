@@ -23,8 +23,8 @@
         <section id="section1">
             <div class="left"></div>
             <div class="right">
-                <h2>Creative Unique Portfolio</h2>
-                <p>
+                <h2 class="split">Creative Unique Portfolio</h2>
+                <p class="secLine split">
                     사람을 강하게 만드는 것은 사람이 하는 일이 아니라, 하고자 노력하는 것이다.<br>
                     지난 시간동안 공부를 하며 힘들었던 점도 많았지만, <br>
                     포기하지 않고 앞으로 달려 나가며 해낼수 있다는 마음으로 달려왔습니다. <br>
@@ -46,5 +46,38 @@
         <section id="section5"></section>
         <section id="section6"></section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        const targets = gsap.utils.toArray(".split");
+        
+        let SplitClient = new SplitType(targets, {type: "lines, words, chars"});
+
+        gsap.set("#header", {width: "0%"})
+        gsap.set("#header h1", {autoAlpha: 0})
+        gsap.set("#header .nav", {autoAlpha: 0})
+        gsap.set("#header .logo-bg", {width: 0})
+        gsap.set("#section1 .left", {autoAlpha: 0, x: -50})
+        gsap.set("#section1 .right h2 .char", {autoAlpha: 0, y: 100})
+        gsap.set("#section1 .right .secLine .line", {autoAlpha: 0, x: 10, y: 10})
+        gsap.set("#section1 .right .logo-bg", {autoAlpha: 0})
+        gsap.set("#section1 .right", {autoAlpha: 0, x: 50})
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+            tl.to("#header",                            {duration: 1, width: "100%"})
+            tl.to("#header .logo-bg",                   {duration: 1, width: "30vw", ease: "expo.out"}, "-=0.5")
+            tl.to("#section1 .left",                    {duration: 1, autoAlpha: 1, x: 0, ease: "expo.out"})
+            tl.to("#section1 .right",                   {duration: 1, autoAlpha: 1, x: 0, ease: "expo.out"}, "-=0.5")
+            tl.to("#section1 .right h2 .char",          {duration: 1, autoAlpha: 1, x: 0, y:0, ease: "slow", stagger: 0.05})
+            tl.to("#section1 .right .secLine .line",    {duration: 1, autoAlpha: 1, x: 0, y:0, ease: "slow", stagger: {amount: 1}})
+            tl.to("#header h1",                         {duration: 1, autoAlpha: 1})
+            tl.to("#header .nav",                       {duration: 1, autoAlpha: 1})
+        }, 2000);
+    </script>
+
 </body>
 </html>

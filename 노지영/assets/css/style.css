@@ -68,4 +68,7 @@
 /* section2 */
 #section2  {
     height: 2000px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
 }

@@ -1,11 +1,15 @@
 #section1 {
     width: 100%;
     height: 100vh;
-    background-color: #0000005a;
+    background-color: #00000093;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -100;
 }
 #section1 .text {
     color: #fff;
@@ -39,5 +43,146 @@
 
 
 #section2 {
+    margin-top: 100vh;
+    padding: 30vh 0;
+    position: relative;
+    z-index: 1000;
+    background: transparent;
+    background-color: #3d3d3d29;
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#section2 .sec2-img {
+    width: 20%;
+}
+#section2 .sec2-img span {
+    float: right;
+    display: inline-block;
+    width: 20vw;
+    height: 20vw;
+    background-image: url(https://kebab-portfolio.web.app/assets/myProfile-95623d94.jpeg);
+    background-position: center top;
+    background-size: cover;
+    border-radius: 50%;
+}
+#section2 .sec2-text {
+    width: 50%;
+    font-size: 20px;
+    font-family: 'ChosunNm';
+    color: #fff;
+    white-space: pre;
+}
+
+#section3 {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    padding: 30vh 0;
+}
+
+#section3 .sec-title {
+    font-size: 10vw;
+    font-family: "Poppins";
+    line-height: .81;
+    font-weight: 100;
+    white-space: nowrap;
+    margin-bottom: 30vh;
+}
+#section3 .sec-title > div:nth-child(2) {
+    margin-left: -20vw;
+}
+#section3 .sec-title > div:nth-child(3) {
+    margin-left: -10vw;
+}
+#section3 .sec-title > div em {
+    font-weight: 900;
+}
+
+.sec-pin {}
+.sec-pin > div {
+    width: 100%;
+    height: 100vh;
+}
+.sec-pin .sec3-section1 {background-color: #fff;}
+.sec-pin .sec3-section2 {background-color: #222;}
+.sec-pin .sec3-section3 {background-color: #333;}
+.sec-pin .sec3-section4 {background-color: #444;}
+.sec-pin .sec3-section5 {background-color: #555;}
+.sec-pin .sec3-section6 {background-color: #666;}
+
+.sec-pin .box {
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 2vw;
+    position: relative;
+}
+.sec-pin .box span {
+    font-family: "Poppins";
+    font-weight: 900;
+    font-size: 30px;
+}
+.sec-pin .box h3 {
+    font-size: 24px;
+    font-family: 'ChosunNm';
+    margin-bottom: 10px;
+}
+.sec-pin .box p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'ChosunNm';
+    padding-right: 20%;
+    margin-bottom: 10px;
+}
+.sec-pin .box .btn a {
+    border: 1px solid #FF0000;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: #FF0000;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.sec-pin .box .qr {
+    width: 130px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 70px;
+}
+.sec-pin .mockup {
+    position: absolute;
+    right: -60%;
+    bottom: -30%;
+    width: 30vw;
+}
+
+
+
+.sec-pin .box1 {
+    position: relative;
+    left: 10%;
+    top: 10%;
+    width: 25vw;
+}
+
+
+
+
+#section4 {
+    width: 100%;
     height: 2000px;
+    background-color:red;
+}
+#section5 {
+    width: 100%;
+    height: 2000px;
+    background-color:transparent;
+}
+#section6 {
+    width: 100%;
+    height: 2000px;
+    background-color:#fff;
 }

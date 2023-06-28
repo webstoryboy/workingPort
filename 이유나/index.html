@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+        .split span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(200px);
+        }
+    </style>
+
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,7 +29,7 @@
 
     <main id="main">
         <section id="section1">
-            <h2>ports</h2>
+            <h2 class="split">ports</h2>
             <p class="desc1">
                 ADD ELEGANCE AND CHARM TO YOUR
                 SPACE WITH FURNITURE THAT
@@ -62,8 +70,13 @@
             <div class="aboutBox2"></div>
             <div class="aboutBox3"></div>
         </section>
-        <section id="section3"></section>
-        <section id="section3"></section>
+        <!-- //section2 -->
+
+        <section id="section3">
+            <h3>이유나</h3>
+            <div class="box"></div>
+        </section>
+        <!-- //section3 -->
         <section id="section4"></section>
         <section id="section5"></section>
         <section id="section6"></section>
@@ -86,6 +99,22 @@
         }
 
         requestAnimationFrame(raf);
+
+
+        document.querySelectorAll(".split").forEach(text => {
+            let splitWrap = text.innerText.split("").join("</span><span aria-hidddn='true'>");
+            text.innerHTML = "<span aria-hidddn='true'>" + splitWrap + "</span>";
+            text.setAttribute("aira-label", text.innerText)
+        });
+
+        setTimeout(() => {
+            gsap.to("#section1 .split span", {
+                autoAlpha: 1,
+                y: 0,
+                stagger: 0.1
+            })
+        }, 2000);
+
 
         gsap.to("#section1 .desc2", {
             yPercent: -300,
@@ -137,6 +166,22 @@
                 markers: true,
                 scrub: true
             },  
+        });
+
+        const ani9 = gsap.timeline();
+        ani9.to("#section3 .box", {x: 1000})
+            .to("#section3 .box", {y: 10})
+            .to("#section3 .box", {x: 0})
+
+        ScrollTrigger.create({
+            animation: ani9,
+            trigger: "#section3",
+            start: "top 20%",
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            markers: true,
+            anticipatePin: 1
         });
 
     </script>

@@ -153,3 +153,15 @@
     font-family: 'ChosunNm';
     color: #4B3D30;
 }
+
+
+#section3 {
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+}

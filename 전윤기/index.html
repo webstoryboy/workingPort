@@ -27,7 +27,7 @@
     <div id="contents">
         <section id="section1">
             <div class="text-wrap">
-                <h1><em>PORTFOLIO</em> FRONTEN</h1>
+                <h1><em>PORTFOLIO</em> <span>FRONTEN</span></h1>
                 <div class="sub">
                     <span>2023 포트폴리오 프로젝트</span>
                     <span>2023.05.05 12:30:01</span>
@@ -39,9 +39,11 @@
             </div>
 
             <div class="text-wrap3">
-                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. <br>
+                <p>
+                    어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. <br>
                     신입의 열정과 도전정신을 깊숙히 <br> 새기며 배움에 있어 겸손함을 유지하며 <br>
                     세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                    <span>전윤기</span>
                 </p>
             </div>
 
@@ -72,6 +74,27 @@
 
         requestAnimationFrame(raf);
 
+        gsap.set("#section1 .text-wrap h1", {autoAlpha: 0, scale: 5.5})
+        gsap.set("#section1 .text-wrap .sub", {autoAlpha: 0, y: 500})
+        gsap.set("#header", {top: -100})
+        gsap.set("#webgl-canvas", {autoAlpha: 0,  scale: 0})
+
+        
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+            tl.to("#webgl-canvas", {autoAlpha: 1, scale: 1, duration: 3})
+            tl.to("#section1 .text-wrap h1", {autoAlpha: 1, scale: 1, ease: "expo.out"})
+            tl.to("#section1 .text-wrap h1 em", {xPercent: -200, duration: 1, delay: 2}, "a")
+            tl.to("#section1 .text-wrap h1 span", {xPercent: 200, duration: 1, delay: 2}, "a")
+            tl.to("#section1 .text-wrap h1", {whiteSpace: "nowrap"})
+            tl.to("#section1 .text-wrap h1 em", {xPercent: 0, duration: 1, delay: 2, ease: "expo.out"}, "b")
+            tl.to("#section1 .text-wrap h1 span", {xPercent: 0, duration: 1, delay: 2, ease: "expo.out"}, "b")
+            tl.to("#header", {top: 0})
+            tl.to("#section1 .text-wrap h1", {top: 200})
+            tl.to("#section1 .text-wrap .sub", {autoAlpha: 1, y:340})
+        }, 2000);
+
         const ani1 = gsap.timeline();
         ani1.to("#section1 .text-wrap h1", {xPercent: -100,ease: "back.out(1)"}, "x")
             .to("#webgl-canvas", {opacity: 0}, "x");
@@ -84,21 +107,6 @@
             scrub: true,
             markers: true,
         });
-
-        // const ani2 = gsap.timeline();
-        // ani2.to(".text-wrap2 > div", {autoAlpha: 0, ease: "back.out(1)"})
-
-        // ScrollTrigger.create({
-        //     animation: ani2,
-        //     trigger: ".text-wrap2",
-        //     start: "center center",
-        //     end: "+=1000",
-        //     pin: true,
-        //     scrub: true,
-        //     markers: true,
-        // });
-
-
     </script>
 
 

@@ -60,7 +60,10 @@
         </section>
         <!-- //section1 -->
 
-        <section id="section2" data-bgcolor="#000"></section>
+        <section id="section2" data-bgcolor="#000">
+
+        </section>
+        <!-- //section2 -->
         <section id="section3"></section>
         <section id="section4"></section>
         <section id="section5"></section>
@@ -72,47 +75,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script>
-        const ani = gsap.timeline();
-        ani.from("#section1 .text-wrap span", {
-            autoAlpha: 0,
-            y: -100,
-            rotation: 360,
-            ease: "back.out(4)",
-            duration: 3,
-            stagger: {
-                amount: 3,
-                from: "random"
-            }
-        })
-        ani.to("#section1 .bg", {
-            autoAlpha: 0,
-            duration: 2,
-        })
-        ani.from(".title-wrap .t1", {
-            autoAlpha: 0,
-            x: -100,
-            duration: 0.5,
-        })
-        ani.from(".title-wrap .t2", {
-            autoAlpha: 0,
-            x: 100,
-            duration: 0.5,
-        })
-        ani.from(".title-wrap .t3", {
-            autoAlpha: 0,
-            x: -100,
-            duration: 0.5,
-        })
+        setTimeout(() => {
+            const ani = gsap.timeline();
+            ani.from("#section1 .text-wrap span", {
+                autoAlpha: 0,
+                y: -100,
+                rotation: 360,
+                ease: "back.out(4)",
+                duration: 3,
+                stagger: {
+                    amount: 3,
+                    from: "random"
+                }
+            })
+            ani.to("#section1 .bg", {autoAlpha: 0, duration: 2,})
+            ani.from(".title-wrap .t1", {autoAlpha: 0,x: -100,duration: 0.5,})
+            ani.from(".title-wrap .t2", {autoAlpha: 0,x: 100,duration: 0.5,})
+            ani.from(".title-wrap .t3", {autoAlpha: 0,x: -100,duration: 0.5,})
+        }, 2000);
+
+
+        const panel = document.querySelector("#section1");
 
         ScrollTrigger.create({
-            animation: ani,
-            trigger: "#section1",
+            trigger: panel,
             start: "top top",
-            end: "+=6000",
             pin: true,
-            markers: false,
-            anticipatePin: 1
+            pinSpacing: false
         });
+
+
+        const ani3 = gsap.timeline();
+        ani3.from(".title-wrap .t1 img", {scale: 100});
+
+        ScrollTrigger.create({
+            animation: ani3,
+            trigger: "#section2",
+            start: "top center",
+            end: "+=3000",
+            scrub: true,
+            pin: true, 
+            anticipatePin: 1,
+            markers: true
+        });
+
+
+       
     </script>
 </body>
 </html>

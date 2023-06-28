@@ -1,3 +1,6 @@
+body {
+    background-color: #000;
+}
 #header {
     position: fixed;
     top: 50%;
@@ -8,7 +11,6 @@
     transform: translate(-50%) rotate(-90deg);
     padding: 0 10px;
 }
-#header .nav {}
 #header .nav li {
     display: inline;
 }
@@ -28,11 +30,76 @@
     align-items: center;
     justify-content: space-between;
     color: #fff;
+    overflow: hidden;
 }
+
+#webgl-canvas {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.circle > div {
+    border-radius: 50%;
+    position: absolute;
+}
+.circle > div:nth-child(1){
+    background-color: #ff89f352;
+    backdrop-filter: blur(10px);
+    width: 20vw;
+    height: 20vw;
+    left: 10%;
+    top: 10%;
+}
+.circle > div:nth-child(2){
+    background-color: #ffda8958;
+    backdrop-filter: blur(10px);
+    left: 60%;
+    top: 5%;
+    width: 34vw;
+    height: 34vw;
+}
+.circle > div:nth-child(3){
+    background-color: #aeff8968;
+    backdrop-filter: blur(10px);
+    left: 60%;
+    top: 50%;
+    width: 22vw;
+    height: 22vw;
+}
+.circle > div:nth-child(4){
+    background-color: #ffb68929;
+    backdrop-filter: blur(10px);
+    left: 20%;
+    top: 40%;
+    width: 16vw;
+    height: 16vw;
+}
+.circle > div:nth-child(5){
+    background-color: #89efff36;
+    backdrop-filter: blur(10px);
+    left: 30%;
+    top: 50%;
+    width: 20vw;
+    height: 20vw;
+}
+.circle > div:nth-child(6){
+    background-color: #8d89ff4e;
+    backdrop-filter: blur(10px);
+    left: 35%;
+    top: 10%;
+    width: 30vw;
+    height: 30vw;
+}
+
+
 #section1 .text {
     padding: 5vw;
     font-size: 10vmax;
     line-height: 1;
+    position: relative;
+    z-index: 100;
 }
 #section1 .text .t4 {
     padding-left: 10vw;
@@ -41,6 +108,8 @@
 #section2 {
     background-color: #000;
     padding-bottom: 30%;
+    position: relative;
+    z-index: 1000;
 }
 #section2 h2 {
     color: #AFFF89;
@@ -64,7 +133,7 @@
     color: #fff;
     margin-left: auto;
     margin-right: 10vw;
-    margin-top: -30vw;
+    margin-top: -10vw;
 }
 #section2 .img .intro {
     font-family: 'ChosunNm';
