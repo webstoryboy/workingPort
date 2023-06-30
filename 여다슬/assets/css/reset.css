@@ -1,15 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@font-face {
-    font-family: 'IropkeBatang';
-    font-weight: normal;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf') format("truetype");
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Lato:wght@100;900&display=swap');
+
 
 /* border-box 초기화 */
 *,
@@ -68,7 +58,7 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: 'Neue Haas Grotesk Display Pro', NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

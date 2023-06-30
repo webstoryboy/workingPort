@@ -50,12 +50,19 @@
     line-height: 1.7;
 }
 #section1 .right {
+    visibility: hidden;
+    position: relative;
     width: 50%;
     height: 100%;
-    background-image: url(../img/section01.jpg);
-    background-size: cover;
-    background-position: center top;
+    overflow: hidden;
 }
+#section1 .right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform-origin: left;
+}
+
 #section1 .title {
    position: absolute;
    left: 0%;
@@ -69,6 +76,7 @@
     padding-right: 40vw;
     padding-top: 1vw;
     padding-left: 5vw;
+    white-space: nowrap;
 }
 #section1 .title .t2 {
     font-size: 12vw;
@@ -123,7 +131,99 @@
 
 
 #section2 {
-    height: 100vh;
     background-color: #EBEAE4;
+    padding: 20px;
 }
 
+#section2 .sec2-title {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+#section2 .sec2-title .left {
+    width: 10%;
+    font-size: 7vw;
+    font-family: 'poppins';
+    font-weight: 100;
+    padding: 2vw 2vw 2vw 4vw;
+    line-height: 1;
+}
+#section2 .sec2-title .right {
+    width: 55%;
+}
+#section2 .sec2-title .right h2 {
+    font-family: 'poppins';
+    font-size: 7vw;
+    line-height: 1.5;
+    font-weight: 100;
+    text-transform: capitalize;
+    text-transform: uppercase;
+}
+#section2 .sec2-title .right p {
+    font-family: 'IropkeBatang';
+    font-size: 16px;
+    white-space: pre-line;
+    line-height: 1.6;
+    margin-bottom: 2vw;
+    margin-top: -1vw;
+}
+
+#section2 .sec2-desc {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+#section2 .sec2-desc .left {
+    width: 45%;
+    height: 1000px;
+    background-image: url(../img/section02.jpg);
+    background-position: center center;
+    filter: grayscale(100%)
+}
+#section2 .sec2-desc .right {
+    width: 54%;
+    height: 1000px;
+    display: flex;
+    align-items: end;
+    font-family: 'IropkeBatang';
+    font-size: 16px;
+    white-space: pre-line;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+#section3 {}
+.title-wrap {
+    padding: 20px;
+}
+.title-wrap > div {
+    font-size: 7vw;
+    font-family: 'poppins';
+    font-weight: 100;
+    padding: 2vw 2vw 2vw 4vw;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.title-wrap .sec3-title1 {
+    background-color: #EBEAE4;
+    font-family: 'Lato';
+    font-weight: 100;
+}
+.title-wrap .sec3-title2 {
+    background-color: #b4b4b4;
+    font-weight: 100;
+}
+.title-wrap .sec3-title3 {
+    background-color: #ddaeae;
+    font-weight: 100;
+}
+.title-wrap .sec3-title4 {
+    background-color: #b3ddae;
+    font-weight: 100;
+}
+.title-wrap .sec3-title5 {
+    background-color: #939a93;
+    font-weight: 100;
+}

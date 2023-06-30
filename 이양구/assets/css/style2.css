@@ -93,7 +93,7 @@ body {
     height: calc(100vh - 40px);
     border: 1px solid #000;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 30px;
 }
 #section1 .title {
     height: 10%;
@@ -114,7 +114,11 @@ body {
     text-transform: uppercase;
     font-weight: 100;
     font-family: 'Red Hat Display';
-    
+}
+#section1 .mainText span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -122,19 +126,30 @@ body {
 
 
 #section2 {
-    border-radius: 20px;
     width: 100%;
-    border: 1px solid #000;
-    padding: 20px;
 }
 #section2 .sec2-title {
-    font-family: 'NanumSquareNeo';
-    font-size: 40px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #FF3D00;
+    background-color: #FF3D00;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Red Hat Display';
+    margin-bottom: 20px;
 }
-#section2 .sec2-title em {
+#section2 .sec2-desc {
+    border: 1px solid #000;
+    font-family: 'NanumSquareNeo';
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 40px;
+    word-break: keep-all;
+}
+#section2 .sec2-desc em {
     position: relative;
 }
-#section2 .sec2-title em::before {
+#section2 .sec2-desc em::before {
     content: '';
     width: 100%;
     height: 20px;
@@ -144,4 +159,58 @@ body {
     border-radius: 50px;
     background-color: #ff8e6c85;
     z-index: -1;
+}
+#section2 .sec2-desc p {
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+/* #section2 .sec2-desc .div {
+    display: flex;
+}
+#section2 .sec2-desc .div strong {
+    color: #FF3D00;
+    font-size: 20vw;
+    font-weight: 900;
+} */
+
+
+
+#section3 {}
+#section3 .sec3-title {
+    padding: 7px 20px 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #5927CC;
+    background-color: #5927CC;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#section3 .sec3-desc {
+    padding: 2vw;
+    border-radius: 20px;
+    border: 1px solid #5927CC;
+    background-color: #5927CC;
+    color: #fff;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+#section3 .sec3-desc span {
+    font-size: 4vw;
+    line-height: 1;
+    font-family: 'NanumSquareNeo';
+    font-weight: 100;
+}
+#section3 .sec3-desc h3 {
+    font-size: 10vw;
+    line-height: 1;
+    font-family: 'Red Hat Display';
+    font-family: 'NanumSquareNeo';
+    font-weight: 900;
+    text-transform: uppercase;
 }
