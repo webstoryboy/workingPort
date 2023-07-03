@@ -86,7 +86,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="sec3-section2">sec3-section2</div>
+                <div class="sec3-section2">
+                    <div class="box box2">
+                        <span>#02</span>
+                        <h3>웹표준을 준수한 사이트 제작</h3>
+                        <p>
+                            웹 표준 코딩 사이트는 웹 개발자들이 웹 사이트를 개발할 때 일반적으로 따르는 표준화된 규칙과 권장사항을 제공하는 사이트입니다. 이러한 사이트는 웹 개발자들이 웹 페이지를 구축할 때 일관성 있고 효율적인 코드를 작성할 수 있도록 도움을 줍니다.
+                        </p>
+                        <div class="btn">
+                            <a href="#">code view</a>
+                            <a href="#">source view</a>
+                        </div>
+                        <div class="qr">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/1200px-QR_Code_Example.svg.png" alt="">
+                            <div class="info">
+
+                            </div>
+                        </div>
+                        <div class="mockup mockup1">
+                            <img src="assets/img/s1.png" alt="dd">
+                        </div>
+                    </div>
+                </div>
                 <div class="sec3-section3">sec3-section3</div>
                 <div class="sec3-section4">sec3-section4</div>
                 <div class="sec3-section5">sec3-section5</div>
@@ -163,34 +184,100 @@
             })
         }, 2000);
 
+
+        ScrollTrigger.saveStyles(".mobile, .desktop");
+
         // 
+        gsap.set(".sec3-section1 .box1", {autoAlpha: 0, width: "10vw", height: "10vw"})
+        gsap.set(".sec3-section1 .box1 span", {autoAlpha: 0})
+        gsap.set(".sec3-section1 .box1 h3", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section1 .box1 p", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section1 .box1 .btn", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section1 .box1 .qr", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section1 .box1 .mockup", {autoAlpha: 0, x: 100})
 
-        gsap.set(".sec3-section1 .box", {autoAlpha: 0, width: "10vw", height: "10vw"})
-        gsap.set(".sec3-section1 .box span", {autoAlpha: 0})
-        gsap.set(".sec3-section1 .box h3", {autoAlpha: 0, y: 10})
-        gsap.set(".sec3-section1 .box p", {autoAlpha: 0, y: 10})
-        gsap.set(".sec3-section1 .box .btn", {autoAlpha: 0, y: 10})
-        gsap.set(".sec3-section1 .box .qr", {autoAlpha: 0, y: 10})
-        gsap.set(".sec3-section1 .box .mockup", {autoAlpha: 0, x: 100})
+        ScrollTrigger.matchMedia({
+            //desktop
+            "(min-width: 800px)": function(){
+                const ani1 = gsap.timeline();
+                ani1.to(".sec3-section1 .box1",      {duration:0.5, width: "10vw", height: "10vw", autoAlpha:1})
+                ani1.to(".sec3-section1 .box1 span", {duration:0.5, autoAlpha:1})
+                ani1.to(".sec3-section1 .box1",      {duration:0.3, x: 300})
+                ani1.to(".sec3-section1 .box1",      {duration:0.3, y: 300})
+                ani1.to(".sec3-section1 .box1",      {duration:0.3, x: 0})
+                ani1.to(".sec3-section1 .box1",      {duration:0.3, y: 0})
+                ani1.to(".sec3-section1 .box1",      {duration:0.5, width: "25vw", height: "10vw"})
+                ani1.to(".sec3-section1 .box1",      {duration:0.5, width: "25vw", height: "auto"})
+                ani1.to(".sec3-section1 .box1 h3",   {duration:0.5, autoAlpha:1, y: 0})
+                ani1.to(".sec3-section1 .box1 p",    {duration:0.5, autoAlpha:1, y: 0})
+                ani1.to(".sec3-section1 .box1 .btn", {duration:0.5, autoAlpha:1, y: 0})
+                ani1.to(".sec3-section1 .box1 .qr",  {duration:0.5, autoAlpha:1, y: 0})
+                ani1.to(".sec3-section1 .box1 .mockup",  {duration:1.5, autoAlpha:1, x: 0})
 
-        const ani1 = gsap.timeline();
-        ani1.to(".sec3-section1 .box",      {duration:0.5, width: "10vw", height: "10vw", autoAlpha:1})
-        ani1.to(".sec3-section1 .box span", {duration:0.5, autoAlpha:1})
-        ani1.to(".sec3-section1 .box",      {duration:0.3, x: 300})
-        ani1.to(".sec3-section1 .box",      {duration:0.3, y: 300})
-        ani1.to(".sec3-section1 .box",      {duration:0.3, x: 0})
-        ani1.to(".sec3-section1 .box",      {duration:0.3, y: 0})
-        ani1.to(".sec3-section1 .box",      {duration:0.5, width: "25vw", height: "10vw"})
-        ani1.to(".sec3-section1 .box",      {duration:0.5, width: "25vw", height: "auto"})
-        ani1.to(".sec3-section1 .box h3",   {duration:0.5, autoAlpha:1, y: 0})
-        ani1.to(".sec3-section1 .box p",    {duration:0.5, autoAlpha:1, y: 0})
-        ani1.to(".sec3-section1 .box .btn", {duration:0.5, autoAlpha:1, y: 0})
-        ani1.to(".sec3-section1 .box .qr",  {duration:0.5, autoAlpha:1, y: 0})
-        ani1.to(".sec3-section1 .box .mockup",  {duration:1.5, autoAlpha:1, x: 0})
+                ScrollTrigger.create({
+                    animation: ani1,
+                    trigger: ".sec3-section1",
+                    start: "top top",
+                    end: "+=5000",
+                    scrub: true,
+                    pin: true, 
+                    anticipatePin: 1,
+                    markers: true,
+                });
+            },
+
+            //mobile 
+            "(max-width: 790px)": function(){
+                gsap.set(".sec3-section1 .box1", {autoAlpha: 1, width: "60vw"})
+                gsap.set(".sec3-section1 .box1 span", {autoAlpha: 1})
+                gsap.set(".sec3-section1 .box1 h3", {autoAlpha: 1, y: 10})
+                gsap.set(".sec3-section1 .box1 p", {autoAlpha: 1, y: 10})
+                gsap.set(".sec3-section1 .box1 .btn", {autoAlpha: 1, y: 10})
+                gsap.set(".sec3-section1 .box1 .qr", {autoAlpha: 1, y: 10})
+                gsap.set(".sec3-section1 .box1 .mockup", {autoAlpha: 1, x: 0})
+
+                ScrollTrigger.create({
+                    animation: ani1,
+                    trigger: ".sec3-section1",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: false,
+                    pin: false
+                });
+            }
+
+        });
+
+        
+
+
+        // 02
+        gsap.set(".sec3-section2 .box2", {autoAlpha: 0, width: "10vw", height: "10vw"})
+        gsap.set(".sec3-section2 .box2 span", {autoAlpha: 0})
+        gsap.set(".sec3-section2 .box2 h3", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section2 .box2 p", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section2 .box2 .btn", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section2 .box2 .qr", {autoAlpha: 0, y: 10})
+        gsap.set(".sec3-section2 .box2 .mockup", {autoAlpha: 0, x: 100})
+
+        const ani2 = gsap.timeline();
+        ani2.to(".sec3-section2 .box2",      {duration:0.5, width: "10vw", height: "10vw", autoAlpha:1})
+        ani2.to(".sec3-section2 .box2 span", {duration:0.5, autoAlpha:1})
+        ani2.to(".sec3-section2 .box2",      {duration:0.3, x: 300})
+        ani2.to(".sec3-section2 .box2",      {duration:0.3, y: 300})
+        ani2.to(".sec3-section2 .box2",      {duration:0.3, x: 0})
+        ani2.to(".sec3-section2 .box2",      {duration:0.3, y: 0})
+        ani2.to(".sec3-section2 .box2",      {duration:0.5, width: "25vw", height: "10vw"})
+        ani2.to(".sec3-section2 .box2",      {duration:0.5, width: "25vw", height: "auto"})
+        ani2.to(".sec3-section2 .box2 h3",   {duration:0.5, autoAlpha:1, y: 0})
+        ani2.to(".sec3-section2 .box2 p",    {duration:0.5, autoAlpha:1, y: 0})
+        ani2.to(".sec3-section2 .box2 .btn", {duration:0.5, autoAlpha:1, y: 0})
+        ani2.to(".sec3-section2 .box2 .qr",  {duration:0.5, autoAlpha:1, y: 0})
+        ani2.to(".sec3-section2 .box2 .mockup",  {duration:1.5, autoAlpha:1, x: 0})
 
         ScrollTrigger.create({
-            animation: ani1,
-            trigger: ".sec3-section1",
+            animation: ani2,
+            trigger: ".sec3-section2",
             start: "top top",
             end: "+=5000",
             scrub: true,
@@ -198,6 +285,8 @@
             anticipatePin: 1,
             markers: true
         });
+
+        
     </script>
 
 

@@ -50,13 +50,43 @@
                 <span>html</span>
                 <span>javascript</span>
                 <span>javascript</span>
+                <span>코딩</span>
+                <span>babo</span>
+                <span>html</span>
+                <span>react.js</span>
+                <span>javascript</span>
+                <span>잘하자</span>
+                <span>react.js</span>
+                <span>css</span>
             </div>
             <div class="title-wrap">
                 <div class="t1">Let's go<img class="img" src="assets/img/section01.png" alt="dd"></div>
                 <div class="t2">portfolio<img class="img" src="assets/img/section02.png" alt="dd"></div>
                 <div class="t3">frontend<img class="img" src="assets/img/section03.png" alt="dd"></div>
             </div>
-            <div class="bg"></div>
+            <div class="bg-wrap">
+                <div class="bg"></div>
+                <div class="about">
+                    <div class="left">
+
+                    </div>
+                    <div class="right">
+                        <img src="https://noji-portfolio.netlify.app/assets/sign-29e8d240.png" alt="d">
+                        <p>
+                            안녕하세요! 저는 노지영입니다.
+                            어렸을 때부터 웹사이트를 보면서 언제나 어떻게 이런 사이트들이 만들어지는지 궁금해하던 시절이 있었습니다. 
+                            그래서 웹디자이너가 되기 위해 학교에 진학했지만, 항상 스스로의 실력에 만족하지 못해 좌절하기도 했습니다. 
+                            그렇지만 졸업 후에는 디자인 분야로 전향하여 다른 경험들을 쌓게 되었습니다.
+
+                            하지만 여전히 내 안에 꿈꾸던 프론트앤드 개발에 대한 열정은 사라지지 않았습니다. 
+                            그래서 서른이 되기 전에 다시 도전하기로 마음먹고 공부를 시작했습니다. 
+                            지금은 자신감을 가지고 나아가며 경험을 쌓고 도전하는 자세로 현재에 머무르지 않고 전진하고 있습니다.
+
+                            앞으로도 계속해서 프론트앤드 개발에 몰두하여 꿈을 이뤄나가고자 합니다
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- //section1 -->
 
@@ -88,36 +118,33 @@
                     from: "random"
                 }
             })
-            ani.to("#section1 .bg", {autoAlpha: 0, duration: 2,})
+            
             ani.from(".title-wrap .t1", {autoAlpha: 0,x: -100,duration: 0.5,})
             ani.from(".title-wrap .t2", {autoAlpha: 0,x: 100,duration: 0.5,})
             ani.from(".title-wrap .t3", {autoAlpha: 0,x: -100,duration: 0.5,})
         }, 2000);
 
 
-        const panel = document.querySelector("#section1");
+        const ani1 = gsap.timeline();
+        ani1.to("#section1 .t1", {duration: 3, xPercent: 250, ease: "expo.out"}, "text")
+            .to("#section1 .t2", {duration: 3, xPercent: -250, ease: "expo.out"}, "text")
+            .to("#section1 .t3", {duration: 3, xPercent: 250, ease: "expo.out"}, "text")
+            .to("#section1 .text-wrap span", {yPercent: 800,  stagger: {amount: 3, from: "random"}}, "-=1")
+            .to("#section1 .bg-wrap .bg", {autoAlpha: 0, duration: 2}, "-=2")
 
         ScrollTrigger.create({
-            trigger: panel,
+            animation: ani1,
+            trigger: "#section1",
             start: "top top",
-            pin: true,
-            pinSpacing: false
-        });
-
-
-        const ani3 = gsap.timeline();
-        ani3.from(".title-wrap .t1 img", {scale: 100});
-
-        ScrollTrigger.create({
-            animation: ani3,
-            trigger: "#section2",
-            start: "top center",
-            end: "+=3000",
+            end: "+=8000",
             scrub: true,
             pin: true, 
             anticipatePin: 1,
             markers: true
         });
+
+
+       
 
 
        
