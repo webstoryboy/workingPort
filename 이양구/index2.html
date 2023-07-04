@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style2.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
@@ -45,43 +45,20 @@
             <!-- //section1 -->
 
             <section id="section2">
-                <div class="sec2-title">
-                  You are now entering ( About ) section
-                </div>
+                <div class="sec2-title split" >You are now entering ( About ) section</div>
+
                 <div class="sec2-desc">
-                  언제나 성장하기 위해 노력하고 끊임없이 움직이는 사람, 신입 개발자!
-                  
-                  <p>
-                      저는 중국의 산동대학교에서 경영학을 전공하며 다양한 경험을 쌓았습니다. 
-                    이제는 나의 적성에 맞는 일을 찾고자 노력하고 있습니다. 
-                    초기에는 개발에 대해 익숙하지 않아 서툴고 부족하다는 것을 알고 있습니다. 
-                    <em>하지만 이러한 부분을 열정적으로 극복하고자 합니다!</em>
-                  </p>
-                  
-
-                  <div class="div">
-                    <p>
-                      저는 항상 새로운 도전을 통해 스스로를 발전시키고자 하는 열정을 가지고 있습니다. 
-                    어려운 문제에 직면하더라도 결코 굴하지 않고, 적극적인 태도로 학습하고 성장하는 것을 목표로 삼고 있습니다. 
-                    제한된 경험과 지식을 극복하며, <em>능동적으로 새로운 기술과 개념을 습득하고</em> 적용해 나갈 준비가 되어 있습니다.
-                    </p>
-                    <strong>Dreamer</strong>
-                  </div>
-
-                  <p>
-                    실력과 노력은 점점 상승한다고 믿습니다. 저는 끊임없이 발전하고자 하는 열정과 인내심을 가지고 있으며, 
-                    어떤 일이든 최선을 다해 성취하기 위해 노력할 것입니다. 제가 부족한 부분을 채우기 위해 노력하고, 
-                    함께 일하는 동료들과의 협업을 통해 더 큰 성과를 이뤄낼 자신이 있습니다.
-                  </p>
-
-                  <p>
-                    저는 열정적이고 성장을 추구하는 신입 개발자로서, 
-                    새로운 도전을 감히 받아들이며 빠르게 적응하고 성장할 준비가 되어 있습니다. 
-                    저에게 주어진 기회를 최대한 활용하여 조직에 가치를 더하고, 
-                    함께 성장하는 모습을 보여드리겠습니다!
-                  </p>
+                  <span>01</span>
+                  <h3>about</h3>
                 </div>
+
+                <div class="sec2-about">
+                    <div></div>
+                </div>
+
             </section>
+            <!-- //section2 -->
+
             <section id="section3">
               <div class="sec3-title">
                 You are now entering ( About ) section
@@ -91,6 +68,8 @@
                 <h3>Site</h3>
               </div>
             </section>
+            <!-- //section3 -->
+            
             <section id="section4"></section>
             <section id="section5"></section>
             <section id="section6"></section>
@@ -103,7 +82,7 @@
     
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
       gsap.set("#section1 .mainText", {fontSize: "90vh"})
@@ -122,9 +101,44 @@
           anticipatePin: 1,
           markers: true
       });
-    </script>
+    </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
     <script src="https://supahfunk.github.io/supah-codepen/OrbitControls.110.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        const targets = gsap.utils.toArray(".split");
+
+        let SplitClient = new SplitType(targets, {type: "lines, words, chars"});
+
+        gsap.set("#section2 .sec2-title .line", {autoAlpha: 0})
+        gsap.set("#section2 .sec2-title", {width: 20, height: 20})
+        gsap.set("#section2 .sec2-desc span", {autoAlpha: 0})
+        gsap.set("#section2 .sec2-desc h3", {autoAlpha: 0})
+        gsap.set("#section2 .sec2-desc", {width: 20, height: 20})
+
+        const ani2 = gsap.timeline();
+        ani2.to("#section2 .sec2-title", {duration: 1, width: "100%", ease: "expo.out"})
+        ani2.to("#section2 .sec2-title", {duration: 1, height: 40, ease: "expo.out"})
+        ani2.to("#section2 .sec2-title .line", {duration: 1, stagger: 0.05, autoAlpha: 1, ease: "expo.out"})
+        ani2.to("#section2 .sec2-desc", {duration: 1, width: "100%", ease: "expo.out"}, "-=3")
+        ani2.to("#section2 .sec2-desc", {duration: 1, height: "80vh", ease: "expo.out"}, "-=2")
+        ani2.to("#section2 .sec2-desc span", {duration: 1, autoAlpha: 1})
+        ani2.to("#section2 .sec2-desc h3", {duration: 1, autoAlpha: 1})
+
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#section2",
+            start: "top center",
+            end: "+=2000",
+            markers: true,
+            onEnter: () => {},
+            onLeave: () => {}
+        });
+    </script>
+
     <script>
 
         const renderer = new THREE.WebGLRenderer({ 
@@ -137,9 +151,6 @@
         const camera = new THREE.PerspectiveCamera( 75, 1000 / 600, 0.1, 1000 )
         camera.position.z = 8
         const scene = new THREE.Scene()
-
-
-
 
         /*--------------------
         Light

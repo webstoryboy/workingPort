@@ -129,50 +129,42 @@ body {
     width: 100%;
 }
 #section2 .sec2-title {
-    padding: 5px 20px;
     border-radius: 20px;
     border: 1px solid #FF3D00;
     background-color: #FF3D00;
     font-size: 16px;
     color: #fff;
-    font-family: 'Red Hat Display';
+    font-family: 'Abel';
     margin-bottom: 20px;
+    font-weight: 900;
+}
+#section2 .sec2-title .line {
+    padding: 8px 20px;
 }
 #section2 .sec2-desc {
-    border: 1px solid #000;
-    font-family: 'NanumSquareNeo';
-    padding: 20px;
     border-radius: 20px;
-    font-size: 40px;
-    word-break: keep-all;
-}
-#section2 .sec2-desc em {
-    position: relative;
-}
-#section2 .sec2-desc em::before {
-    content: '';
-    width: 100%;
-    height: 20px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-radius: 50px;
-    background-color: #ff8e6c85;
-    z-index: -1;
-}
-#section2 .sec2-desc p {
-    border-bottom: 1px solid #000;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-/* #section2 .sec2-desc .div {
+    border: 1px solid #FF3D00;
+    background-color: #FF3D00;
+    color: #fff;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between
 }
-#section2 .sec2-desc .div strong {
-    color: #FF3D00;
-    font-size: 20vw;
+#section2 .sec2-desc span {
+    font-size: 4vw;
+    line-height: 1;
+    font-family: 'NanumSquareNeo';
+    font-weight: 100;
+    padding: 2vw;
+}
+#section2 .sec2-desc h3 {
+    font-size: 12vw;
+    line-height: 0.7;
+    font-family: 'Abel';
     font-weight: 900;
-} */
+    text-transform: uppercase;
+    padding: 2vw;
+}
 
 
 
