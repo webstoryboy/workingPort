@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;900&family=Poppins:wght@100;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -61,8 +63,56 @@
         </section>
         <!-- //section2 -->
 
-        <section id="section3"></section>
-        <section id="section4"></section>
+        <section id="section3" data-bgcolor="#041F1E">
+            <h2>site <em>coding</em></h2>
+            <div class="desc">
+                호환성: 웹표준을 준수하는 웹페이지는 다양한 웹 브라우저와 기기에서 일관된 방식으로 표시됩니다.<br>
+                이는 웹사이트가 모든 사용자에게 동일한 경험을 제공하고, 웹 브라우저와 기기의 종속성을 최소화합니다.<br>
+                접근성: 웹표준은 웹페이지가 장애인 및 저시력 사용자 등 <br>
+                다양한 사용자 그룹에게 접근 가능하도록 지원합니다. 
+            </div>
+            <div class="site-wrap">
+                <div class="site">
+                    <div class="left">
+                        <h3>Webstandard</h3>
+                        <p>항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에 맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서 약 6개월간의 여정을 시작했습니다. 아직은 서툴고 부족하다는 점을 알고 있습니다.</p>
+                        <div class="btn">
+                            <a href="#">code</a>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+        
+        
+        <section id="section4" data-bgcolor="#fff">
+            <h2>script <em>coding</em></h2>
+            <div class="desc">
+                호환성: 웹표준을 준수하는 웹페이지는 다양한 웹 브라우저와 기기에서 일관된 방식으로 표시됩니다.<br>
+                이는 웹사이트가 모든 사용자에게 동일한 경험을 제공하고, 웹 브라우저와 기기의 종속성을 최소화합니다.<br>
+                접근성: 웹표준은 웹페이지가 장애인 및 저시력 사용자 등 <br>
+                다양한 사용자 그룹에게 접근 가능하도록 지원합니다. 
+            </div>
+            <div class="script-wrap">
+                <div class="script">
+                    <div class="img"></div>
+                    <div class="info">
+                        <h3>Webstandard</h3>
+                        <p>항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에 맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서 약 6개월간의 여정을 시작했습니다. 아직은 서툴고 부족하다는 점을 알고 있습니다.</p>
+                        <div class="btn">
+                            <a href="#">code</a>
+                            <a href="#">view</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section4 -->
+
+
         <section id="section5"></section>
         <section id="section6"></section>
     </main>
@@ -70,7 +120,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
         gsap.set("#header", {top: -100})
         gsap.set("#canvas", {autoAlpha: 0})
         gsap.set("#section1", {autoAlpha: 0})
@@ -115,6 +179,29 @@
             pin: true,
             pinSpacing: false
         });
+
+
+
+        // bg
+        // gsap.utils.toArray("#main > section").forEach((item) => {
+        //     let color = item.getAttribute("data-bgcolor");
+
+        //     ScrollTrigger.create({
+        //         trigger: item,
+        //         start: "top top",
+        //         end: "bottom bottom",
+        //         markers: true,
+
+        //         onEnter: () => gsap.to("body", {
+        //             backgroundColor: color,
+        //             duration: 1.4,
+        //         }),
+        //         onEnterBack: () => gsap.to("body", {
+        //             backgroundColor: color,
+        //             duration: 1.4,
+        //         }),
+        //     });
+        // });
         
     </script>
 

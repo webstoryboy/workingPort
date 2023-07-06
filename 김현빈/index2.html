@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Scroll Effect</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <style>
+        #parallax__cont {
+            width: 900%;
+            display: flex;
+            flex-wrap: nowrap;
+            color: #fff;
+        }
+        #section1 {background-color: #333;}
+        #section2 {background-color: #444; width: 100%;}
+        #section3 {background-color: #555; width: 100%;}
+        #section4 {background-color: #666; width: 100%;}
+        #section5 {background-color: #777; width: 100%;}
+        #section6 {background-color: #888; width: 100%;}
+        #section7 {background-color: #999; width: 100%;}
+        #section8 {background-color: #111; width: 100%;}
+        #section9 {background-color: #222; width: 100%;}
+
+        .parallax__item {
+            height: 100vh;
+            position: relative;
+            font-size: 40px;
+        }
+
+        /* section1 */
+        #section1 {
+            background-color: #fff;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        #section1 .img {
+            width: 50vh;
+            height: 80vh;
+            /* visibility: hidden; */
+            overflow: hidden;
+        }
+        #section1 .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transform-origin: left;
+        }
+        #section1 .desc {
+            color: #333;
+            width: 36vh;
+            font-family: 'IropkeBatang';
+            margin-left: 6vh;
+            margin-top: 4vh;
+            margin-right: 6vh;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        #section1 .desc span {
+            display: inline-block;
+            text-align: right;
+            width: 100%;
+            margin-top: 10px;
+            color: #666
+        }
+    </style>
+</head>
+<body>
+
+    <main id="parallax__cont">
+        <section id="section1" class="parallax__item">
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1687208833983-ab2ac071fa41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="메인 이미지" />
+            </div>
+            <div class="desc">
+                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                <span>2022.03.04<br>김현빈</span>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2" class="parallax__item">
+            <span class="parallax__item__num">02</span>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3" class="parallax__item">
+            <span class="parallax__item__num">03</span>
+           
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4" class="parallax__item">
+            <span class="parallax__item__num">04</span>
+           
+        </section>
+        <!-- //section4 -->
+
+        <section id="section5" class="parallax__item">
+            <span class="parallax__item__num">05</span>
+           
+        </section>
+        <!-- //section5 -->
+
+        <section id="section6" class="parallax__item">
+            <span class="parallax__item__num">06</span>
+        
+        </section>
+        <!-- //section6 -->
+
+        <section id="section7" class="parallax__item">
+            <span class="parallax__item__num">07</span>
+            
+        </section>
+        <!-- //section7 -->
+
+        <section id="section8" class="parallax__item">
+            <span class="parallax__item__num">08</span>
+           
+        </section>
+        <!-- //section8 -->
+
+        <section id="section9" class="parallax__item">
+            <span class="parallax__item__num">09</span>
+            
+        </section>
+        <!-- //section9 -->
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+    <script>
+        // 스무스 효과
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 가로 모드
+        let sections = gsap.utils.toArray(".parallax__item");
+
+        let scrollTween = gsap.to(sections, {
+            x: -(document.querySelector("#parallax__cont").offsetWidth - window.innerWidth),
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#parallax__cont",
+                pin: true,
+                anticipatePin: 1,
+                scrub: 1,
+                end: "+=7000"
+            }
+        });
+    </script>
+</body>
+</html>

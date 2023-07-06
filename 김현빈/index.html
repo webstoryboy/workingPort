@@ -138,9 +138,9 @@
             tl.to (".text-wrap .t3", {duration: 0.6, autoAlpha: 1, y:0, ease: Power1.out})
         }, 2000);
 
-
         // 가로 모드
         let sections = gsap.utils.toArray(".parallax__item");
+
         let scrollTween = gsap.to(sections, {
             x: -(document.querySelector("#parallax__cont").offsetWidth - window.innerWidth),
             ease: "none",
@@ -149,9 +149,12 @@
                 pin: true,
                 anticipatePin: 1,
                 scrub: 1,
-                end: "+=7000",
+                end: "+=7000"
             }
         });
+
+
+
 
         // 섹션1
         gsap.to(".text-wrap .t2", {

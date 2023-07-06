@@ -1,7 +1,31 @@
 body {
     background-size: 30px 30px;
-    background-image: repeating-radial-gradient( #e414ff 0px, #000000 2px, #000000 48px);
+    background-image: repeating-radial-gradient( #a010b3 0px, #000000 2px, #000000 48px);
 }
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+#header .logo  {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+#header .logo {
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Abel';
+}
+
+
 
 #section1 {
     width: 100%;
@@ -44,4 +68,126 @@ body {
 
 #section2 {
     height: 3000px;
+}
+
+
+@font-face {
+    font-family: "neontubes";
+    src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+    src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    padding: 20px;
+    display: block;
+    font-family: "neontubes";
+    font-size: 16vw;
+    transform: rotate(-4deg);
+    color: #ffd9e2;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, 0.5), 0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
+    animation: blink 4s infinite alternate;
+}
+@keyframes blink {
+    40% {
+        opacity: 1;
+    }
+    42% {
+        opacity: 0.8;
+    }
+    43% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0.2;
+    }
+    46% {
+        opacity: 1;
+    }
+}
+  
+
+
+/* section2 */
+#section2 {
+    background-color: #170619;
+    padding: 4vw;
+}
+#section2 h2 {
+    font-size: 10vw;
+    line-height: 0.9;
+    color: #EA3CFD;
+    text-transform: uppercase;
+    font-family: 'Orbitron';
+    padding-top: 10vw;
+    font-weight: 100;
+}
+#section2 p {
+    color: #fff;
+    font-family: 'IropkeBatang';
+}
+#section2 .box {
+    width: 40vw;
+    border: 1px solid #EA3CFD;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: #ea3cfd4e;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50vw;
+}
+#section2 .box .left {
+    width: 20%;
+    text-align: center;
+}
+#section2 .box .left span {
+    background-color: #EA3CFD;
+    color: #000;
+    text-transform: uppercase;
+    padding: 0px 8px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+#section2 .box .left em {
+    color: #EA3CFD;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+#section2 .box .right {
+    width: 75%;
+}
+#section2 .box .right h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#section2 .box .right p {
+    color: #b2b2b2;
+}
+
+
+
+
+/* line */
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #EA3CFD;
+    display: block;
+    margin-top: 50px;
+    position: relative;
+}
+.line::before {
+    content: '';
+    height: 20px;
+    width: 2px;
+    background-color: #EA3CFD;
+    position: absolute;
+    left: 0;
+    top: 0;
 }

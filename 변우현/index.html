@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header id="header">
+        <h1 class="logo">portfolio</h1>
+
+    </header>
+    <!-- //header -->
+
     <div id="contents">
         <section id="section1">
             <h1>portfolio</h1>
@@ -25,7 +34,37 @@
             </div>
             <canvas id="canvas"></canvas>
         </section>
-        <section id="section2"></section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <h2>about<br><em>me</em></h2>
+            <span class="line"></span>
+            
+            <div class="box">
+                <div class="left">
+                    <img src="https://fitalux-portfolio-vite-2023.netlify.app/assets/desc_img-25aa54f5.png" alt="">
+                    <span>frontend</span>
+                    <em>04.09 ~ 08.03</em>
+                </div>
+                <div class="right">
+                    <h3>배움에 대한 열정과 자신감</h3>
+                    <p>
+                        특성화 고등학교의 디지털 미디어과를 졸업한 후, 다양한 분야의 업무를 경험하다가 우연히 직업 훈련학교에서 일하게 되었습니다. 강의실 칠판에 남은 흔적들과 펼쳐진 책들에 눈길을 두는 동안, 마음 깊은 곳에서 차오르던 우리 고양감을 잊지 않고 오직 '배우고 싶다'는 열정 하나로 6개월간의 여정을 시작했습니다.<br><br>
+
+                        이 직업 훈련학교에서는 전문가들로부터 직접적인 지도를 받으며, 다양한 기술과 지식을 습득할 수 있는 기회를 가졌습니다. 나는 학습의 과정에서 열정과 자기 자신에 대한 믿음을 더욱 확고히 하였습니다. 실전 훈련을 통해 문제를 해결하고 협업하는 방법을 배웠고, 시간에 쫓기지 않고도 목표를 이룰 수 있는 계획력을 키웠습니다.<br><br>
+                        
+                        6개월이라는 짧은 기간이었지만, 나는 열정과 자신감이 가득한 사람들과 함께 공부하고 성장하는 경험을 했습니다. 직업 훈련학교에서는 동료들과의 소통과 협업을 통해 실제 업무 상황을 모의하여 학습했습니다. 이러한 실전 훈련은 나에게 진정한 자신감을 심어주었고, 나의 잠재력을 발휘할 수 있는 기회를 제공했습니다.<br><br>
+                        
+                        이제 나는 배움에 대한 열정과 자신감을 가지고 더욱 높은 목표를 향해 나아갈 준비가 되었습니다. 나는 새로운 도전과 학습의 기회를 찾기 위해 끊임없이 노력할 것이며, 내가 얻은 지식과 기술을 활용하여 다양한 분야에서 성공을 이루고 싶습니다.<br><br>
+                        
+                        때로는 어려움과 실패가 찾아올 수도 있겠지만, 나는 그것을 좌절로 받아들이지 않고 새로운 도약의 기회로 삼을 것입니다. 나는 배움의 여정에서 끊임없이 성장하고, 내가 원하는 꿈을 실현하기 위해 열심히 노력할 것입니다.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+        <!-- //section2 -->
+
         <section id="section3"></section>
         <section id="section4"></section>
         <section id="section5"></section>
@@ -33,6 +72,9 @@
     </div>
 
 
+
+
+   
     <script id="vertex" type="text/glsl">
         #define NORMAL
     
@@ -52,9 +94,7 @@
         #include <clipping_planes_pars_vertex>
         
         void main() {
-        
             #include <uv_vertex>
-        
             #include <beginnormal_vertex>
             #include <morphnormal_vertex>
             #include <skinbase_vertex>
