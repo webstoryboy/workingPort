@@ -148,7 +148,8 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 #section2 .sec2-desc span {
     font-size: 4vw;
@@ -164,6 +165,68 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     padding: 2vw;
+}
+#section2 .sec2-about {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 2vw;
+}
+#section2 .sec2-about > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#section2 .sec2-about > div h3 {
+    width: 20%;
+    font-family: "Abel";
+    font-size: 26px;
+}
+#section2 .sec2-about > div h3 em {
+    border: 1px solid #000;
+    padding: 5px 20px;
+    border-radius: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+#section2 .sec2-about > div p {
+    width: 77%;
+    border-bottom: 1px solid #000;
+    font-size: 4vw;
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    padding-bottom: 100px;
+    padding-top: 20px;
+}
+#section2 .sec2-about > div p em {
+    background-color: #FF3D00;
+    color: #fff;
+}
+
+#section2 .sec2-about .t1 p {
+    font-size: 4vw;
+    line-height: 1.2;
+    font-weight: 200;
+    text-transform: uppercase;
+    border-top: 1px solid #000;
+}
+#section2 .sec2-about .t2 p {
+    font-size: 2vw;
+    font-weight: 400;
+}
+#section2 .sec2-about .t3 p {
+    font-size: 2vw;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#section2 .sec2-about .skill-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#section2 .sec2-about .skill-box > div {
+    width: 32%;
+    height: 500px;
 }
 
 
@@ -201,8 +264,56 @@ body {
 #section3 .sec3-desc h3 {
     font-size: 10vw;
     line-height: 1;
-    font-family: 'Red Hat Display';
     font-family: 'NanumSquareNeo';
     font-weight: 900;
     text-transform: uppercase;
+}
+
+
+.sec3-site {
+    margin-top: 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 2vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    
+}
+.sec3-site .site {
+    display: flex;
+    align-items: center;
+}
+.sec3-site .site .left {
+    width: 70%;
+    padding: 5%;
+}
+.sec3-site .site .right {
+    width: 50%;
+}
+.sec3-site .site .right h4 {
+    color: #5927CC;
+    font-size: 40px;
+    font-family: 'NanumSquareNeo';
+    font-size: 4vw;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+.sec3-site .site .right p {
+    font-family: 'NanumSquareNeo';
+    font-size: 16px;
+    line-height: 1.6;
+}
+.sec3-site .site .right a {
+    background-color: #5927CC;
+    color: #fff;
+    padding: 5px 20px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'NanumSquareNeo';
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
 }
