@@ -60,9 +60,9 @@
                 <span>css</span>
             </div>
             <div class="title-wrap">
-                <div class="t1">Let's go<img class="img" src="assets/img/section01.png" alt="dd"></div>
-                <div class="t2">portfolio<img class="img" src="assets/img/section02.png" alt="dd"></div>
-                <div class="t3">frontend<img class="img" src="assets/img/section03.png" alt="dd"></div>
+                <div class="t1">Let's go</div>
+                <div class="t2">portfolio</div>
+                <div class="t3">frontend</div>
             </div>
             <div class="bg-wrap">
                 <div class="bg"></div>
@@ -90,11 +90,72 @@
         </section>
         <!-- //section1 -->
 
-        <section id="section2" data-bgcolor="#000">
-
+        <section id="section2" data-bgcolor="#fff">
+            <div class="name">
+                <img src="https://noji-portfolio.netlify.app/assets/sign-29e8d240.png" alt="d">
+            </div>
+            <div class="img-wrap">
+                <div class="img i1"></div>
+                <div class="img i2"></div>
+                <div class="img i3"></div>
+                <div class="img i4"></div>
+                <div class="img i5"></div>
+            </div>
+            <div class="text-wrap">
+                <div class="text t1">
+                    저는 오픈 마인드를 가진 탐구하는 사람이 되고자 합니다.<br>
+                    새로운 것을 받아들이고 학습하는 것을 즐깁니다. <br>
+                    실패와 도전을 두려워하지 않고 성장하려고 노력합니다.<br>
+                </div>
+                <div class="text t2">
+                    저는 오픈 마인드를 가진 탐구하는 사람이 되고자 합니다.2<br>
+                    새로운 것을 받아들이고 학습하는 것을 즐깁니다. <br>
+                    실패와 도전을 두려워하지 않고 성장하려고 노력합니다.<br>
+                </div>
+                <div class="text t3">
+                    저는 오픈 마인드를 가진 탐구하는 사람이 되고자 합니다.3<br>
+                    새로운 것을 받아들이고 학습하는 것을 즐깁니다. <br>
+                    실패와 도전을 두려워하지 않고 성장하려고 노력합니다.<br>
+                </div>
+                <div class="text t4">
+                    저는 오픈 마인드를 가진 탐구하는 사람이 되고자 합니다.4<br>
+                    새로운 것을 받아들이고 학습하는 것을 즐깁니다. <br>
+                    실패와 도전을 두려워하지 않고 성장하려고 노력합니다.<br>
+                </div>
+                <div class="text t5">
+                    저는 오픈 마인드를 가진 탐구하는 사람이 되고자 합니다.5<br>
+                    새로운 것을 받아들이고 학습하는 것을 즐깁니다. <br>
+                    실패와 도전을 두려워하지 않고 성장하려고 노력합니다.<br>
+                </div>
+            </div>
         </section>
         <!-- //section2 -->
-        <section id="section3"></section>
+
+        <section id="section3">
+            <div class="site-wrap">
+                <div class="site s1">
+                    <div class="img"></div>
+                    <h3>javascript</h3>
+                    <p>자바스크립트를 이용하여, 패럴랙스 효과를 구현했습니다.<br>패럴랙스의 다양햔 효과와 원리를 이해할 수 있었습니다.</p>
+                    <div class="btn">
+                        <a href="#">code</a>
+                        <a href="#">view</a>
+                    </div>
+                </div>
+
+                <div class="site s2">
+                    <div class="img"></div>
+                    <h3>javascript</h3>
+                    <p>자바스크립트를 이용하여, 패럴랙스 효과를 구현했습니다.<br>패럴랙스의 다양햔 효과와 원리를 이해할 수 있었습니다.</p>
+                    <div class="btn">
+                        <a href="#">code</a>
+                        <a href="#">view</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
         <section id="section4"></section>
         <section id="section5"></section>
         <section id="section6"></section>
@@ -143,6 +204,47 @@
             markers: true
         });
 
+        gsap.set(".text-wrap .t1", {duration: 1, y: 100, autoAlpha: 0, ease: "power2.out"})
+        gsap.set(".text-wrap .t2", {duration: 1, y: 100, autoAlpha: 0, ease: "power2.out"})
+        gsap.set(".text-wrap .t3", {duration: 1, y: 100, autoAlpha: 0, ease: "power2.out"})
+        gsap.set(".text-wrap .t4", {duration: 1, y: 100, autoAlpha: 0, ease: "power2.out"})
+        gsap.set(".text-wrap .t5", {duration: 1, y: 100, autoAlpha: 0, ease: "power2.out"})
+
+        const ani2 = gsap.timeline();
+        ani2.to(".img-wrap .i1", {duration: 2, top: "-100%", delay: 2})
+            .to(".text-wrap .t1", {duration: 1, y: 0, autoAlpha: 1, ease: "power2.out"}, "-=1")
+            .to(".text-wrap .t1", {duration: 1, y: -100, autoAlpha: 0, ease: "power2.out", delay: 1})
+
+            .to(".img-wrap .i2", {duration: 2, top: "-100%"})
+            .to(".text-wrap .t2", {duration: 1, y: 0, autoAlpha: 1, ease: "power2.out"}, "-=1")
+            .to(".text-wrap .t2", {duration: 1, y: -100, autoAlpha: 0, ease: "power2.out", delay: 1})
+
+            .to(".img-wrap .i3", {duration: 2, top: "-100%"})
+            .to(".text-wrap .t3", {duration: 1, y: 0, autoAlpha: 1, ease: "power2.out"}, "-=1")
+            .to(".text-wrap .t3", {duration: 1, y: -100, autoAlpha: 0, ease: "power2.out", delay: 1})
+
+            .to(".img-wrap .i4", {duration: 2, top: "-100%"})
+            .to(".text-wrap .t4", {duration: 1, y: 0, autoAlpha: 1, ease: "power2.out"}, "-=1")
+            .to(".text-wrap .t4", {duration: 1, y: -100, autoAlpha: 0, ease: "power2.out", delay: 1})
+
+            .to(".img-wrap .i5", {duration: 2, top: "-100%"})
+            .to(".text-wrap .t5", {duration: 1, y: 0, autoAlpha: 1, ease: "power2.out"}, "-=1")
+            .to(".text-wrap .t5", {duration: 1, y: -100, autoAlpha: 0, ease: "power2.out", delay: 1})
+
+            .to("#section2 .name", {duration: 2, rotation: 360, scale: 1.5, left: "50%", top: "50%", x: "-50%", y: "-50%"})
+            .to("#section2 .name", {duration: 4, scale: 50})
+            .to("#section2", {duration: 1, backgroundColor: "#000"}, "-=2")
+
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#section2",
+            start: "top top",
+            end: "+=8000",
+            scrub: true,
+            pin: true, 
+            anticipatePin: 1,
+            markers: true
+        });
 
        
 

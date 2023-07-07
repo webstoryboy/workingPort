@@ -118,8 +118,127 @@
 
 /* section2 */
 #section2  {
-    height: 2000px;
-    background-color: red;
+    height: 100vh;
     position: relative;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+#section2 .name {
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    width: 200px;
+    z-index: 10000;
+}
+#section2 .img-wrap {
+    width: 20vw;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+#section2 .text-wrap .text {
+    position: absolute;
+    left: 63%;
+    top: 45%;
+    width: 20vw;
+    height: 40vh;
+    color: #000;
+    font-family: 'IropkeBatang';
+    font-size: 16px;
+    line-height: 1.5;
+}
+#section2 .text-wrap .text.t2, #section2 .text-wrap .text.t4 {
+    left: 16%;
+    text-align: right;
+}
+#section2 .img-wrap .img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+#section2 .img-wrap .i1 {
+    background-image: url(https://noji-portfolio.netlify.app/assets/section03_img-min-95b8e24a.png);
+    z-index: 500;
+}
+#section2 .img-wrap .i2 {
+    background-image: url(https://noji-portfolio.netlify.app/assets/section04_03-min-1e3d4d6a.png);
+    z-index: 400;
+}
+#section2 .img-wrap .i3 {
+    background-image: url(https://noji-portfolio.netlify.app/assets/section04_04-min-8a4fe98d.png);
+    z-index: 300;
+}
+#section2 .img-wrap .i4 {
+    background-image: url(https://noji-portfolio.netlify.app/assets/section04_02-min-2386d2a9.png);
+    z-index: 200;
+}
+#section2 .img-wrap .i5 {
+    background-image: url(https://noji-portfolio.netlify.app/assets/section04_01-min-5a22b7de.png);
+    z-index: 100;
+}
+
+
+
+#section3 {
+    height: 8000px;
+    position: relative;
+    z-index: 3000;
+    padding: 10vh;
+    background-color: #000;
+}
+.site-wrap {}
+.site-wrap .site {
+}
+.site-wrap .site .img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+.site-wrap .site h3 {
+    font-family: 'Grandiflora One', serif;
+    font-size: 4vw;
+    line-height: 1;
+    color: #fff;
+}
+.site-wrap .site p {
+    font-family: 'IropkeBatang';
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.site-wrap .btn a {
+    background: #fff;
+    color: #000;
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+
+.site-wrap .site.s1 {
+    width: 40vw;
+    height: 45vh;
+    margin-top: 30vh;
+    margin-left: 40vw;
+}
+.site-wrap .site.s1 .img {
+    background-image: url(https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+}
+.site-wrap .site.s2 {
+    width: 25vw;
+    height: 65vh;
+    margin-top: 30vh;
+    margin-left: 10vw;
+}
+.site-wrap .site.s2 .img {
+    background-image: url(https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=710&q=80);
+}
+
