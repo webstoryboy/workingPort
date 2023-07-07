@@ -195,10 +195,10 @@
 
 
 #section3 {}
-.title-wrap {
+#section3 .title-wrap {
     padding: 20px;
 }
-.title-wrap > div {
+#section3 .title-wrap > div {
     font-size: 7vw;
     font-family: 'Neue Haas Grotesk Display Pro';
     font-weight: 900;
@@ -206,19 +206,19 @@
     line-height: 0.91;
     text-transform: uppercase;
 }
-.title-wrap .sec3-title1 {
+#section3 .title-wrap .sec3-title1 {
     background-color: #EBEAE4;
 }
-.title-wrap .sec3-title2 {
+#section3 .title-wrap .sec3-title2 {
     background-color: #b4b4b4;
 }
-.title-wrap .sec3-title3 {
+#section3 .title-wrap .sec3-title3 {
     background-color: #ddaeae;
 }
-.title-wrap .sec3-title4 {
+#section3 .title-wrap .sec3-title4 {
     background-color: #b3ddae;
 }
-.title-wrap .sec3-title5 {
+#section3 .title-wrap .sec3-title5 {
     background-color: #939a93;
 }
 
@@ -282,3 +282,84 @@
 
 .site-wrap .site2 {}
 .site-wrap .site3 {}
+
+
+/* section4 */
+#section4 {
+    background-color: #EBEAE4;
+}
+#section4 .title-wrap {
+    padding: 20px;
+}
+#section4 .title-wrap > div {
+    font-size: 7vw;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-weight: 900;
+    padding: 2.6vw 2vw 2vw 4vw;
+    line-height: 0.91;
+    text-transform: uppercase;
+}
+#section4 .title-wrap .sec4-title1 {
+    background-color: #EBEAE4;
+}
+#section4 .title-wrap .sec4-title2 {
+    background-color: #b4b4b4;
+}
+#section4 .title-wrap .sec4-title3 {
+    background-color: #ddaeae;
+}
+#section4 .title-wrap .sec4-title4 {
+    background-color: #b3ddae;
+}
+#section4 .title-wrap .sec4-title5 {
+    background-color: #939a93;
+}
+.script-wrap {
+    margin: 20px;
+    height: 2000px;
+    border-top: 1px solid #939a93;
+}
+.script-wrap .script {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #939a93;
+    border-bottom: 1px solid #939a93;
+    margin-top: 40px;
+
+}
+.script-wrap .script .left {
+    width: 50%;
+    padding-right: 1%;
+    border-right: 1px solid #939a93;
+}
+.script-wrap .script .right {
+    width: 50%;
+    padding-left: 1%;
+}
+
+.script-wrap .script .view {
+    margin-top: 10vh;
+    background-color: #fff;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+.script-wrap .script .view span {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-size: 3vw;
+    font-weight: 900;
+}
+.script-wrap .script ul {
+    border-top: 1px solid #939a93;
+    margin-top: 20px;
+}
+.script-wrap .script li {
+    padding: 10px;
+    border-bottom: 1px solid #939a93;
+    font-family: 'IropkeBatang';
+
+}
