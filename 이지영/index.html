@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>port</h1>
+        <nav>
+            menu
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <div id="section1">
+        <div class="title__wrap">
+            <div class="t1 split">Lee Jiyoung</div>
+            <div class="t2 split">FRONT Developer</div>
+
+            <div class="info">
+                <span class="left">in seoul
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="right">Scroll Down
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M14.5895 16.0032L5.98291 7.39664L7.39712 5.98242L16.0037 14.589V7.00324H18.0037V18.0032H7.00373V16.0032H14.5895Z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="img__wrap">
+            <div class="img"></div>
+        </div>
+    </div>
+    <!-- //section1 -->
+
+    <div id="section2">
+        <div class="left">
+            As a front-end developer, I will constantly try to acquire a variety of skills and knowledge to provide
+            users with a variety of experiences.
+        </div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+    <!-- //section2 -->
+    <div id="section3"></div><!-- //section3 -->
+    <div id="section4"></div><!-- //section4 -->
+    <div id="section5"></div><!-- //section5 -->
+    <div id="section6"></div><!-- //section6 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+
+    <script>
+        gsap.to(".img__wrap .img", {
+            yPercent: -20,
+            ease: "none",
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: "#section1",
+                start: "top bottom",
+                ene: "bottom top",
+                markers: false,
+                scrub: true
+            }
+        });
+
+        // 04 split-type 사용하기
+        const targets = gsap.utils.toArray(".split");
+
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        });
+
+        gsap.set(".title__wrap .t1 .char", {
+            opacity: 0.6,
+            yPercent: 100,
+        })
+        gsap.set(".title__wrap .t2 .char", {
+            opacity: 0.6,
+            yPercent: 100,
+        })
+        gsap.set(".title__wrap .info", {
+            opacity: 0
+        })
+        gsap.to("#header", { y: -100 });
+        gsap.to(".img__wrap", { width: 0 });
+        gsap.to(".img__wrap .img", { opacity: 0 });
+
+
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+
+            tl.to(".title__wrap .t1 .char", { opacity: 1, yPercent: 0, ease: "power4.out", duration: 1, stagger: 0.0351, })
+            tl.to(".title__wrap .t2 .char", { opacity: 1, yPercent: 0, ease: "power4.out", duration: 1, stagger: 0.0351, }, "-=1")
+            tl.to(".title__wrap .info", { opacity: 1 });
+            tl.to("#header", { y: 0 });
+            tl.to(".img__wrap", { width: "100%", ease: "power4.out", duration: 1 });
+            tl.to(".img__wrap .img", { opacity: 1, duration: 1 });
+
+
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

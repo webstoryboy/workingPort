@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Shrikhand&display=swap');
+@import url(https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;900&display=swap');
+@import url('https://webfontworld.github.io/Cafe24Simplehae/Cafe24Simplehae.css');
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    background: rgba(242, 215, 186, 0.50);
+    backdrop-filter: blur(30px);
+    border-radius: 50px;
+    padding: 10px 40px;
+    font-family: 'Poppins';
+}
+
+.header__left h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #6B51FE;
+    margin-right: 30px;
+}
+
+.header__left nav li {
+    display: inline;
+    color: #6B51FE;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+.header__right {
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.header__right li {
+    display: inline;
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+}
+
+.header__right li {
+    width: 66px;
+    height: 66px;
+    border-radius: 100px;
+    display: inline-block;
+    background-image: url(https://images.unsplash.com/photo-1526510747491-58f928ec870f?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+}
+
+.header__right li:nth-child(2) {
+    background-image: url(https://images.unsplash.com/photo-1700123287639-b8ffc3f50f02?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.header__right li:nth-child(3) {
+    background-image: url(https://images.unsplash.com/photo-1684530607818-bcfd35f497b3?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+#section1 {
+    background: linear-gradient(180deg, #F9EDDE 0%, #F5DFC9 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#section1 canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+#section1 .center h2 {
+    font-size: 13vw;
+    font-family: 'Shrikhand';
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #6B51FE
+}
+
+#section1 .center p {
+    text-align: right;
+    font-family: 'nanumSquareNeo';
+    font-family: 'Cafe24Simplehae';
+    color: #4C46E6;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+#section2 {
+    height: 1000px;
+    background-color: #ccc;
+}
