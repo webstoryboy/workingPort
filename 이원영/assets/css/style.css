@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap');
+
+body {
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+}
+
+#mainSection {
+    width: 100%;
+    height: 100vh;
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Bebas Neue';
+    color: #fff;
+}
+
+#mainSection canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#mainSection h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    z-index: 1700;
+    letter-spacing: -0.6vw;
+    line-height: 1;
+}
+
+.main__gird {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    z-index: 1500;
+
+    grid-template-areas:
+        "grid1 grid1 grid1 grid1 grid3 grid3 grid3 grid4 grid4 grid4 grid4 grid4"
+        "grid2 grid2 grid2 grid2 grid3 grid3 grid3 grid4 grid4 grid4 grid4 grid4"
+        "grid5 grid5 grid6 grid6 grid7 grid7 grid8 grid8 grid8 grid8 grid8 grid8"
+        "grid5 grid5 grid6 grid6 grid7 grid7 grid9 grid9 grid9 grid9 grid9 grid9"
+    ;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    position: relative;
+}
+
+.main__gird .item {
+    backdrop-filter: blur(16px);
+    transition: all 1s;
+    background-color: rgba(255, 255, 255, .08);
+    border-radius: 0.5rem;
+    transition: background-color .3s cubic-bezier(.645, .045, .355, 1);
+    position: relative;
+}
+
+.main__gird .item span {
+    line-height: 1;
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-family: 'Abel';
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+}
+
+.main__gird .item:hover {
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, .58);
+    z-index: 30000;
+}
+
+.main__gird .item.none {
+    backdrop-filter: blur(0);
+}
+
+.main__gird .item:nth-child(1) {
+    grid-area: grid1;
+}
+
+.main__gird .item:nth-child(2) {
+    grid-area: grid2;
+}
+
+.main__gird .item:nth-child(3) {
+    grid-area: grid3;
+}
+
+.main__gird .item:nth-child(4) {
+    grid-area: grid4;
+}
+
+.main__gird .item:nth-child(5) {
+    grid-area: grid5;
+}
+
+.main__gird .item:nth-child(6) {
+    grid-area: grid6;
+}
+
+.main__gird .item:nth-child(7) {
+    grid-area: grid7;
+}
+
+.main__gird .item:nth-child(8) {
+    grid-area: grid8;
+}
+
+.main__gird .item:nth-child(9) {
+    grid-area: grid9;
+}

@@ -1,0 +1,192 @@
+#header div {
+    position: fixed;
+    font-family: 'GmarketSans';
+    color: #fff;
+    z-index: 1000;
+    text-transform: uppercase;
+}
+
+#header .leftTop {
+    left: 10px;
+    top: 10px;
+    font-size: 18px;
+    font-weight: 900;
+
+}
+
+#header .rightTop {
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    opacity: 0.3;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#section1 #stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#section1 .center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'GmarketSans';
+    flex-direction: column;
+}
+
+#section1 .center .top {
+    font-size: 13vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 0.9;
+    padding-top: 0.7vw;
+    color: #fff;
+
+}
+
+#section1 .center .img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.1vw;
+    justify-content: space-between;
+}
+
+#section1 .center .img>div {
+    width: 6vw;
+    height: 8vw;
+    margin: 0.1vw;
+    border-radius: 10px;
+    background-image: url(https://source.unsplash.com/500x500/?water);
+    background-size: cover;
+    background-position: center center;
+}
+
+#section1 .center .img>div:nth-child(1) {
+    background-image: url(https://source.unsplash.com/500x500/?abstract)
+}
+
+#section1 .center .img>div:nth-child(2) {
+    background-image: url(https://source.unsplash.com/500x500/?animal)
+}
+
+#section1 .center .img>div:nth-child(3) {
+    background-image: url(https://source.unsplash.com/500x500/?visual)
+}
+
+#section1 .center .img>div:nth-child(4) {
+    background-image: url(https://source.unsplash.com/500x500/?story)
+}
+
+#section1 .center .img>div:nth-child(5) {
+    background-image: url(https://source.unsplash.com/500x500/?space)
+}
+
+#section1 .center .img>div:nth-child(6) {
+    background-image: url(https://source.unsplash.com/500x500/?technology)
+}
+
+#section1 .center .img>div:nth-child(7) {
+    background-image: url(https://source.unsplash.com/500x500/?texture)
+}
+
+#section1 .center .img>div:nth-child(8) {
+    background-image: url(https://source.unsplash.com/500x500/?food)
+}
+
+#section1 .center .img>div:nth-child(9) {
+    background-image: url(https://source.unsplash.com/500x500/?interior)
+}
+
+#section1 .center .img>div:nth-child(10) {
+    background-image: url(https://source.unsplash.com/500x500/?abstract)
+}
+
+#section1 .center .img>div:nth-child(11) {
+    background-image: url(https://source.unsplash.com/500x500/?art)
+}
+
+#section1 .center .img>div:nth-child(12) {
+    background-image: url(https://source.unsplash.com/500x500/?red)
+}
+
+#section1 .center .img>div:nth-child(13) {
+    background-image: url(https://source.unsplash.com/500x500/?black)
+}
+
+#section1 .center .img>div:nth-child(14) {
+    background-image: url(https://source.unsplash.com/500x500/?blue)
+}
+
+#section1 .center .img>div:nth-child(15) {
+    background-image: url(https://source.unsplash.com/500x500/?yellow)
+}
+
+#section1 .center .img>div:nth-child(16) {
+    background-image: url(https://source.unsplash.com/500x500/?abstract)
+}
+
+#section1 .center .bom {
+    font-size: 13vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 0.9;
+    padding-top: 0.7vw;
+    color: #fff;
+}
+
+
+
+
+
+#section2 {
+    height: 2000px;
+    background-color: #fff;
+    margin-top: 100vh;
+    border-radius: 100px;
+    padding: 10%;
+}
+
+#section2 .text {}
+
+#section2 .text>div:nth-child(1) {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'GmarketSans';
+
+}
+
+#section2 .text>div:nth-child(2) {
+    font-family: PartizenoRegular;
+    font-size: 8vw;
+    line-height: 0.8;
+    padding-left: 5vw;
+}
+
+#section2 .text>div:nth-child(3) {
+    font-family: PartizenoRegular;
+    font-size: 12vw;
+    line-height: 0.8;
+    padding-left: 15vw;
+    margin-top: -1vw;
+}

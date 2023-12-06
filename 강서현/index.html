@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="leftTop">
+            <a href="#">visual</a>
+        </div>
+        <div class="rightTop">
+            <a href="#">Github</a>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="section1">
+        <div class="center">
+            <div class="top split">visual</div>
+            <div class="img">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="bom split">stories</div>
+        </div>
+        <canvas id="stars"></canvas>
+    </div>
+    <!-- //section1 -->
+
+    <div id="section2">
+        <div class="text">
+            <div class="split">hey</div>
+            <div class="split">creative</div>
+            <div class="split">developer</div>
+        </div>
+    </div>
+    <!-- //serction2 -->
+
+    <div id="section3"></div>
+    <div id="section4"></div>
+    <div id="section5"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        const targets = gsap.utils.toArray(".split");
+
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        });
+
+        gsap.set(".center .top .line", { overflow: "hidden" })
+        gsap.set(".center .bom .line", { overflow: "hidden" })
+        gsap.set(".center .top .char", { opacity: 0, y: 100 })
+        gsap.set(".center .bom .char", { opacity: 0, y: -100 })
+        gsap.set(".center .img div", { opacity: 0, scale: 2.5 })
+        gsap.set(".leftTop", { opacity: 1, top: "-50" })
+        gsap.set(".rightTop", { opacity: 1, top: "-50" })
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+
+            tl.to(".center .top .char", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, "a")
+            tl.to(".center .bom .char", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, "a")
+            tl.to(".center .img div", { opacity: 1, scale: 1, stagger: { amount: 2, from: "random" } })
+            tl.to(".leftTop", { opacity: 1, top: 10 }, "b")
+            tl.to(".rightTop", { opacity: 1, top: 10 }, "b")
+        }, 2000)
+
+
+        // 
+        const stars = document.getElementById('stars');
+        const starsCtx = stars.getContext('2d');
+
+        let screen, starsElements, starsParams = { speed: 2, number: 300, extinction: 4 };
+
+        setupStars();
+        updateStars();
+
+        window.onresize = function () {
+            setupStars();
+        };
+
+        function Star() {
+            this.x = Math.random() * stars.width;
+            this.y = Math.random() * stars.height;
+            this.z = Math.random() * stars.width;
+
+            this.move = function () {
+                this.z -= starsParams.speed;
+                if (this.z <= 0) {
+                    this.z = stars.width;
+                }
+            };
+
+            this.show = function () {
+                let x, y, rad, opacity;
+                x = (this.x - screen.c[0]) * (stars.width / this.z);
+                x = x + screen.c[0];
+                y = (this.y - screen.c[1]) * (stars.width / this.z);
+                y = y + screen.c[1];
+                rad = stars.width / this.z;
+                opacity = (rad > starsParams.extinction) ? 1.5 * (2 - rad / starsParams.extinction) : 1;
+
+                starsCtx.beginPath();
+                starsCtx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
+                starsCtx.arc(x, y, rad, 0, Math.PI * 2);
+                starsCtx.fill();
+            }
+        }
+
+        function setupStars() {
+            screen = {
+                w: window.innerWidth,
+                h: window.innerHeight,
+                c: [window.innerWidth * 0.5, window.innerHeight * 0.5]
+            };
+            window.cancelAnimationFrame(updateStars);
+            stars.width = screen.w;
+            stars.height = screen.h;
+            starsElements = [];
+            for (let i = 0; i < starsParams.number; i++) {
+                starsElements[i] = new Star();
+            }
+        }
+
+        function updateStars() {
+            starsCtx.fillStyle = "black";
+            starsCtx.fillRect(0, 0, stars.width, stars.height);
+            starsElements.forEach(function (s) {
+                s.show();
+                s.move();
+            });
+            window.requestAnimationFrame(updateStars);
+        }
+    </script>
+    </script>
+</body>
+
+</html>
