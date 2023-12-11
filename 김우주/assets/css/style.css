@@ -1,0 +1,90 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff31;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+#header h1 {
+    color: #fff;
+    font-family: Abel;
+    font-size: 20px;
+}
+
+#header nav li {
+    display: inline-block;
+}
+
+#header nav li a {
+    color: #E6E6E6;
+    font-family: abel;
+    padding: 3px 10px;
+}
+
+
+#section1 {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#section1 canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#section1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000c9;
+}
+
+#section1 .center {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+
+#section1 .center .title {
+    font-size: 4vw;
+    font-family: 'GmarketSans';
+    margin-bottom: 3vw;
+    line-height: 1.4;
+    text-transform: capitalize;
+}
+
+#section1 .center .desc {
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: 'IropkeBatang';
+    word-break: keep-all;
+}
+
+.logo {
+    display: none;
+}
+
+
+
+
+#section2 {
+    height: 2000px;
+    background-color: #000;
+}

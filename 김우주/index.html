@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Frontend Developer - WK</h1>
+        <nav>
+            <ul>
+                <li><a href="#">about me</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <div id="section1">
+        <div class="center">
+            <div class="title">
+                <div>Creating user-centric</div>
+                <div>development with a focus</div>
+                <div>on usability.</div>
+            </div>
+            <div class="desc">
+                '배움에는 끝이 없다' 라는 말이 있듯이 공부도 100% 라는 완벽한 수치는 없다고 생각합니다.<br>
+                그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도<br>
+                복습하고 새로운 것들을 공부하여 차근차근 프론트엔드 업무에<br>
+                대한 저만의 전문성과 경쟁력을 갖추겠습니다.
+            </div>
+            <div class="logo">
+                <div class="linear__effect"></div>
+                <div class="slider__track" id="sliderTrack1">
+                    <div class="slider">
+                        <div class="text tHtml">HTML</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tCss">CSS3</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tMongo">mongoDB</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tJs">JavaScript</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tReact">React</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tSass">Sass</div>
+                    </div>
+                    <div class="slider ">
+                        <div class="text tJson">Json</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tNode">Node.js</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tJquery">Jquery</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tPhp">PHP</div>
+                    </div>
+                </div>
+                <div class="slider__track" id="sliderTrack2">
+                    <div class="slider">
+                        <div class="text tHtml">HTML</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tCss">CSS3</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tMongo">mongoDB</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tJs">JavaScript</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tReact">React</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tSass">Sass</div>
+                    </div>
+                    <div class="slider ">
+                        <div class="text tJson">Json</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tNode">Node.js</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tJquery">Jquery</div>
+                    </div>
+                    <div class="slider">
+                        <div class="text tPhp">PHP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //section1 -->
+
+    <div id="section2"></div><!-- //section2 -->
+    <div id="section3"></div><!-- //section3 -->
+    <div id="section4"></div><!-- //section4 -->
+    <div id="section5"></div><!-- //section5 -->
+    <div id="section6"></div><!-- //section6 -->
+
+    <div id="container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+        void main() {
+            gl_Position = vec4( position, 1.0 );
+        }
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        precision highp float;
+
+        uniform vec2 resolution;
+        uniform float time;
+        uniform vec2 mouse;
+        uniform sampler2D backbuffer;
+
+        vec3 wave(vec2 uv,float speed, float thickness, float amplitude, float delay, vec3 color){
+            float shake = mix(0.0, 1.0, amplitude);
+            float wave = sin(delay + mod(uv.x+uv.y/2.0,0.25) * 1.0 - time * speed ) / 5.0 * shake;
+            float colwave = thickness /  abs((1.0-length(uv))+wave); //線の太さ
+            return color * colwave;
+        }
+        
+        float random (in vec2 st) {
+            return fract(cos(dot(st.xy,vec2(12.9898,78.233))) * 43758.5453123);
+        }
+
+        void main(void) {
+            vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+            vec3 col0 = wave(uv,0.1,0.08,8.0,5., vec3(0.6, 0.6, 0.6));
+            vec3 col1 = wave(uv,0.2,0.08,9.0,6., vec3(0.4, 0.9, 0.9));
+            vec3 col2 = wave(uv,0.2,0.08,10.0,7., vec3(0.6, 0.9, 0.9));
+            vec3 col3 = wave(uv,0.1,0.08,11.0,8., vec3(0.6, 0.6, 0.6));
+
+            //vec3 col = col0+col1+col2+col3;
+            vec3 col = col0+col1;
+
+            gl_FragColor = vec4(vec3(col), 1.0);
+        }
+    </script>
+    <script>
+        var container;
+        var camera, scene, renderer;
+        var uniforms;
+
+        init();
+        animate();
+
+        function init() {
+            container = document.getElementById('section1');
+
+            camera = new THREE.Camera();
+            camera.position.z = 1;
+
+            scene = new THREE.Scene();
+
+            var geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+            uniforms = {
+                time: {
+                    type: "f",
+                    value: 1.0
+                },
+                resolution: {
+                    type: "v2",
+                    value: new THREE.Vector2()
+                }
+            };
+
+            var material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexShader').textContent,
+                fragmentShader: document.getElementById('fragmentShader').textContent
+            });
+
+            var mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            container.appendChild(renderer.domElement);
+
+            onWindowResize();
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function onWindowResize(event) {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            uniforms.resolution.value.x = renderer.domElement.width;
+            uniforms.resolution.value.y = renderer.domElement.height;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            render();
+        }
+
+        function render() {
+            uniforms.time.value += 0.05;
+            renderer.render(scene, camera);
+        }
+    </script>
+</body>
+
+</html>

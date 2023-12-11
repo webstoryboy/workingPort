@@ -1,0 +1,137 @@
+#mainIntro {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/Wallpaper.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.footer__info {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00000083;
+    backdrop-filter: blur(16px);
+    text-align: center;
+}
+
+.footer__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__info .menu {
+    padding: 10px;
+}
+
+.footer__info .menu li {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.footer__info .menu li:hover {
+    background: #ffffff23;
+}
+
+.footer__info .menu li a {
+    padding: 7px;
+    display: inline-block;
+}
+
+.footer__info .menu img {
+    width: 25px;
+}
+
+
+.layer__about {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 80px;
+    border-radius: 1px;
+}
+
+.layer__about .list {
+    background-color: #223167a8;
+    backdrop-filter: blur(30px);
+    height: calc(100% - 70px);
+    padding: 40px;
+    color: #fff;
+    text-transform: capitalize;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.layer__about .list .work {
+    margin-bottom: 100px;
+}
+
+.layer__about .list .work h3 {
+    margin-bottom: 30px;
+    font-family: "nanumSquareNeo";
+    font-weight: 800;
+}
+
+.layer__about .list .work ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layer__about .list .work ul li {
+    width: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.layer__about .list .work ul li a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ffffff57;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.layer__about .intro {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #22316767;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px 40px;
+    font-family: "nanumSquareNeo";
+    display: flex;
+    border-radius: 0 0 10px 10px;
+}
+
+.layer__about .intro .face {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: #000;
+    margin-right: 10px;
+    background-image: url(https://images.unsplash.com/photo-1681502014934-b70a5ff05bef?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.layer__about .intro h3 {
+    padding-top: 3px;
+}
+
+.layer__about .intro .close {
+    position: absolute;
+    right: 40px;
+    top: 25px;
+    cursor: pointer;
+}
