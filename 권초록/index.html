@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="section">
+        <div class="top">
+            <div class="title split">CHOROK KWON</div>
+            <div class="desc split">
+                안녕하세요. 프론트엔드 개발자를 꿈꾸는 권초록 입니다.<br>
+                저는 하루를 솔직한 모습으로 채워갑니다. 그 무엇보다 정직하고 성실하게 살아가는 것이 제일 중요하다고
+                생각합니다. <br>프론트엔드 개발자를 위한 첫 걸음, 부족한 점이 많지만 성실하게 채운 오늘이<br>
+                내일의 어려운 상황에서 올바른 판단의 기준이 될 것이라 믿습니다. <br>꾸준히 열심을 채우겠습니다.
+            </div>
+        </div>
+        <div class="bom">
+            <div>
+                <ul class="split">
+                    <li><a href="#">youtube site/</a></li>
+                    <li><a href="#">react movie site/</a></li>
+                    <li><a href="#">next blog site/</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="split">
+                    <li><a href="#">javascript/</a></li>
+                    <li><a href="#">scss/</a></li>
+                    <li><a href="#">game/</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="split">
+                    <li><a href="#">php blog/</a></li>
+                    <li><a href="#">react blog/</a></li>
+                    <li><a href="#">next blog/</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        const targets = gsap.utils.toArray(".split");
+
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        })
+        gsap.set("#section .top .title .char", { y: 400 })
+        gsap.set("#section .top .desc .char", { opacity: 0, y: 10 })
+        gsap.set("#section .bom .char", { opacity: 0 })
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+            tl.to("#section .top .title .char", { stagger: 0.03, y: 0, duration: .5, ease: "slow(0.7,0.7,false)" })
+            tl.to("#section .top .desc .char", { stagger: 0.01, y: 0, opacity: 1, duration: 1, ease: "slow(0.7,0.7,false)" })
+            tl.to("#section .bom .char", { opacity: 1 })
+        }, 2000);
+    </script>
+</body>
+
+</html>

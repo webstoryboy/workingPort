@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500;600;700&family=League+Gothic&display=swap');
+
+#section {
+    width: 100%;
+    height: 100vh;
+    background-color: #E0E1E3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#section .top {}
+
+#section .top .title {
+    font-family: 'League Gothic';
+    font-size: 27vw;
+    line-height: 0.8;
+    letter-spacing: -1vw;
+    padding: 1vw;
+    overflow: hidden;
+}
+
+#section .top .desc {
+    margin-left: auto;
+    word-break: keep-all;
+    font-family: 'IropkeBatang';
+    text-align: right;
+    margin-right: 2vw;
+}
+
+#section .bom {
+    font-family: 'KoHo';
+    font-size: 3vw;
+    padding: 2vw;
+}
+
+#section .bom>div {
+    margin-bottom: 1vw;
+}
+
+#section .bom>div:last-child {
+    margin-bottom: 0;
+}
+
+#section .bom>div li {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+#section .bom>div li a {
+    position: relative;
+
+}
+
+#section .bom>div li a::before {
+    content: 'project';
+    color: #4c4c4c;
+    font-size: 16px;
+    vertical-align: 6px;
+    padding-right: 10px;
+}
