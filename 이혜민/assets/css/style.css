@@ -4,6 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;900&display=swap');
 @import url('https://webfontworld.github.io/Cafe24Simplehae/Cafe24Simplehae.css');
 
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 #header {
     position: fixed;
     left: 0;
@@ -113,6 +119,172 @@
 }
 
 #section2 {
-    height: 1000px;
-    background-color: #ccc;
+    background: rgba(242, 215, 186, 0.50);
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.about {
+    font-size: 40px;
+    line-height: 1.7;
+    font-family: 'Cafe24Simplehae';
+    margin-bottom: 200px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.about em {
+    background-color: #FDDE79;
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px 2px #f0c63d;
+}
+
+.about strong {
+    background-color: #F9BE88;
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px 2px #ff9b3e;
+}
+
+.about b {
+    position: relative;
+}
+
+.about b::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background-color: #a696ff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.about span {
+    background-color: #FFADAE;
+    padding: 4px 20px;
+    border-radius: 50px;
+    border: 1px solid #ffa0a1;
+    box-shadow: inset 13px 13px 10px #ffa0a1;
+    transform: rotate(-10deg);
+    display: inline-block;
+    color: #d41518
+}
+
+#section2>div {
+    font-size: 10vw;
+    font-family: 'Poppins';
+    color: #6B51FE;
+}
+
+#section2 .line1 {
+    width: 200%;
+    background-color: #9DECFA;
+    font-weight: 900;
+    transform: rotate(-1deg);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#section2 .line1 span {
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    font-size: 6vw;
+    margin-right: 2vw;
+}
+
+#section2 .line2 {
+    width: 200%;
+    background-color: #FFADAD;
+    font-weight: 100;
+    transform: rotate(1deg);
+    margin-left: -5%;
+}
+
+#section2 .line2 span {
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    font-size: 6vw;
+    margin-right: 2vw;
+}
+
+#section2 .line3 {
+    width: 200%;
+    background-color: #FFE375;
+    font-weight: 500;
+    transform: rotate(-1deg);
+    margin-left: -5%;
+}
+
+#section2 .line3 span {
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    font-size: 6vw;
+    margin-right: 2vw;
+}
+
+#section3 {
+    padding: 300px 0;
+    background: linear-gradient(180deg, rgba(242, 215, 186, 0.50) 0%, #F5DFC9 100%);
+}
+
+#section3 .about {
+    color: #6B51FE;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.site-wrap {}
+
+.site-wrap .site {
+    width: 100%;
+    height: 800px;
+    background-color: #fff;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    padding: 5%;
+    position: relative;
+}
+
+.site-wrap .site h3 {
+    text-align: center;
+    font-size: 7vw;
+    font-family: 'Bodoni Moda';
+    color: #4C46E6;
+}
+
+.site-wrap .site p {
+    font-family: 'Cafe24Simplehae';
+    color: #4C46E6;
+    padding-left: 50%;
+    line-height: 1.6;
+    word-break: keep-all;
+    font-size: 18px;
+}
+
+.site-wrap .site .tag {
+    width: 89%;
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-wrap .site .tag span {
+    background-color: #4C46E6;
+    color: #fff;
+    font-family: 'Cafe24Simplehae';
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.site-wrap .site.s1 {
+    background-color: #FDDE79;
 }

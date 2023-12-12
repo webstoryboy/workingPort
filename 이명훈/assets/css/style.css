@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#header h1 {
+    color: #fff;
+    font-family: 'PPRader';
+    line-height: 1;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#header .nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-family: 'PPRader';
+    text-align: left;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#header .nav li {
+    padding-left: 25px;
+}
+
+#header .nav li.active {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg' class='NavLink__Arrow-sc-spxnpa-2 eCrgcr'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 0.757324L12.2426 4.99996L11.5355 5.70707L11.5353 5.70688L7.99962 9.24259L7.29252 8.53549L10.3281 5.49994H0V4.49994H10.3284L7.29289 1.46443L8 0.757324Z' fill='%236DF6FF'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left 10px;
+}
+
+#header .nav li.active a {
+    color: #6DF6FF;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#section1 .main-text {
+    padding: 4vw;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-55%);
+    z-index: 1000;
+}
+
+#section1 .main-text>div {
+    font-family: 'Orbitron';
+    font-size: 9vw;
+    line-height: 1;
+    color: #fff;
+    font-weight: 100;
+}
+
+#section1 .main-text>div em {
+    font-weight: 700;
+}
+
+
+#section1 .hope {
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    z-index: 10000;
+    font-size: 30px;
+    font-weight: 100;
+    color: #fff;
+    font-family: 'PPRader';
+}
+
+#section1 .hope>div {
+    padding-right: 110px;
+}
+
+#section1 .hope span {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 100px;
+    display: block;
+}
+
+#section1 .hope span img {
+    width: 100%;
+}
+
+
+#section2 {
+    position: relative;
+    height: 2000px;
+    background-color: #000000ae;
+}
+
+#section3 {}
+
+#section4 {}
+
+#section5 {}
