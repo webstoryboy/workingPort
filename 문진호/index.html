@@ -26,12 +26,31 @@
         </div>
         <div class="item noR"></div>
         <div class="item"></div>
-        <div class="item"></div>
+        <div class="item title">
+            <h3>site<em>coding</em></h3>
+            <p class="desc">
+                웹 표준에 충실한 코딩에서 시작하여, 정교한 레이아웃과 반응형 디자인을 완성하고, 패럴랙스 스크롤링 기법을 통해 웹사이트 개발의 깊이를 더했습니다. 이러한 과정을 통해, 저는 사이트
+                코딩의 모든 측면을 섬세하게 다루는 전문성을 키워왔습니다
+            </p>
+            <div class="list">
+                <ul>
+                    <li><a class="pageLink" href="sub1.html">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="item noR title">
             <h2>portfolio</h2>
         </div>
         <div class="item"></div>
-        <div class="item"></div>
+        <div class="item title">
+            <h3>work<em>coding</em></h3>
+            <p class="desc">
+                "'GYOBOK SITE': PHP로 구축한 사용자 맞춤형 웹 경험."
+                "'YOUTUBE SITE': React와 API를 통한 빠르고 동적인 콘텐츠."
+                "'MOVIE SITE': Vue.js와 API로 혁신적인 영화 탐색."</p>
+        </div>
         <div class="item noB"></div>
         <div class="item black"></div>
         <div class="item noR"></div>
@@ -40,6 +59,49 @@
         <div class="item noB"></div>
         <div class="item noR noB"></div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.pageLink').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // 기본 동작 방지
+                    let url = this.href; // 이동할 URL 저장
+
+                    var items = Array.from(document.querySelectorAll('.item'));
+
+                    for (let i = items.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [items[i], items[j]] = [items[j], items[i]];
+                    }
+
+                    items.forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    items.forEach(function (item, index) {
+                        setTimeout(function () {
+                            item.classList.add('active');
+
+                            if (index === items.length - 1) {
+                                setTimeout(function () {
+                                    items.forEach(function (item) {
+                                        item.style.borderColor = 'black'; // 선 색상을 검은색으로 변경
+                                        item.style.transition = "all 1s";
+                                    });
+                                }, 1000); // 'active' 클래스 추가 후 추가적인 지연
+                            }
+
+                        }, 200 * index); // 0.2초 간격
+                    });
+
+                    // 2초 후에 페이지 이동
+                    setTimeout(function () {
+                        window.location.href = url;
+                    }, 12000);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
