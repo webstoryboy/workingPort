@@ -11,40 +11,58 @@
 }
 
 @font-face {
-    font-family: 'PartizenoRegular';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/PartizenoRegular.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'PPRader';
+    font-family: 'PPHatton';
     font-weight: 700;
     font-style: normal;
-    src: url('../fonts/PPRader-Bold.woff2') format('woff2'),
-        url('../fonts/PPRader-Bold.woff') format('woff');
+    src: url('../fonts/PPHatton-Bold.woff2') format('woff2'),
+        url('../fonts/PPHatton-Bold.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'PPRader';
+    font-family: 'PPHatton';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/PPHatton-BoldItalic.woff2') format('woff2'),
+        url('../fonts/PPHatton-BoldItalic.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPHatton';
     font-weight: 500;
     font-style: normal;
-    src: url('../fonts/PPRader-Regular.woff2') format('woff2'),
-        url('../fonts/PPRader-Regular.woff') format('woff');
+    src: url('../fonts/PPHatton-Medium.woff2') format('woff2'),
+        url('../fonts/PPHatton-Medium.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'PPRader';
-    font-weight: 100;
-    font-style: normal;
-    src: url('../fonts/PPRader-Thin.woff2') format('woff2'),
-        url('../fonts/PPRader-Thin.woff') format('woff');
+    font-family: 'PPHatton';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/PPHatton-MediumItalic.woff2') format('woff2'),
+        url('../fonts/PPHatton-MediumItalic.woff') format('woff');
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'PPHatton';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/PPHatton-Ultralight.woff2') format('woff2'),
+        url('../fonts/PPHatton-Ultralight.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPHatton';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/PPHatton-UltralightItalic.woff2') format('woff2'),
+        url('../fonts/PPHatton-UltralightItalic.woff') format('woff');
+    font-display: swap;
+}
 
 /* border-box 초기화 */
 *,

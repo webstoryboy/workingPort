@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+#header h1 {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 300;
+    background-color: #3f3f3f;
+    color: #fff;
+    padding: 6px 50px;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    margin-right: 20px;
+}
+
+#header nav li {
+    display: inline;
+    padding: 0 20px;
+}
+
+#header nav li a {
+    display: inline-block;
+}
+
+#section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #D6D4C7;
+}
+
+.main-text {
+    color: #dbdacc;
+    text-align: center;
+    letter-spacing: -4px;
+    text-shadow: 1px 1px 2px rgba(244, 247, 231, .8),
+        -1px -1px 1px #b2b29f;
+    font-size: 12vw;
+    text-transform: uppercase;
+    line-height: 0.8;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+.card1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'PPHatton';
+    font-size: 3.6vw;
+    line-height: 1;
+    background-image: url("https://assets-global.website-files.com/6003a2d9ee7d8b258bc99da4/64fdcd36e5028769a05277bd_Purple%20(3).svg");
+    padding: 6vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+}
+
+.card2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-120%, -120%);
+    font-family: 'PPHatton';
+    font-size: 3.6vw;
+    line-height: 1;
+    background-image: url("https://assets-global.website-files.com/6003a2d9ee7d8b258bc99da4/64fdcd3673684cc4d9a03f22_Yellow%20(1).svg");
+    padding: 5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    z-index: 100;
+}
+
+.card3 {
+    position: absolute;
+    left: 70%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    font-family: 'PPHatton';
+    font-size: 3.6vw;
+    line-height: 1;
+    background-image: url("https://assets-global.website-files.com/6003a2d9ee7d8b258bc99da4/64fdcd7dbd89df5714bc6a84_Green%20(1).svg");
+    padding: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    z-index: 100;
+}
