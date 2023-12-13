@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 #intro {
     display: flex;
     align-items: center;
@@ -8,20 +10,93 @@
 }
 
 #intro .text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    z-index: 2000;
+    transform: translate(-50%, -50%);
     font-size: 4vw;
-    color: #fff;
+    color: #000;
+    overflow: hidden;
+    line-height: 1;
 }
 
-#intro .bg {
+#intro .bg-main {
     font-size: 10vw;
     position: absolute;
-    z-index: -1;
+    z-index: 10;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
     height: 100vh;
-    width: 100vw;
-    background-image: url(https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-color: #000;
+    overflow: hidden;
+
+}
+
+#intro .bg-main .bg {
+    width: 120%;
+    height: 120%;
+    margin-left: -10%;
+    transform: scale(1.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(https://images.unsplash.com/photo-1659469378420-e68c6ee21a28?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+#intro .bg-white {
+    width: 75%;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+#intro .bg-white .tl {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+#intro .bg-white .tr {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-family: 'Poppins';
+}
+
+#intro .bg-white .bl {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    font-family: 'Poppins';
+}
+
+#intro .bg-white .br {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-family: 'Poppins';
+}
+
+#intro .bg-small {
+    width: 200px;
+    height: 30vh;
+    background-color: #000;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 500;
+    background-image: url(https://images.unsplash.com/photo-1659469378420-e68c6ee21a28?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
