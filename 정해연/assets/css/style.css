@@ -127,9 +127,96 @@ body {
 #section2 .desc {
     color: #E9DFCE;
     font-family: "IropkeBatang";
-    width: 30vw;
     margin: 10vh auto;
     text-align: center;
     word-break: keep-all;
     line-height: 1.6;
+}
+
+#section3 {
+    height: 3000px;
+    overflow: hidden;
+}
+
+#section3 .text {
+    font-size: 30vw;
+    font-family: "PartizenoRegular";
+    color: #E9DFCE;
+    white-space: nowrap;
+    font-style: italic;
+    margin-left: -20%;
+    position: relative;
+    margin-bottom: 20%;
+}
+
+#section3 .text .list {
+    position: absolute;
+    right: 20px;
+    top: 30vw;
+    font-size: 14px;
+    font-family: 'Abel';
+}
+
+.site-wrap {
+    color: #E9DFCE;
+}
+
+.site-wrap .site {
+    width: 100%;
+    margin-left: 6vw;
+    position: relative;
+}
+
+.site-wrap .site .imgWrap {
+    width: 55%;
+    height: 63vh;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.site-wrap .site .imgWrap .img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/img.png);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.site-wrap .site .title {
+    font-family: "PartizenoRegular";
+    font-size: 8vw;
+    line-height: 1;
+    margin-top: -5vw;
+    position: relative;
+    z-index: 10;
+    margin-left: 30vw;
+}
+
+.site-wrap .site .desc {
+    font-family: "IropkeBatang";
+    font-size: 16px;
+    margin-left: 31vw;
+    position: relative;
+}
+
+.site-wrap .site .desc .btn {
+    position: absolute;
+    right: 20%;
+    top: 0;
+    display: inline-block;
+    width: auto;
+    z-index: 10000;
+}
+
+.site-wrap .site .desc .btn a {
+    background-color: #E9DFCE;
+    color: #000;
+    padding: 10px 50px;
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: "Orbitron";
 }
