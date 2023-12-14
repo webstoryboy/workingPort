@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: #F2EEE4;
+    color: #F14620;
+}
+
+#section1 {
+    padding: 5%;
+}
+
+#section1 .desc {
+    font-size: 3.8vw;
+    line-height: 1.2;
+    font-family: 'PPSupplyMono';
+    font-weight: 100;
+    letter-spacing: -0.2vw;
+}
+
+#section1 .text {
+    margin-top: 10%;
+    font-size: 26vw;
+    line-height: 0.8;
+    font-family: Poppins;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#section1 .text .imgWrap {
+    position: absolute;
+    right: 10vw;
+    top: 5vw;
+    width: 30vw;
+    height: 80vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#section1 .text .imgWrap .img {
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url(https://images.unsplash.com/photo-1682070410678-5a62ffa34842?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+#section1 .text>div {}
+
+
+
+#section2 {
+    height: 3000px;
+}
