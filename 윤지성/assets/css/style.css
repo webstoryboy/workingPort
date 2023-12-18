@@ -51,6 +51,8 @@
     width: 25px;
 }
 
+
+
 .layer {
     width: 80vw;
     height: 80vh;
@@ -127,4 +129,122 @@
     font-size: 13px;
     line-height: 1.5;
     opacity: 0.8;
+}
+
+.wallpapers .youtubeIcon {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.wallpapers .youtubeIcon img {
+    width: 40px;
+}
+
+.wallpapers .youtubeIcon span {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px;
+    font-family: "nanumSquareNeo";
+}
+
+.wallpapers .movieIcon {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.wallpapers .movieIcon img {
+    width: 40px;
+}
+
+.wallpapers .movieIcon span {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px;
+    font-family: "nanumSquareNeo";
+}
+
+
+/* portLayer 공통요소 */
+.portLayer {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 30px);
+    transform: translate(-50%, -50%);
+}
+
+.portLayer__contents {
+    background-color: #0f1735a8;
+    backdrop-filter: blur(30px);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.youtubeLayer {
+    color: #fff;
+}
+
+.youtubeLayer .portLayer__contents {
+    padding: 5%;
+}
+
+.youtubeLayer .portLayer__contents h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.youtubeLayer .portLayer__contents .info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.youtubeLayer .portLayer__contents .info::after {
+    content: '';
+    width: 1px;
+    height: 13px;
+    background-color: #78828a44;
+    position: absolute;
+    left: 235px;
+    top: 17px;
+}
+
+.youtubeLayer .portLayer__contents .info li {
+    display: inline-block;
+    color: #78828A;
+    padding: 5px 10px;
+}
+
+.youtubeLayer .portLayer__contents .info li:first-child {
+    color: #bcbdbe;
+}
+
+.youtubeLayer .portLayer__contents .info input {
+    border: 1px solid rgba(37, 30, 77, 0.671);
+    background-color: #78828a0a;
+    backdrop-filter: blur(20px);
+    padding: 10px 16px;
+    border-radius: 100px;
+    outline: none;
+    color: #fff;
+    margin-right: 36px;
 }

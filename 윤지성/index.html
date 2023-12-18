@@ -12,6 +12,16 @@
 
 <body>
     <div id="mainIntro">
+        <div class="wallpapers">
+            <div class="draggableIcon youtubeIcon">
+                <img src="assets/img/youtube.png" alt="youtube">
+                <span>나만의 유튜브</span>
+            </div>
+            <div class="draggableIcon movieIcon">
+                <img src="assets/img/netflix.png" alt="netflix">
+                <span>영화 리스트</span>
+            </div>
+        </div>
 
         <div class="footer__info">
             <div class="weather"></div>
@@ -42,6 +52,37 @@
             <div class="date"></div>
         </div>
 
+        <div class="portLayer portLayer1 youtubeLayer">
+            <div class="portLayer__contents">
+                <h3>Search</h3>
+                <div class="info">
+                    <div>
+                        <input type="search">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>all</li>
+                            <li>coding</li>
+                            <li>react</li>
+                            <li>node.js</li>
+                            <li>javascript</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="view">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="portLayer portLayer2 netflix">netflix</div> -->
 
         <div class="layer layer1 about">
             <div class="layer__contents">
@@ -85,7 +126,6 @@
     <script src="https://unpkg.com/split-type"></script>
     <script>
         gsap.set(".layer", { autoAlpha: 0, y: 20 });
-        gsap.set(".layer1", { autoAlpha: 1 });
 
         // Selecting menu items
         const menu1 = document.querySelector('.menu1');
@@ -93,19 +133,16 @@
         const menu3 = document.querySelector('.menu3');
         const menu4 = document.querySelector('.menu4');
 
-        // Selecting all layer popups
         const allLayers = document.querySelectorAll('.layer');
 
-        // Function to close all popups
         function closeAllLayers() {
             allLayers.forEach(layer => {
                 gsap.to(layer, { autoAlpha: 0, y: 20, backdropFilter: 'blur(0px)', duration: 0.5 });
             });
         }
 
-        // Function to toggle visibility of a layer
         function toggleLayer(layer) {
-            closeAllLayers(); // Close all layers first
+            closeAllLayers();
             gsap.to(layer, { autoAlpha: 1, y: 0, backdropFilter: 'blur(10px)', duration: 0.5 });
         }
 
@@ -114,6 +151,41 @@
         menu2.addEventListener('click', () => toggleLayer(document.querySelector('.layer2')));
         menu3.addEventListener('click', () => toggleLayer(document.querySelector('.layer3')));
         menu4.addEventListener('click', () => toggleLayer(document.querySelector('.layer4')));
+
+        // 드래그
+        function makeDraggable(element) {
+            var posX = 0, posY = 0, mouseX = 0, mouseY = 0;
+
+            element.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+
+            function onMouseMove(e) {
+                posX = mouseX - e.clientX;
+                posY = mouseY - e.clientY;
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                element.style.left = (element.offsetLeft - posX) + "px";
+                element.style.top = (element.offsetTop - posY) + "px";
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+        }
+
+        // Select all elements with the class 'draggableIcon'
+        var draggableIcons = document.querySelectorAll('.draggableIcon');
+
+        // Apply the dragging functionality to each icon
+        draggableIcons.forEach(function (icon) {
+            makeDraggable(icon);
+        });
     </script>
 </body>
 
