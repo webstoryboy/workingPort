@@ -87,6 +87,7 @@
 }
 
 #intro .bg-small {
+    cursor: pointer;
     width: 200px;
     height: 30vh;
     background-color: #000;
