@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://webfontworld.github.io/amore/AritaBuri.css');
 
 #intro {
     display: flex;
@@ -11,14 +13,25 @@
 
 #intro .text {
     position: absolute;
-    left: 10%;
+    left: 2%;
     top: 50%;
     z-index: 2000;
-    transform: translate(-50%, -50%);
-    font-size: 4vw;
-    color: #000;
-    overflow: hidden;
+    transform: translatey(-50%);
+}
+
+#intro .text h3 {
+    font-size: 5vw;
     line-height: 1;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+#intro .text p {
+    width: 100%;
+    color: #fff;
+    font-family: 'AritaBuri';
+    line-height: 1.5;
+    font-weight: 100;
 }
 
 #intro .bg-main {
@@ -100,4 +113,118 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+/* sub */
+body {
+    background-image: url(https://images.unsplash.com/photo-1659469378420-e68c6ee21a28?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#contents {
+    display: flex;
+    width: 1000%;
+}
+
+#contents>section {}
+
+#section1 {
+    width: 100vw;
+    height: 100vh;
+    background: #00000050;
+    backdrop-filter: blur(15px);
+}
+
+#section2 {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+}
+
+#section3 {
+    width: 300vw;
+    height: 100vh;
+    background: transparent;
+    background: #0A090550;
+    backdrop-filter: blur(25px);
+    color: #fff;
+    display: flex;
+}
+
+#section3 .num {
+    font-size: 10vw;
+    font-family: 'GmarketSans';
+    border-right: 1px solid #ffffff26;
+    display: block;
+    width: 800px;
+    height: 100vh;
+    padding-left: 5vw;
+    padding-top: 2vw;
+}
+
+#section3 .desc-wrap {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+#section3 .desc-wrap>.desc {
+    padding: 2% 2%;
+    border-right: 1px solid #ffffff26;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#section3 .desc-wrap>.desc h5 {
+    font-family: 'GmarketSans';
+    color: #dadada;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    opacity: 0.5;
+}
+
+#section3 .desc-wrap>.desc p {
+    font-family: 'AritaBuri';
+}
+
+
+
+#section3 .desc-wrap>.desc.d1 {}
+
+#section3 .desc-wrap>.desc.d2 {}
+
+#section3 .desc-wrap>.desc.d3 {}
+
+#section3 .desc-wrap>.desc.d4 {}
+
+
+
+#section1 .subText {
+    position: absolute;
+    z-index: 10000;
+    left: 2%;
+    top: 50%;
+    z-index: 2000;
+    transform: translatey(-50%);
+}
+
+#section1 .subText h3 {
+    font-size: 5vw;
+    line-height: 1;
+    color: #fff;
+    padding-bottom: 10px;
+    font-family: "PartizenoRegular";
+}
+
+#section1 .subText p {
+    width: 100%;
+    color: #fff;
+    font-family: 'AritaBuri';
+    line-height: 1.5;
 }

@@ -1,23 +1,66 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import gsap from 'gsap';
 
 const Home = () => {
+
+    useEffect(() => {
+
+        gsap.set(".item.i3 .item__inner", {
+            opacity: 0,
+            y: 30
+        });
+        gsap.to(".item.i2 .item__inner", {
+            opacity: 1,
+            delay: 1,
+        })
+        gsap.to(".item.i2 .item__bg", {
+            height: "0%",
+            ease: "power3.inOut",
+        })
+        gsap.to(".item.i3 .item__bg", {
+            height: "0%",
+            ease: "power3.inOut",
+            delay: 0.3
+        })
+        gsap.to(".item.i3 .item__inner", {
+            opacity: 1,
+            delay: 0.7,
+            y: 0
+        });
+        gsap.to(".item.i7 .item__bg", {
+            height: "0%",
+            ease: "power3.inOut",
+            delay: 0.6
+        })
+        gsap.to(".item.i10 .item__bg", {
+            height: "0%",
+            ease: "power3.inOut",
+            delay: 0.9
+        })
+    }, [])
+
     return (
         <div>
             <div id="item__wrap" class="fixed">
-                <div class="item i1 black">
-                    <p class="desc">
-                        항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에 맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서 약 6개월간의 여정을 시작했습니다.
-                    </p>
-                    <div className="item__bg" style={{ height: "10%" }}></div>
-                </div>
-                <div class="item i2">
+                <div className="item i1 black">
+                    <div className="item__inner">
+                        <p class="desc">
+                            항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에 맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서 약 6개월간의 여정을 시작했습니다.
+                        </p>
+                    </div>
                     <div className="item__bg"></div>
                 </div>
-                <div class="item i3 title">
-                    <h3>script<em>javascript</em></h3>
-                    <p class="desc">
-                        항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에 맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서 약 6개월간의 여정을 시작했습니다.
-                    </p>
+                <div className="item i2">
+                    <div className="item__inner">22</div>
+                    <div className="item__bg"></div>
+                </div>
+                <div className="item i3 title">
+                    <div className="item__inner">
+                        <h3>script<em>javascript</em></h3>
+                        <p class="desc">
+                            항공기계설계를 전공으로 공부하였고, 다양한 분야의 업무를 하며 나의 적성에 맞는 일을 찾고자 노력을 했습니다. 다니던 대학원을 휴학하고 국비지원학원에서 약 6개월간의 여정을 시작했습니다.
+                        </p>
+                    </div>
                     <div className="item__bg"></div>
                 </div>
                 <div class="item i4 noR">
