@@ -13,13 +13,13 @@
         .layerImg {
             position: absolute;
             left: 50%;
-            top: 120%;
+            top: 50%;
             width: 350px;
             height: 500px;
             transform: translate(-50%, -50%) rotate(10deg);
             background-color: #ccc;
             overflow: hidden;
-            opacity: 0.5;
+            opacity: 1;
         }
 
         .layerImg .img {
@@ -69,6 +69,19 @@
         </div>
     </div>
 
+    <div class="overlay">
+        <div class="overlay__inner"></div>
+    </div>
+
+    <div class="preview">
+        <div class="preview__inner">
+            <h2 class="preview__item-title oh">
+                <span class="oh__inner">Brave</span>
+            </h2>
+        </div>
+    </div>
+
+
     <div class="layerImg">
         <div class="img">
             <img src="assets/img/1.jpg" alt="">
@@ -96,13 +109,27 @@
             // });
 
             document.querySelector(".dddd").addEventListener("mouseover", () => {
-                gsap.to(".layerImg", { opacity: 1, rotation: 0, top: "50%", width: 400, height: 550, duration: 2, ease: "expo.out" })
+                gsap.to(".layerImg", { opacity: 1, rotation: 0, top: "50%", width: 400, height: 550, duration: 1, ease: "expo.out" })
                 gsap.to(".layerImg .img", { width: "120%", height: "120%", duration: 1 })
 
             });
             document.querySelector(".dddd").addEventListener("mouseout", () => {
-                gsap.to(".layerImg", { top: "-20%", duration: 1 })
+                gsap.to(".layerImg", { opacity: 1, rotation: -10, top: "-20%", width: 300, height: 450, duration: 1, ease: "expo.out" })
+                gsap.to(".layerImg .img", { width: "120%", height: "120%", duration: 1 })
             });
+
+            let tl = gsap.timeline({
+                defaults: { duration: 1.1, ease: 'expo' },
+                onStart: () => {
+                    gsap.set(".oh__inner", { yPercent: 100 })
+                }
+            })
+            tl.to(".overlay__inner", { ease: "power2", startAt: { xPercent: -100 }, xPercent: 0 })
+            tl.to(".oh__inner", { yPercent: 0 })
+
+
+
+
         });
     </script>
 </body>
