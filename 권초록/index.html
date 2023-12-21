@@ -13,7 +13,7 @@
         .layerImg {
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 150%;
             width: 350px;
             height: 500px;
             transform: translate(-50%, -50%) rotate(10deg);
@@ -47,29 +47,32 @@
         <div class="bom">
             <div>
                 <ul class="split">
-                    <li class="dddd"><a href="#" data-img-src="assets/img/1.jpg">youtube site/</a></li>
-                    <li><a href="#" data-img-src="assets/img/2.jpg">react movie site/</a></li>
-                    <li><a href="#" data-img-src="assets/img/3.jpg">next blog site/</a></li>
+                    <li class="hoverMenu m1" data-target="l1"><a href="#" data-img-src="assets/img/1.jpg">youtube
+                            site/</a></li>
+                    <li class="hoverMenu m2" data-target="l2"><a href="#" data-img-src="assets/img/2.jpg">react movie
+                            site/</a></li>
+                    <li class="hoverMenu m3" data-target="l3"><a href="#" data-img-src="assets/img/3.jpg">next blog
+                            site/</a></li>
                 </ul>
             </div>
             <div>
                 <ul class="split">
-                    <li><a href="#" data-img="4.jpg">javascript/</a></li>
-                    <li><a href="#" data-img="5.jpg">scss/</a></li>
-                    <li><a href="#" data-img="6.jpg">game/</a></li>
+                    <li class="hoverMenu m4" data-target="l4"><a href="#" data-img="4.jpg">javascript/</a></li>
+                    <li class="hoverMenu m5" data-target="l5"><a href="#" data-img="5.jpg">scss/</a></li>
+                    <li class="hoverMenu m6" data-target="l6"><a href="#" data-img="6.jpg">game/</a></li>
                 </ul>
             </div>
             <div>
                 <ul class="split">
-                    <li><a href="#" data-img="7.jpg">php blog/</a></li>
-                    <li><a href="#" data-img="8.jpg">react blog/</a></li>
-                    <li><a href="#" data-img="9.jpg">next blog/</a></li>
+                    <li class="hoverMenu m7" data-target="l7"><a href="#" data-img="7.jpg">php blog/</a></li>
+                    <li class="hoverMenu m8" data-target="l8"><a href="#" data-img="8.jpg">react blog/</a></li>
+                    <li class="hoverMenu m9" data-target="l9"><a href="#" data-img="9.jpg">next blog/</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="overlay">
+    <!-- <div class="overlay">
         <div class="overlay__inner"></div>
     </div>
 
@@ -79,12 +82,52 @@
                 <span class="oh__inner">Brave</span>
             </h2>
         </div>
-    </div>
+    </div> -->
 
 
-    <div class="layerImg">
+    <div class="layerImg l1">
         <div class="img">
             <img src="assets/img/1.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l2">
+        <div class="img">
+            <img src="assets/img/2.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l3">
+        <div class="img">
+            <img src="assets/img/3.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l4">
+        <div class="img">
+            <img src="assets/img/4.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l5">
+        <div class="img">
+            <img src="assets/img/5.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l6">
+        <div class="img">
+            <img src="assets/img/6.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l7">
+        <div class="img">
+            <img src="assets/img/7.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l8">
+        <div class="img">
+            <img src="assets/img/8.jpg" alt="">
+        </div>
+    </div>
+    <div class="layerImg l9">
+        <div class="img">
+            <img src="assets/img/9.jpg" alt="">
         </div>
     </div>
 
@@ -93,43 +136,22 @@
     <script src="https://unpkg.com/split-type"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // const layerImgDiv = document.querySelector('.layerImg .img');
-            // const layerImg = layerImgDiv.querySelector('img');
+            document.querySelectorAll('.hoverMenu').forEach(item => {
+                item.addEventListener('mouseover', function () {
+                    const targetClass = this.getAttribute('data-target');
+                    const targetLayerImg = document.querySelector(`.layerImg.${targetClass} .img`);
+                    const imgSrc = this.querySelector('a').getAttribute('data-img-src');
+                    targetLayerImg.querySelector('img').src = imgSrc;
+                    gsap.to(`.layerImg.${targetClass}`, { opacity: 1, rotation: 0, top: "50%", width: 400, height: 550, duration: 1, ease: "expo.out" });
+                    gsap.to(`.layerImg.${targetClass} .img`, { width: "120%", height: "120%", duration: 1 });
+                });
 
-            // document.querySelectorAll('.bom li').forEach(item => {
-            //     item.addEventListener('mouseover', function () {
-            //         const imgSrc = this.getAttribute('data-img-src');
-            //         layerImg.src = imgSrc;
-            //         gsap.to(layerImgDiv, { top: '50%', duration: 0.5 });
-            //     });
-
-            //     item.addEventListener('mouseout', function () {
-            //         gsap.to(layerImgDiv, { y: '0%', duration: 0.5 });
-            //     });
-            // });
-
-            document.querySelector(".dddd").addEventListener("mouseover", () => {
-                gsap.to(".layerImg", { opacity: 1, rotation: 0, top: "50%", width: 400, height: 550, duration: 1, ease: "expo.out" })
-                gsap.to(".layerImg .img", { width: "120%", height: "120%", duration: 1 })
-
+                item.addEventListener('mouseout', function () {
+                    const targetClass = this.getAttribute('data-target');
+                    gsap.to(`.layerImg.${targetClass}`, { opacity: 1, rotation: -10, top: "-50%", width: 300, height: 450, duration: 1, ease: "expo.out" });
+                    gsap.to(`.layerImg.${targetClass} .img`, { width: "120%", height: "120%", duration: 1 });
+                });
             });
-            document.querySelector(".dddd").addEventListener("mouseout", () => {
-                gsap.to(".layerImg", { opacity: 1, rotation: -10, top: "-20%", width: 300, height: 450, duration: 1, ease: "expo.out" })
-                gsap.to(".layerImg .img", { width: "120%", height: "120%", duration: 1 })
-            });
-
-            let tl = gsap.timeline({
-                defaults: { duration: 1.1, ease: 'expo' },
-                onStart: () => {
-                    gsap.set(".oh__inner", { yPercent: 100 })
-                }
-            })
-            tl.to(".overlay__inner", { ease: "power2", startAt: { xPercent: -100 }, xPercent: 0 })
-            tl.to(".oh__inner", { yPercent: 0 })
-
-
-
-
         });
     </script>
 </body>
