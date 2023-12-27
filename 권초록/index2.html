@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+    <header id="header">
+        <h1>green</h1>
+        <nav>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">comment</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <section id="section1">
+        <div class="sec1-text">
+            <div class="split s1">portfolio</div>
+            <div class="split s2">anything</div>
+        </div>
+        <div class="start">
+            get start
+        </div>
+        <div class="intro">
+            <span class="f">{</span>
+            코딩이라는 힘을 갖춘 이는, 모든 한계를 돌파하여 혁신의 선봉에 서게 될것이다.<br>
+            그 누구도 당신의 창조적 비상을 막을 수 없으며, <br>
+            당신은 놀라운 변화를 이끌며 새로운 세상을 만들어 나갈 것이다.
+            <span class="e">}</span>
+        </div>
+        <div class="icon">
+            <span class="icon1"><img src="assets/img/yuan-dynamic-color.png" alt=""></span>
+            <span class="icon2"><img src="assets/img/video-camera-dynamic-color.png" alt=""></span>
+            <span class="icon3"><img src="assets/img/thumb-up-dynamic-color.png" alt=""></span>
+            <span class="icon4"><img src="assets/img/sun-dynamic-color.png" alt=""></span>
+            <span class="icon5"><img src="assets/img/rocket-dynamic-color.png" alt=""></span>
+            <span class="icon6"><img src="assets/img/locker-dynamic-color.png" alt=""></span>
+            <span class="icon7"><img src="assets/img/flash-dynamic-color.png" alt=""></span>
+            <span class="icon8"><img src="assets/img/color-palette-dynamic-color.png" alt=""></span>
+            <span class="icon9"><img src="assets/img/sphere-dynamic-color.png" alt=""></span>
+        </div>
+    </section>
+    <!-- //section1 -->
+
+    <section id="section2">
+        <div class="sec2-text">
+            <h3>{about me}</h3>
+            <p>
+                프론트엔드 개발의 세계에서 나는 항상 한 가지 진리를 명심합니다: 
+                '자만은 발전의 무덤이다.' 기술의 끝없는 바다에서 나는 단지 한 방울에 불과함을 잊지 않습니다. 
+                매 순간, 매 프로젝트는 나를 더 높은 고지로 이끌 수 있는 기회이지만, 
+                자만심은 그 모든 것을 잿더미로 만들 수 있습니다. 
+                이는 개발자로서의 나의 여정에서 가장 위험한 적입니다. 
+                배움의 길은 결코 끝나지 않으며, 나의 성장은 내 겸손함에서 비롯됩니다. 
+                자만은 나의 발목을 잡는 족쇄가 아니라, 나를 더 높이 솟구치게 하는 발판이 되어야 합니다. 내가 멈추는 순간, 나의 세계도 멈춥니다."
+            </p>
+        </div>
+    </section>
+    <!-- //section2 -->
+
+    <section id="section3">
+        <div class="section3-1">
+            <div class="sec3-img">
+                <img src="http://chfhrdk1.dothome.co.kr/port-gsap/assets/img/profil02.png" alt="">
+            </div>
+            <div class="sec3-text">
+                <div class="t1">That's right, Green</div>
+                <div class="t2">That's right, Anything</div>
+                <div class="t3">That's right, Anything</div>
+                <div class="t4">That's right, Anything</div>
+            </div>
+        </div>
+        <div class="section3-2">section3-2</div>
+        <div class="section3-3">section3-3</div>
+    </section>
+    <!-- //section3 -->
+
+    <section id="section4">
+        section4
+    </section>
+    <!-- //section4 -->
+
+    <section id="section5"></section><!-- //section5 -->
+    <section id="section6"></section><!-- //section6 -->
+    <section id="section7"></section><!-- //section7 -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+         const targets = gsap.utils.toArray(".split");
+        
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, {type: "lines, words, chars"});
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        });
+
+        gsap.set(".icon span", {opacity: 0, scale: 3, rotation: 360})
+        gsap.set(".intro", {opacity: 0})
+        gsap.set(".start", {opacity: 0})
+        gsap.set("#header", {top: -100})
+        gsap.set(".sec1-text .s1 .char", {opacity: 0, y: 100})
+        gsap.set(".sec1-text .s2 .char", {opacity: 0, y: -100})
+
+        setTimeout(() => {
+            let tl = gsap.timeline();
+            tl.to(".icon span", {opacity: 1, duration: 1.4, ease: "bounce.out", scale: 1, rotation: 0, stagger: {amount: 1, from: "random"}}, "-=0.5")
+            tl.to(".sec1-text .s1 .char", {opacity: 1, y: 0, duration: 0.5, ease: "power4.inout", stagger: {amount: 1, from: "random"}}, "a")
+            tl.to(".sec1-text .s2 .char", {opacity: 1, y: 0, duration: 0.5, ease: "power4.inout", stagger: {amount: 1, from: "random"}}, "a")
+            tl.to(".intro", {opacity: 1, duration: 0.6})
+            tl.to(".start", {opacity: 1, duration: 0.6})
+            tl.to("#header", {top: 0, duration: 0.6})
+        }, 3000)
+
+    </script>
+
+    <script>
+        const horizontal = document.querySelector("#section3"); 
+        const sections = gsap.utils.toArray("#section3 > div");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: horizontal,
+                start: "top top",
+                end: () => "+=" + (horizontal.offsetWidth - innerWidth),
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true,
+                anticipatePin: 1
+            }
+        });
+    </script>
+</body>
+</html>

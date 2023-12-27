@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://webfontworld.github.io/Cafe24Ssurround/Cafe24Ssurround.css');
+@import url('https://webfontworld.github.io/Cafe24SsurroundAir/Cafe24SsurroundAir.css');
+@import url('https://webfontworld.github.io/Cafe24Oneprettynight/Cafe24Oneprettynight.css');
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    color: #FFFBDF;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Fredoka';
+    border-bottom: 1px solid #fffbdf3a;
+    z-index: 10000;
+    background: #0000007d;
+}
+#header h1 {
+    padding: 10px;
+    font-weight: 700;
+}
+#header nav {
+    padding-top: 5px;
+}
+#header nav li {
+    display: inline;
+}
+#header nav li a {
+    display: inline-block;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    position: relative;
+}
+
+#section1 .sec1-text {
+    font-family: 'Fredoka';
+    color: #FFFBDF;
+    font-size: 14vw;
+    line-height: 1;
+}
+#section1 .sec1-text > div:first-child {padding-right: 30vw;}
+#section1 .sec1-text > div:last-child {padding-left: 30vw;}
+
+#section1 .start {
+    color: #FFFBDF;
+    border: 3px solid #FFFBDF;
+    background-color: #0000005d;
+    backdrop-filter: blur(20px);
+    border-radius: 50px;
+    padding: 10px 70px 10px 60px;
+    text-transform: capitalize;
+    position: absolute;
+    right: 8vw;
+    bottom: 8vw;
+}
+#section1 .start::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 40px;
+    top: 11px;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 10C18 9.44772 17.5523 9 17 9C16.4477 9 16 9.44772 16 10L18 10ZM16.2929 24.7071C16.6834 25.0976 17.3166 25.0976 17.7071 24.7071L24.0711 18.3431C24.4616 17.9526 24.4616 17.3195 24.0711 16.9289C23.6805 16.5384 23.0474 16.5384 22.6569 16.9289L17 22.5858L11.3431 16.9289C10.9526 16.5384 10.3195 16.5384 9.92893 16.9289C9.53841 17.3195 9.53841 17.9526 9.92893 18.3431L16.2929 24.7071ZM16 10L16 24L18 24L18 10L16 10Z' fill='%23FFFBDF'/%3E%3Crect x='1' y='1' width='32' height='32' rx='16' stroke='%23FFFBDF' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+#section1 .intro {
+    position: absolute;
+    left: 8vw;
+    bottom: 8vw;
+    width: 600px;
+    color: #FFFBDF;
+    font-family: "nanumSquareNeo";
+    text-align: center;
+    font-size: 16px;
+    white-space: nowrap;
+}
+#section1 .intro .f {
+    position: absolute;
+    left: -34px;
+    top: -34px;
+    font-size: 100px;
+    font-weight: 100;
+}
+#section1 .intro .e {
+    position: absolute;
+    right: -34px;
+    top: -34px;
+    font-size: 100px;
+    font-weight: 100;
+}
+.icon img {
+    width: 100px;
+}
+.icon span {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.icon .icon1 {
+    left: 10%;
+    top: 50%;
+}
+
+.icon .icon2 {
+    left: 20%;
+    top: 50%;
+}
+
+.icon .icon3 {
+    left: 30%;
+    top: 50%;
+}
+
+.icon .icon4 {
+    left: 40%;
+    top: 50%;
+}
+
+.icon .icon5 {
+    left: 50%;
+    top: 50%;
+}
+.icon .icon6 {
+    left: 60%;
+    top: 50%;
+}
+.icon .icon7 {
+    left: 70%;
+    top: 50%;
+}
+.icon .icon8 {
+    left: 80%;
+    top: 50%;
+}
+.icon .icon9 {
+    left: 90%;
+    top: 50%;
+}
+
+
+#section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #FFFBDF;
+    height: 100vh;
+    padding: 7%;
+}
+
+#section2 h3 {
+    color: #878678;
+    font-family: 'Fredoka';
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+#section2 p {
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 30px;
+    word-break: keep-all;
+}
+
+/* #section3 */
+#section3 {
+    background: #000;
+    height: 100vh;
+    position: relative;
+    width: 300%;
+    display: flex;
+    overflow: hidden;
+}
+#section3 .section3-1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#section3 .section3-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+#section3 .section3-3 {
+    width: 100%;
+    height: 100vh;
+    background-color: #512a0f;
+}
+#section3 .section3-1 .sec3-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#section3 .section3-1 .sec3-img img {
+    width: 400px;
+    border-radius: 50%;
+}
+#section3 .section3-1 .sec3-text {
+    padding-top: 100px;
+}
+#section3 .section3-1 .sec3-text .t1 {
+    background-color: #F4812D;
+    color: #000;
+    display: inline-block;
+    padding: 20px 50px;
+    font-family: 'Fredoka';
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+#section3 .section3-1 .sec3-text .t2 {
+    background-color: #F6C2F7;
+    color: #000;
+    display: inline-block;
+    padding: 20px 50px;
+    font-family: 'Fredoka';
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+}
+#section3 .section3-1 .sec3-text .t3 {
+    background-color: #F4812D;
+    color: #000;
+    display: inline-block;
+    padding: 20px 50px;
+    font-family: 'Fredoka';
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+}
+
+#section3 .section3-1 .sec3-text .t4 {
+    background-color: #F6C2F7;
+    color: #000;
+    display: inline-block;
+    padding: 20px 50px;
+    font-family: 'Fredoka';
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    position: absolute;
+    left: 55%;
+    top: 35%;
+}
+
+
+
+#section4 {
+    width: 100%;
+    height: 1000px;
+    background-color: #ccc;
+}

@@ -109,7 +109,7 @@
     justify-content: center;
     flex-direction: row;
     width: 200%;
-    margin-left: -50%;
+    margin-left: -20%;
     white-space: nowrap;
 }
 
@@ -218,7 +218,7 @@
 
 
 #section3 {
-    padding: 20% 50px 10%;
+    padding: 20% 0 10%;
     height: 4000px;
 }
 
@@ -231,6 +231,7 @@
     font-weight: 900;
     position: relative;
     margin-bottom: 10%;
+    padding: 0 5%;
 }
 
 #section3 .title .t1 {
@@ -245,7 +246,7 @@
     background-position: center;
     display: block;
     position: absolute;
-    left: 0.6vw;
+    left: 5.5%;
     top: 0.6vw;
     border-radius: 10px;
     background-color: #000;
@@ -276,9 +277,11 @@
 
 .site__wrap .site {
     display: flex;
+    height: 100vh;
 }
 
 .site__wrap .site .num {
+    width: 15vw;
     font-size: 15vw;
     font-family: 'GmarketSans';
     font-weight: 900;
@@ -309,4 +312,50 @@
     width: 50%;
     height: 300px;
     background-color: #ccc;
+}
+
+.site__wrap .site .tit .img-wrap {
+    display: flex;
+}
+.site__wrap .site .tit .img-wrap .img {
+    width: 60%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.site__wrap .site .tit .img-wrap .desc {
+    width: 36%;
+    margin-left: 4%;
+    margin-top: 60px;
+    font-family: 'IropkeBatang';
+}
+.site__wrap .site .tit .img-wrap .desc h4 {
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 10px;
+}
+
+.site.s1 {
+    position: sticky;
+    left: 0;
+    top: 100px;
+    background-color: #dedede;
+    z-index: 900;
+    padding: 5%;
+}
+.site.s2 {
+    position: sticky;
+    left: 0;
+    top: 100px;
+    z-index: 1000;
+    padding: 5%;
+    background-color: #fff;
+}
+.site.s3 {
+    position: sticky;
+    left: 0;
+    top: 100px;
+    background-color: #dedede;
+    z-index: 2000;
+    padding: 5%;
 }

@@ -91,6 +91,30 @@
                 <div class="subTitle">(유튜브 사이트 제작)</div>
                 <div class="tit">
                     <div class="h4">We build motion systems that scale your identity.</div>
+                    <div class="img-wrap">
+                        <div class="img"></div>
+                        <div class="desc">
+                            <h4>유튜브 사이트 제작</h4>
+                            <p>협업없이 혼자 프로젝트를 추진하는 것은 혼자만의 시야와 지식으로 한정된 결과물을 가져온다고 생각합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site s2">
+                <span class="num">2.</span>
+                <div class="subTitle">(영화 사이트 제작)</div>
+                <div class="tit">
+                    <div class="h4">We build motion systems that scale your identity.</div>
+                    <div class="img"></div>
+                </div>
+            </div>
+
+            <div class="site s3">
+                <span class="num">3.</span>
+                <div class="subTitle">(영화 사이트 제작)</div>
+                <div class="tit">
+                    <div class="h4">We build motion systems that scale your identity.</div>
                     <div class="img"></div>
                 </div>
             </div>
@@ -104,7 +128,7 @@
     <div id="section6"></div><!-- //section1 -->
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script>
@@ -122,6 +146,8 @@
         requestAnimationFrame(raf)
     </script>
     <script>
+        gsap.registerPlugin(ScrollTrigger);
+
         const targets = gsap.utils.toArray(".split");
 
         targets.forEach(target => {
@@ -156,7 +182,19 @@
             tl.to(".sec1__intro .line:nth-child(5) .char", { opacity: 1, y: 0, x: 0, stagger: 0.01, duration: 0.8, ease: "expo.out" }, "-=0.5");
         }, 4000)
 
+        const ani1 = gsap.timeline();
+        ani1.to("#section2 .imgWrap", {marginLeft: "-50%" })
 
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#section1",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            anticipatePin: 1,
+            markers: true
+        });
+        
     </script>
 </body>
 

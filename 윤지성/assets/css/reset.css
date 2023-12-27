@@ -385,3 +385,8 @@ select {
 .pt200 {
     padding-top: 200px;
 }
+
+
+.none {
+    display: none;
+}

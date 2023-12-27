@@ -53,6 +53,20 @@ body {
     text-align: right;
 }
 
+
+.weather {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    border: 1px solid #F14620;
+    z-index: 10000;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+
+    font-family: 'PPSupplyMono';
+}
+
 #section1 {
     padding: 7% 5%;
 }
@@ -77,10 +91,10 @@ body {
 
 #section1 .text .imgWrap {
     position: absolute;
-    right: 10vw;
-    top: 5vw;
+    left: 50vw;
+    top: 25vw;
     width: 30vw;
-    height: 80vh;
+    height: 40vw;
     background-color: #000;
     overflow: hidden;
 }
@@ -100,17 +114,44 @@ body {
 
 
 #section2 {
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #section2 .about1 {
     font-family: 'iceJaram-Rg';
     text-align: center;
-
 }
+
+
+#section2 .about2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc49;
+}
+#section2 .about2 > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 400px;
+    background-color: #fff;
+}
+#section2 .about2 > div.img1 {}
+#section2 .about2 > div.img2 {}
+#section2 .about2 > div.img3 {}
+#section2 .about2 > div.img4 {}
+#section2 .about2 > div.img5 {}
+#section2 .about2 > div.img6 {}
+#section2 .about2 > div.img7 {}
 
 #section2 h4 {
     font-size: 30px;
@@ -123,17 +164,8 @@ body {
     font-weight: bold;
 }
 
-#section2 .about2 {
-    margin-top: 10vw;
-    margin-left: 10vw;
-    font-family: 'iceJaram-Rg';
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
 #section3 {
-    height: 100vh;
+
 }
 
 #section3 h4 {
@@ -195,7 +227,7 @@ body {
     position: absolute;
     z-index: 100;
     left: 50%;
-    top: 60%;
+    top: 54%;
     transform: translate(-50%, -50%);
     width: 36%;
 }
@@ -221,4 +253,58 @@ body {
     line-height: 100px;
     margin-top: 10px;
     font-family: 'PPSupplyMono';
+}
+
+
+
+
+#section4 {
+    padding: 7% 5%;
+}
+
+#section4 .desc {
+    font-size: 3.8vw;
+    line-height: 1.2;
+    font-family: 'PPSupplyMono';
+    font-weight: 100;
+    letter-spacing: -0.2vw;
+}
+
+#section4 .text {
+    margin-top: 10%;
+    font-size: 26vw;
+    line-height: 0.8;
+    font-family: Poppins;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 100px;
+}
+#section4 .list li {
+    border-bottom: 1px solid #F14620;
+    position: relative;
+}
+#section4 .list li span {
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#section4 .list li em {
+    display: block;
+    font-weight: bold;
+    
+}
+#section4 .list li strong {
+    font-family: 'IropkeBatang';
+    padding-bottom: 10px;
+    display: block;
+}
+#section4 .list li .icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#section4 .list li .icon svg {
+    fill : #F14620
 }
