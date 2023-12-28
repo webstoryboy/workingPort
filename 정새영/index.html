@@ -17,7 +17,7 @@
             <div class="split t2">LIFE WE MUST</div>
             <div class="split t3">LOSE OUR FEAR</div>
             <div class="split t4">OF BEING WRONG</div>
-            <div class="img i1"><span>youtube API</span></div>
+            <div class="img i1"><span></span></div>
             <div class="img i2"></div>
             <div class="img i3"></div>
             <div class="img i4"></div>
@@ -38,7 +38,33 @@
             let lines = SplitClient.lines;
             let words = SplitClient.words;
             let chars = SplitClient.chars;
-        })
+        });
+
+        gsap.set(".split .char", { opacity: 0, scale: 1.5 })
+        gsap.set(".center__text .i1", { width: "1vw", height: 0 })
+        gsap.set(".center__text .i2", { width: "1vw", height: 0 })
+        gsap.set(".center__text .i3", { width: "1vw", height: 0 })
+        gsap.set(".center__text .i4", { width: "1vw", height: 0 })
+
+
+        // 사라질 때
+        // setTimeout(() => {
+        //     gsap.to(".split .char", { duration: 0.3, opacity: 0, stagger: { amount: 1, from: "random" } })
+        // }, 2000)
+
+        // 나타날 때
+        setTimeout(() => {
+            let tl = gsap.timeline();
+            tl.to(".split .char", { duration: 1, scale: 1, opacity: 1, stagger: { amount: 1, from: "random" } })
+            tl.to(".center__text .i1", { width: "1vw", height: "7.4vw", duration: 0.4 }, "1")
+            tl.to(".center__text .i2", { width: "1vw", height: "7.4vw", duration: 0.4 }, "1")
+            tl.to(".center__text .i3", { width: "1vw", height: "7.4vw", duration: 0.4 }, "1")
+            tl.to(".center__text .i4", { width: "1vw", height: "7.4vw", duration: 0.4 }, "1")
+            tl.to(".center__text .i1", { width: "27vw", height: "7.4vw", duration: 0.4, ease: "power4.out" })
+            tl.to(".center__text .i2", { width: "20vw", height: "7.4vw", duration: 0.4 })
+            tl.to(".center__text .i3", { width: "19vw", height: "7.4vw", duration: 0.4 })
+            tl.to(".center__text .i4", { width: "7.4vw", height: "7.4vw", duration: 0.4 })
+        }, 2000)
     </script>
 </body>
 

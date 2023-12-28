@@ -8,6 +8,36 @@
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+
+    <style>
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,10 +45,8 @@
         <section id="section1">
             <div class="subText">
                 <h3>Trend Device</h3>
-                <p>
-                    직관적이고 사용하기 편리한 인터페이스를 제공하여<br>
-                    사용자가 원하는 휴대폰 모델을 선택하고, 선택한 모델들을 한눈에 비교할 수 있도록 합니다.
-                </p>
+                <p class="split">React와 축구 API를 이용하여 만든 축구 정보를 제공하는 웹사이트입니다.</p>
+                <p class="split">경기 결과, 일정, 리그 테이블 같은 정보를 API로 받아오며, 하이라이트 비디오도 제공합니다.</p>
             </div>
         </section>
         <section id="section2"></section>
@@ -38,23 +66,178 @@
                 </div>
 
                 <div class="desc d2">
-
+                    <h5>technology</h5>
+                    <h6>회원가입</h6>
+                    <p>
+                        Firebase를 이용해 사용자의 이메일과 비밀번호로 회원가입하고,<br>MongoDB를 통해 사용자 데이터를 저장합니다.<br>
+                        Axios를 사용하여 서버로 데이터를 전송하며, React Router를 이용하여 페이지 간 이동을 합니다.<br>
+                        또한, 사용자가 입력한 정보의 유효성을 검사하고, 이메일 중복 검사를 수행하여 회원가입 과정을 관리합니다.
+                    </p>
+                    <h6 class="top">리그정보</h6>
+                    <p>
+                        리그의 정보를 가져와 보여주는 기능을 구현하였습니다.<br>
+                        React Router를 통해 경로의 파라미터를 가져와 해당 리그의 정보를 API로 요청하여 가져옵니다.<br>
+                        리그 정보는 Football Data API에서 받아온 데이터를 사용하여 리그 이름, 팀 정보, 리그 로고 등을 화면에 표시합니다.
+                    </p>
+                    <h6 class="top">커뮤니케이션</h6>
+                    <p>
+                        React Router를 통해 경로의 파라미터를 가져와 해당 리그의 정보를 API로 요청하여 가져옵니다.<br>
+                        리그 정보는 Football Data API에서 받아온 데이터를 <br>
+                        사용하여 리그 이름, 팀 정보, 리그 로고 등을 화면에 표시합니다.
+                    </p>
                 </div>
 
 
-                <div class="desc d3">desc3</div>
-                <div class="desc d4">desc4</div>
-                <div class="desc d5">desc5</div>
+                <div class="desc d3">
+                    <h5>TROUBLE SHOOTING</h5>
+                    <h6>문제점1</h6>
+                    <p>
+                        프로젝트를 마무리하던 학기에 "소프트웨어 공학" 이라는 수업을 들으면서<br>
+                        소프트웨어를 제대로 설계하지 않는다면 결국 "늑대인간"과 같이 변해서 개발자에게 공포를 선사한다는<br>
+                        논문인 "No Silver Bullet" 을 보게 되었습니다.<br>
+                        이를 통해서 시간에 쫓겨 단순 구현에만 초점을 맞추고 집중했던 저의 모습을 반성했고 어떠한 소프트웨어를<br>
+                        만들던지 그 소프트웨어를 체계적이고 관리할 만하게 설계한다는 것이 얼마나 중요한지 깨달았습니다.<br>
+                        BLoC 패턴을 적용하며 전체적인 설계를 어느정도 예상했음에도 불구하고<br>
+                        상세하게 큰 그림을 설계하지 않았다는 점에서 아쉬움이 있습니다.
+                    </p>
+
+                    <h6 class="top">문제점2</h6>
+                    <p>
+                        이것도 위와 마찬가지로 시간에 쫓겨 구현에만 집중했던 것 때문에 테스팅을 시도해 볼 수조차 없었습니다.<br>
+                        핑계일 수 있지만 테스팅을 하기 위해선 테스트 코드를<br>
+                        짜는 방법도 배워야 하고 유닛 테스팅인지 통합 테스트인지도 구분하는 안목을 길러야 하기 때문에 멀리했던 것 같습니다.<br>
+                        역시 테스트 코드를 짜지 않았기 때문에 제가 손수 하나하나 빌드/테스트하는 시간이 굉장히 오래걸렸습니다.<br>
+                        만약, 테스트 코드를 짜고 CI/CD를 적용했다면 훨씬 수월한 개발과정이 되었을 것 같습니다.
+                    </p>
+
+                    <h6 class="top">문제점3</h6>
+                    <p>
+                        위에서 말한 구글의 디자인 스프린트를 하면서 많은 아이디어 회의를 했지만, <br>
+                        역시 이렇다 할 아이디어를 낼 수는 없었습니다. <br>
+                        프로젝트를 진행한 이 아이디어 역시 제일 처음에 제가 냈던 아이디어를 조금 보완한 수준입니다. <br>
+                        이렇게 아이디어가 미비했기 때문에 개발과정도 막힐 때가 많았고 문제가 발생할 때가 많았습니다. <br>
+                        또한 제가 약한 부분이 바로 새로운 아이디어를 내고 그것을 발전시키는 것이라는 걸 확실히 깨닫는 계기도 되었습니다.
+                    </p>
+                </div>
+                <div class="desc d4">
+                    <h5>coding</h5>
+                    <h6 class="top">코딩</h6>
+                    <p>
+                        위에서 말한 구글의 디자인 스프린트를 하면서 많은 아이디어 회의를 했지만, <br>
+                        역시 이렇다 할 아이디어를 낼 수는 없었습니다. <br>
+                        프로젝트를 진행한 이 아이디어 역시 제일 처음에 제가 냈던 아이디어를 조금 보완한 수준입니다. <br>
+                        이렇게 아이디어가 미비했기 때문에 개발과정도 막힐 때가 많았고 문제가 발생할 때가 많았습니다. <br>
+                        또한 제가 약한 부분이 바로 새로운 아이디어를 내고 그것을 발전시키는 것이라는 걸 확실히 깨닫는 계기도 되었습니다.
+                    </p>
+                    <div class="code">
+                        <pre><code class="language-html">&lt;div class="desc d4"&gt;
+    &lt;h5&gt;coding&lt;/h5&gt;
+    &lt;h6 class="top"&gt;코딩&lt;/h6&gt;
+    &lt;p&gt;
+        위에서 말한 구글의 디자인 스프린트를 하면서 많은 아이디어 회의를 했지만, &lt;br&gt;
+        역시 이렇다 할 아이디어를 낼 수는 없었습니다. &lt;br&gt;
+        프로젝트를 진행한 이 아이디어 역시 제일 처음에 제가 냈던 아이디어를 조금 보완한 수준입니다. &lt;br&gt;
+        이렇게 아이디어가 미비했기 때문에 개발과정도 막힐 때가 많았고 문제가 발생할 때가 많았습니다. &lt;br&gt;
+        또한 제가 약한 부분이 바로 새로운 아이디어를 내고 그것을 발전시키는 것이라는 걸 확실히 깨닫는 계기도 되었습니다.
+    &lt;/p&gt;
+    &lt;div class="code"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                </div>
+                <div class="desc d5">
+                    <div class="commnet-wrap" data-lenis-prevent-wheel>
+                        <div class="comment">
+                            <p>정말 수고가 많습니다. 정말 수고가 많습니다.</p>
+                            <span>자갈<spna>2023.01.30 작성</spna></span>
+                        </div>
+                        <div class="comment">
+                            <p>이거 너무 멋있네요!.</p>
+                            <span>비켜<spna>2023.01.30 작성</spna></span>
+                        </div>
+                        <div class="comment">
+                            <p>이거 너무 멋있네요!.</p>
+                            <span>자갈모양은 맛있냐<spna>2023.01.30 작성</spna></span>
+                        </div>
+                        <div class="comment">
+                            <p>이렇게 어떻게 만들어요? 나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>비켜<spna>2023.01.30 작성</spna></span>
+                        </div>
+                        <div class="comment">
+                            <p>나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>가격<spna>2023.01.30 작성</spna></span>
+                        </div>
+                        <div class="comment">
+                            <p>나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>가격<spna>2023.01.30 작성</spna></span>
+                        </div>
+
+                        <div class="comment">
+                            <p>나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>가격<spna>2023.01.30 작성</spna></span>
+                        </div>
+
+                        <div class="comment">
+                            <p>나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>가격<spna>2023.01.30 작성</spna></span>
+                        </div>
+
+                        <div class="comment">
+                            <p>나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>가격<spna>2023.01.30 작성</spna></span>
+                        </div>
+
+                        <div class="comment">
+                            <p>나도 만들고 싶다. 풋봎 하고 싶다.</p>
+                            <span>가격<spna>2023.01.30 작성</spna></span>
+                        </div>
+
+
+
+                    </div>
+                    <div class="comment-write">
+                        <input type="text" placeholder="이름">
+                        <input type="text" placeholder="비밀번호">
+                        <input type="text" placeholder="댓글 내용">
+                    </div>
+                </div>
                 <div class="desc d6">desc6</div>
+            </div>
             </div>
         </section>
     </main>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+
     <script src="https://unpkg.com/split-type"></script>
     <script>
+
+        const targets = gsap.utils.toArray(".split");
+
+        targets.forEach(target => {
+            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        })
+
         gsap.set(".bg-main .bg", { marginLeft: "-12%", duration: 3, ease: "expo.out", scale: 1, delay: 0.4 })
     </script>
 
