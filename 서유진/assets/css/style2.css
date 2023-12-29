@@ -346,3 +346,110 @@ body {
         display: block;
     }
 }
+
+
+.about-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.about-wrap .about1 {
+    width: 30%;
+    height: 100%;
+    background-color: #aca4806d;
+    backdrop-filter: blur(10px);
+    border-right: 1px dashed #89846b;
+}
+
+.about-wrap .about1 figure {
+    padding: 30px;
+}
+
+.about-wrap .about1 .info {
+    padding: 0 30px 30px 30px;
+}
+
+.about-wrap .about1 .info h3 {
+    font-family: "PartizenoRegular";
+    font-size: 30px;
+}
+
+.about-wrap .about1 .info h3 em {
+    font-family: 'Cara';
+    font-size: 16px;
+}
+
+.about-wrap .about1 .info li {
+    border-bottom: 1px solid #89846b;
+    font-family: 'Abel';
+}
+
+.about-wrap .about1 .info li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 13px 0 10px 0;
+}
+
+.about-wrap .about1 .info li em {
+    text-transform: capitalize;
+}
+
+.about-wrap .about1 .info li span {
+    font-family: 'IropkeBatang';
+    font-size: 14px;
+    padding-top: 2px;
+    opacity: 0.7;
+}
+
+.about-wrap .about2 {
+    width: 35%;
+    height: 100%;
+    background-color: #F2F0E7;
+    border-right: 1px dashed #89846b;
+}
+
+.about-wrap .about2 .info {
+    padding: 40px;
+}
+
+.about-wrap .about2 .info h3 {
+    font-family: "PartizenoRegular";
+    font-size: 30px;
+}
+
+.about-wrap .about2 .info h3 em {
+    font-family: 'Cara';
+    font-size: 16px;
+}
+
+.about-wrap .about2 .info h4 {
+    font-family: 'Abel';
+    border-bottom: 1px dashed #89846b;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.about-wrap .about2 .info li {
+    font-family: 'IropkeBatang';
+    font-size: 14px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.about-wrap .about2 .info li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+}
+
+.about-wrap .about3 {
+    width: 35%;
+    height: 100%;
+    background-color: #F2F0E7;
+}
