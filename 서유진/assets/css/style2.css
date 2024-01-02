@@ -357,6 +357,7 @@ body {
 .about-wrap .about1 {
     width: 30%;
     height: 100%;
+    overflow-y: auto;
     background-color: #aca4806d;
     backdrop-filter: blur(10px);
     border-right: 1px dashed #89846b;
@@ -406,8 +407,13 @@ body {
 .about-wrap .about2 {
     width: 35%;
     height: 100%;
+    overflow-y: auto;
     background-color: #F2F0E7;
     border-right: 1px dashed #89846b;
+}
+
+.about-wrap .about2.noline {
+    border-right: 0;
 }
 
 .about-wrap .about2 .info {
@@ -448,8 +454,68 @@ body {
     background-color: #000;
 }
 
-.about-wrap .about3 {
-    width: 35%;
+.about-wrap .about2 .info .tool span img {
+    width: auto;
+}
+
+.about-wrap .about2 .info .skill {}
+
+.about-wrap .about2 .info .skill li {
+    padding-left: 0;
+}
+
+.about-wrap .about2 .info .skill li::before {
+    width: 0;
+    height: 0;
+}
+
+.about-wrap .about2 .info .skill li {
+    display: flex;
+    align-items: center;
+}
+
+.about-wrap .about2 .info .skill li em {
+    width: 80px;
+}
+
+.about-wrap .about2 .info .skill li span {
+    width: calc(100% - 80px);
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid #89846b;
+    display: inline-block;
+    border-radius: 30px;
+    position: relative;
+}
+
+.about-wrap .about2 .info .skill li span::before {
+    content: '';
     height: 100%;
-    background-color: #F2F0E7;
+    background-color: #89846b;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
+.about-wrap .about2 .info .skill li span.s70::before {
+    width: 70%;
+}
+
+.about-wrap .about2 .info .skill li span.s80::before {
+    width: 80%;
+}
+
+.about-wrap .about2 .info .skill li span.s90::before {
+    width: 90%;
+}
+
+.about-wrap .about2 .info .skill li span.s100::before {
+    width: 100%;
+}
+
+.about-wrap .about2 .info p {
+    font-family: 'IropkeBatang';
+    margin-bottom: 10px;
+    font-size: 14px;
 }
