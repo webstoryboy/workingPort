@@ -219,7 +219,6 @@
 
 #section3 {
     padding: 20% 0 10%;
-    height: 4000px;
 }
 
 #section3 .title {
@@ -317,18 +316,21 @@
 .site__wrap .site .tit .img-wrap {
     display: flex;
 }
+
 .site__wrap .site .tit .img-wrap .img {
     width: 60%;
     background-size: cover;
     background-position: center center;
     background-image: url(https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
+
 .site__wrap .site .tit .img-wrap .desc {
     width: 36%;
     margin-left: 4%;
     margin-top: 60px;
     font-family: 'IropkeBatang';
 }
+
 .site__wrap .site .tit .img-wrap .desc h4 {
     text-decoration: underline;
     text-underline-position: under;
@@ -343,6 +345,7 @@
     z-index: 900;
     padding: 5%;
 }
+
 .site.s2 {
     position: sticky;
     left: 0;
@@ -351,6 +354,7 @@
     padding: 5%;
     background-color: #fff;
 }
+
 .site.s3 {
     position: sticky;
     left: 0;
@@ -358,4 +362,95 @@
     background-color: #dedede;
     z-index: 2000;
     padding: 5%;
+}
+
+
+
+#section4 {
+    padding: 20% 0 10%;
+    height: 4000px;
+}
+
+#section4 .title {
+    font-family: 'GmarketSans';
+    text-align: left;
+    font-size: 8vw;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 10%;
+    padding: 0 5%;
+}
+
+#section4 .title .t1 {
+    padding-left: 14vw;
+}
+
+#section4 .title .img {
+    width: 12vw;
+    height: 6.6vw;
+    background-image: url(https://source.unsplash.com/500x500/?color);
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: absolute;
+    left: 5.5%;
+    top: 0.6vw;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+#section4 .title .desc {
+    font-family: 'IropkeBatang';
+    line-height: 1.6;
+    font-size: 16px;
+    color: #202020;
+    font-weight: normal;
+    padding-left: 0.5vw;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#section4 .title .desc2 {
+    padding-top: 30px;
+    font-family: 'IropkeBatang';
+    line-height: 1.6;
+    font-size: 16px;
+    color: #202020;
+    font-weight: normal;
+    padding-left: 0.5vw;
+}
+
+.about-wrap {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-wrap .left {
+    width: 50%;
+    padding-bottom: 60%;
+    background-image: url(../img/dd.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.about-wrap .right {
+    width: 45%;
+}
+
+.about-wrap .right dl {}
+
+.about-wrap .right dt {
+    font-family: "Josefin Slab";
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-wrap .right dd {
+    font-family: 'IropkeBatang';
+    margin-bottom: 50px;
+    line-height: 1.7;
 }
