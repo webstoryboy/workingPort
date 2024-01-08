@@ -335,6 +335,7 @@ body {
     width: 55%;
     /* background-color: #cccc; */
 
+
 }
 
 .sec5-text .text-left h3 {
@@ -345,6 +346,9 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     margin-top: -0.7vw;
+    position: sticky;
+    left: 0;
+    top: 90px;
 }
 
 .sec5-text .text-right {
@@ -417,6 +421,9 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     margin-top: -0.7vw;
+    position: sticky;
+    left: 0;
+    top: 90px;
 }
 
 .sec6-text .text-right {
@@ -453,8 +460,6 @@ body {
     top: 5px;
     border-radius: 3px;
 }
-
-
 
 .comment-wrap {}
 
@@ -506,4 +511,166 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
+}
+
+.comment-wrap .comment form {}
+
+.comment-wrap .comment form legend {
+    display: none;
+}
+
+.comment-wrap .comment form fieldset {
+    padding: 10px;
+    border: 1px solid #cccccc7c;
+}
+
+.comment-wrap .comment form fieldset label {
+    display: none;
+}
+
+.comment__form .input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'IropkeBatang';
+    margin-bottom: 10px;
+}
+
+.comment__form .input input {
+    border: 0;
+    background: transparent;
+    border: 1px solid #cccccc7c;
+    width: 49%;
+    padding: 10px;
+    font-family: 'IropkeBatang';
+}
+
+.comment__form .text textarea {
+    border: 0;
+    background: transparent;
+    border: 1px solid #cccccc7c;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-family: 'IropkeBatang';
+
+}
+
+.comment__form button {
+    border: 0;
+    background: transparent;
+    border: 1px solid #cccccc7c;
+    width: 100%;
+    padding: 10px;
+    color: #cccccc7c;
+    font-family: 'IropkeBatang';
+}
+
+
+#section7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 30px;
+    font-family: 'PPSupplyMono';
+}
+
+#section7 {
+    position: relative;
+}
+
+#section7 .bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#section7 .bottom ul {
+    display: inline-block;
+}
+
+#section7 .bottom li {
+    display: inline;
+}
+
+#section7 .bottom li a {
+    font-size: 16px;
+    text-emphasis-style: dot;
+}
+
+#section7 .bottom li a:hover {
+    text-emphasis-color: #000;
+}
+
+
+.modal__wrap {
+    display: none;
+}
+
+.modal__wrap .modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 19000;
+    transform: translate(-50%, -50%);
+    background-color: #0000008e;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.modal__wrap .modal .modal__inner {
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 85vh;
+    border: 1px solid #ffffffaf;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.modal__inner {
+    display: flex;
+}
+
+.modal__inner .modal__left {
+    width: 50%;
+    height: 100%;
+    background-image: url('https://springsummer.imgix.net/uploads/Magasin-01.png?auto=compress%2Cformat&fit=clip&q=35&w=2600');
+    background-image: url('../img/Frame02.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.modal__inner .modal__left img {
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__inner .modal__right {
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+
+}
+
+.modal__inner .modal__right h4 {
+    font-family: 'iceJaram-Rg';
+    font-size: 30px;
+}
+
+.modal__inner .modal__right p {
+    margin-bottom: 10px;
 }
