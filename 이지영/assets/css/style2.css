@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap');
+
+/* @font-face {
+    font-family: 'PPRader';
+    font-weight: 700;
+    font-style: normal;
+    src: url('assets/fonts/PPRader-Bold.woff2') format('woff2'),
+        url('assets/fonts/PPRader-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPRader';
+    font-weight: 500;
+    font-style: normal;
+    src: url('assets/fonts/PPRader-Regular.woff2') format('woff2'),
+        url('assets/fonts/PPRader-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPRader';
+    font-weight: 100;
+    font-style: normal;
+    src: url('assets/fonts/PPRader-Thin.woff2') format('woff2'),
+        url('assets/fonts/PPRader-Thin.woff') format('woff');
+    font-display: swap;
+} */
+@font-face {
+    font-family: "eduAll";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Light.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Light.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Light.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Light.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Light.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "eduAll";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Bold.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Bold.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Bold.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Bold.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/eduAll/eduAll-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+#intro {
+    background-color: #191310;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #DC5B37;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'PPRader';
+}
+
+#intro .h1 {
+    position: relative;
+    z-index: 1000;
+    font-size: 10vw;
+    line-height: .71;
+    padding-bottom: 0.7vw;
+}
+
+#intro .h1 em {
+    font-weight: 100;
+}
+
+.intro__top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+
+.intro__top .sec {
+    margin: 0 10px;
+    background-color: #fff;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.intro__top .s1 {
+    width: 230px;
+    height: 30vh;
+    background-image: url(https://images.unsplash.com/photo-1534237710431-e2fc698436d0?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__top .s2 {
+    width: 230px;
+    height: 20vh;
+    background-image: url(https://images.unsplash.com/photo-1506607541365-d0c9593de494?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__top .s3 {
+    width: 230px;
+    height: 30vh;
+    background-image: url(https://images.unsplash.com/photo-1691036562015-56ebf6648f8c?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__top .s4 {
+    width: 230px;
+    height: 25vh;
+    background-image: url(https://images.unsplash.com/photo-1490351267196-b7a67e26e41b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__top .s5 {
+    width: 230px;
+    height: 40vh;
+    background-image: url(https://images.unsplash.com/photo-1542361345-89e58247f2d5?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.intro__bom .sec {
+    margin: 0 10px;
+    background-color: #0c0c0c;
+    background-size: cover;
+}
+
+.intro__bom .a1 {
+    width: 230px;
+    height: 30vh;
+    background-image: url(https://images.unsplash.com/photo-1666133618839-f0e310290707?q=80&w=4000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom .a2 {
+    width: 230px;
+    height: 40vh;
+    background-image: url(https://images.unsplash.com/photo-1677833766807-5598cc321858?q=80&w=4000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom .a3 {
+    width: 230px;
+    height: 50vh;
+    background-image: url(https://images.unsplash.com/photo-1479292889369-1a48f234247e?q=80&w=3436&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom .a4 {
+    width: 230px;
+    height: 40vh;
+    background-image: url(https://images.unsplash.com/photo-1563356802-5290589463a1?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom .a5 {
+    width: 230px;
+    height: 30vh;
+    background-image: url(https://images.unsplash.com/photo-1573950604387-c907d12d3bd0?q=80&w=2471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom .a6 {
+    width: 230px;
+    height: 40vh;
+    background-image: url(https://images.unsplash.com/photo-1573090951046-c49b94d5621c?q=80&w=3413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.intro__bom .a7 {
+    width: 230px;
+    height: 20vh;
+    background-image: url(https://images.unsplash.com/photo-1569668444050-b7bc2bfec0c7?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+
+
+#sub {
+    background-color: #191310;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #DC5B37;
+    font-family: 'PPRader';
+}
+
+#sub h1 {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    font-weight: 100;
+    transform: translatex(-50%);
+    text-align: center;
+    z-index: 10000;
+    background: #1913105d;
+    backdrop-filter: blur(10px);
+}
+
+#sub h1 em {
+    display: block;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#sub h1 span {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+    letter-spacing: 4.3px;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    padding-left: 4px;
+}
+
+.intro__cont h2 {
+    font-size: 10vw;
+    line-height: 1;
+    margin-bottom: -3vw;
+    margin-right: -4vw;
+    font-weight: 100;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.intro__cont h2 em {
+    font-weight: bold;
+}
+
+.intro__cont .imgwrap {
+    width: 80vw;
+    height: 400px;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1704587422648-43f456047a72?q=80&w=4287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center center;
+}
+
+.intro__cont .imgwrap img {
+    object-fit: contain;
+}
+
+.intro__cont p {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: -10vw;
+    margin-top: -4vw;
+    font-family: "eduAll";
+    word-break: keep-all;
+}
+
+#sub .btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#sub .btn.back {
+    right: auto;
+    left: 20px;
+}
+
+#sub .btn a {
+    font-weight: 100;
+    font-size: 30px;
+    display: inline-block;
+    margin: 3px 6px;
+    font-size: 30px;
+    text-emphasis-style: filled;
+}
+
+#sub .btn a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 1px;
+    text-emphasis-style: open;
+}
+
+#sub .comment {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    width: 400px;
+    height: 400px;
+    background-color: #cccccc00;
+    border: 1px solid #DC5B37;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub .comment:hover {
+    background-color: #DC5B37;
+    color: #fff;
+}
+
+#sub .comment span {
+    cursor: pointer;
+}
+
+#sub .comment2 {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 400px;
+    height: 400px;
+    background-color: #DC5B37;
+    border: 1px solid #DC5B37;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+
+#sub .comment2 input {
+    border: 0;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    font-family: "eduAll";
+
+}
+
+#sub .comment2 button {
+    border: 0;
+    background: transparent;
+    background: #b8492a;
+    display: block;
+    padding: 5px 20px;
+    color: #fff;
+    font-family: "eduAll";
+}
+
+#sub .comment2 input::placeholder {
+    color: #fff;
+}
+
+#sub .coview {
+    position: fixed;
+    z-index: 1000;
+    background-color: #cccccc00;
+    border: 1px solid #DC5B37;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    padding: 6px 10px;
+    font-family: "eduAll";
+
+}
+
+#sub .coview span {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+#sub .coview.c1 {
+    left: 30px;
+    top: 30px;
+}
+
+#sub .coview.c2 {
+    left: 30px;
+    top: 100px;
+}
+
+#sub .coview.c3 {
+    left: 30px;
+    top: 170px;
+}

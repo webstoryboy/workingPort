@@ -3,23 +3,23 @@ import gsap from 'gsap';
 
 
 const Home = () => {
-    
-    useEffect(() => {
-        const tl = gsap.timeline();
-        tl.to(".h1", {opacity: 0, duration: 0.41})
-        tl.to(".s2", {opacity: 0, duration: 0.41})
-        tl.to(".s3", {opacity: 0, duration: 0.41})
-        tl.to(".s4", {opacity: 0, duration: 0.41})
-        tl.to(".s5", {opacity: 0, duration: 0.41})
-        tl.to(".a1", {opacity: 0, duration: 0.41})
-        tl.to(".a2", {opacity: 0, duration: 0.41})
-        tl.to(".a3", {opacity: 0, duration: 0.41})
-        tl.to(".a4", {opacity: 0, duration: 0.41})
-        tl.to(".a5", {opacity: 0, duration: 0.41})
-        tl.to(".a6", {opacity: 0, duration: 0.41})
-        tl.to(".a7", {opacity: 0, duration: 0.41})
-        tl.to(".s1", {height: "100vh", width: "50%"})
-    }, [])
+
+    // useEffect(() => {
+    //     const tl = gsap.timeline();
+    //     tl.to(".h1", {opacity: 0, duration: 0.41})
+    //     tl.to(".s2", {opacity: 0, duration: 0.41})
+    //     tl.to(".s3", {opacity: 0, duration: 0.41})
+    //     tl.to(".s4", {opacity: 0, duration: 0.41})
+    //     tl.to(".s5", {opacity: 0, duration: 0.41})
+    //     tl.to(".a1", {opacity: 0, duration: 0.41})
+    //     tl.to(".a2", {opacity: 0, duration: 0.41})
+    //     tl.to(".a3", {opacity: 0, duration: 0.41})
+    //     tl.to(".a4", {opacity: 0, duration: 0.41})
+    //     tl.to(".a5", {opacity: 0, duration: 0.41})
+    //     tl.to(".a6", {opacity: 0, duration: 0.41})
+    //     tl.to(".a7", {opacity: 0, duration: 0.41})
+    //     tl.to(".s1", {height: "100vh", width: "50%"})
+    // }, [])
 
 
     return (
