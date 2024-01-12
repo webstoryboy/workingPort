@@ -298,7 +298,6 @@
 
 #section5 {
     background-color: #fff;
-    height: 100vh;
     border-radius: 100px 100px 0 0;
 }
 
@@ -309,12 +308,14 @@
     font-weight: 800;
     line-height: 0.9;
     text-transform: uppercase;
-    
+
 }
-.sec5-text > div {
+
+.sec5-text>div {
     display: inline-block;
     position: relative;
 }
+
 .sec5-text span {
     font-size: 24px;
     font-weight: 2;
@@ -322,4 +323,140 @@
     position: absolute;
     right: -90px;
     top: 0;
+}
+
+#section6 {
+    background-color: #000;
+    color: #fff;
+    padding: 100px;
+    position: relative;
+}
+
+#section6 .text>div:nth-child(1) {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'GmarketSans';
+}
+
+#section6 .text>div:nth-child(2) {
+    font-family: PartizenoRegular;
+    font-size: 8vw;
+    line-height: 0.8;
+    padding-left: 5vw;
+}
+
+#section6 .text>div:nth-child(3) {
+    font-family: PartizenoRegular;
+    font-size: 12vw;
+    line-height: 0.8;
+    padding-left: 8vw;
+    margin-top: -1vw;
+    position: relative;
+    z-index: 300;
+    white-space: nowrap;
+}
+
+#section6 .img {
+    position: relative;
+    z-index: 100;
+    width: 50%;
+}
+
+#section6 .input {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#section6 .input input {
+    border: 0;
+    background-color: transparent;
+    border: 1px solid #ffffff62;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+#section6 .input button {
+    border: 0;
+    background-color: transparent;
+    border: 1px solid #ffffff62;
+    padding: 5px 30px;
+    color: #fff
+}
+
+#section6 .input .input1 {
+    width: 20%;
+}
+
+#section6 .input .input2 {
+    width: 20%;
+}
+
+#section6 .input .input3 {
+    width: 40%;
+}
+
+#section6 .input button {
+    width: 20%;
+}
+
+#section6 .comment__wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#section6 .comment__wrap .comment {
+    max-width: 300px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    z-index: 1000;
+    border: 1px solid #ffffff61;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.7;
+    font-family: 'IropkeBatang';
+}
+
+#section6 .comment__wrap .comment.c1 {
+    left: 10%;
+    bottom: 20%;
+}
+
+#section6 .comment__wrap .comment.c2 {
+    left: 20%;
+    bottom: 30%;
+}
+
+#section6 .comment__wrap .comment.c3 {
+    left: 50%;
+    bottom: 40%;
+}
+
+#section6 .comment__wrap .comment.c4 {
+    left: 70%;
+    bottom: 60%;
+}
+
+#section6 .comment__wrap .comment.c5 {
+    left: 70%;
+    bottom: 30%;
+}
+
+#section6 .comment__wrap .comment.c6 {
+    left: 70%;
+    bottom: 30%;
+}
+
+#section6 .comment__wrap .comment span em {
+    display: inline-block;
+    border: 1px solid #ffffff43;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 12px;
 }
