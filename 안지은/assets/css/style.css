@@ -1,0 +1,85 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#header h1 {
+    font-family: 'Poppins';
+    color: #fff;
+    line-height: 0.5;
+}
+
+#header h1 span {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+}
+
+#header h1 em {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 11px;
+}
+
+#header nav {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+#section1 {
+    height: 200vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    line-height: 1;
+    overflow: hidden;
+}
+
+#section1 p {
+    font-family: 'Iropke Batang';
+    width: 400px;
+    line-height: 1.5;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20vh;
+    margin-left: 4vw;
+}
+
+#section1 .text>div {
+    font-family: 'gmarket';
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 300;
+    margin-left: 3vw;
+    margin-top: 2vw;
+    line-height: 0.9;
+}
+
+@media (max-width: 640px) {
+    #section1 p {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 13vw;
+        word-break: keep-all;
+        margin-bottom: 13vw;
+    }
+
+    #section1 .text>div {
+        text-align: center;
+        padding: 1vw;
+    }
+}
