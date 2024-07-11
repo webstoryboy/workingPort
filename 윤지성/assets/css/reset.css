@@ -1,3 +1,5 @@
+@import url(https://websfont.github.io/websfont/websfont.css);
+
 @font-face {
     font-family: 'Chomsky';
     src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/Chomsky.woff') format('woff');
@@ -7,14 +9,83 @@
 }
 
 @font-face {
-    font-family: 'theramy';
-    src: url('https://gosu1234.dothome.co.kr/portfolio/font/theramy-webfont.eot');
-    src: url('https://gosu1234.dothome.co.kr/portfolio/font/theramy-webfont.eot?#iefix') format('embedded-opentype'),
-        url('https://gosu1234.dothome.co.kr/portfolio/font/theramy-webfont.woff2') format('woff2'),
-        url('https://gosu1234.dothome.co.kr/portfolio/font/theramy-webfont.woff') format('woff'),
-        url('https://gosu1234.dothome.co.kr/portfolio/font/theramy-webfont.ttf') format('truetype');
+    font-family: 'NeoGeoTrial-Black';
+    src: url('../fonts/NeoGeoTrial-Black.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-Bold';
+    src: url('../fonts/NeoGeoTrial-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-Book';
+    src: url('../fonts/NeoGeoTrial-Book.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-ExtraBold';
+    src: url('../fonts/NeoGeoTrial-ExtraBold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-ExtraLight';
+    src: url('../fonts/NeoGeoTrial-ExtraLight.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-Light';
+    src: url('../fonts/NeoGeoTrial-Light.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-Medium';
+    src: url('../fonts/NeoGeoTrial-Medium.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-Regular';
+    src: url('../fonts/NeoGeoTrial-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-SemiBold';
+    src: url('../fonts/NeoGeoTrial-SemiBold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoGeoTrial-Thin';
+    src: url('../fonts/NeoGeoTrial-Thin.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
