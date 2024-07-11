@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="pattern" id="pattern"></div>
+    </div>
+
+    <header id="header">
+        <div class="box1 ">
+            <h1 class="btop bbom">portfolio</h1>
+        </div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    </header>
+
+    <script>
+        function createSparkles() {
+            const pattern = document.getElementById('pattern');
+            const sparkleSize = 20; // 스파클 간격 (px)
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const numColumns = Math.floor(width / sparkleSize);
+            const numRows = Math.floor(height / sparkleSize);
+            const totalSparkles = numColumns * numRows;
+
+            for (let i = 0; i < totalSparkles; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                pattern.appendChild(sparkle);
+            }
+        }
+
+        window.onload = createSparkles;
+    </script>
+</body>
+
+</html>

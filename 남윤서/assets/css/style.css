@@ -1,0 +1,240 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* backdrop-filter: blur(10px); */
+    color: #B7CBE3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 1rem;
+    z-index: 10;
+}
+
+#header h1 {
+    font-family: 'SwisspoTrial-CondBlackTall';
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 0.8;
+}
+
+#header h1 span {
+    display: block;
+    font-family: 'Poppins';
+    letter-spacing: 5.7px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#header nav {
+    font-family: 'SwisspoTrial-CondBlackTall';
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 0.8;
+}
+
+#header nav span {
+    display: block;
+    font-family: 'Poppins';
+    letter-spacing: 5.7px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+@media (max-width: 800px) {
+    #header h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+        line-height: 0.8;
+    }
+
+    #header h1 span {
+        letter-spacing: 3.7px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    #header nav {
+        font-size: 40px;
+        letter-spacing: 1px;
+        line-height: 0.8;
+    }
+
+    #header nav span {
+        letter-spacing: 3.7px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #1F2635;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#section1 #stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#section1 .text {
+    color: #B7CBE3;
+    text-align: center;
+    line-height: 0.21;
+    position: relative;
+    z-index: 10;
+}
+
+#section1 .text h1 {
+    font-family: 'SwisspoTrial-CondThinTall';
+    font-size: 10vw;
+    line-height: 1;
+    font-weight: 100;
+    letter-spacing: 4vw
+}
+
+#section1 .text p {
+    font-family: 'Qwitcher Grypen';
+    font-size: 3vw;
+    display: none;
+}
+
+#section2 {
+    width: 100%;
+    height: 2000px;
+    background-color: #1F2635;
+}
+
+
+/* footer */
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: end;
+    z-index: 100;
+}
+
+#footer .left {
+    color: #B7CBE3;
+    border: 1px solid #B7CBE3;
+    width: 300px;
+    height: 73px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+#footer .left .up {
+    border-bottom: 1px solid #B7CBE3;
+    display: flex;
+    height: 24px;
+}
+
+#footer .left .up span:nth-child(1) {
+    width: 20%;
+    border-right: 1px solid #B7CBE3;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+#footer .left .up span:nth-child(2) {
+    padding-left: 10px;
+    width: 80%;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 2px;
+}
+
+#footer .left .down {
+    display: flex;
+    height: 48px;
+
+}
+
+#footer .left .down span:nth-child(1) {
+    width: 80%;
+    border-right: 1px solid #B7CBE3;
+    line-height: 1;
+    padding-top: 7px;
+}
+
+#footer .left .down span:nth-child(2) {
+    width: 20%;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 14px;
+}
+
+#footer .center {
+    text-align: center;
+    width: 370px;
+}
+
+#footer .center h5 {
+    font-family: 'SwisspoTrial-CondBlackTall';
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 0.8;
+    color: #B7CBE3;
+    margin-bottom: 0.3vw;
+
+}
+
+#footer .center p {
+    font-family: 'IropkeBatang';
+    color: #B7CBE3;
+}
+
+#footer .right {
+    width: 300px;
+    height: 170px;
+    border-radius: 5px;
+    background-image: url('https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+#footer .right span {
+    font-size: 60px;
+    font-family: 'SwisspoTrial-CondBlackTall';
+    color: #B7CBE3;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 1200px) {
+    #footer .right {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    #footer .center {
+        display: none;
+    }
+
+    #footer .left {
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    }
+}

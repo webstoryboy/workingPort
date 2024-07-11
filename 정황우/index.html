@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <section id="section1">
         <div class="box-wrap">
-            <div class="box1"></div>
+            <div class="box1">
+                <h1>Developer</h1>
+                <p class="desc">
+                    어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.<br>
+                    신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며<br>
+                    세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                </p>
+                <div class="scroll">scroll down</div>
+
+                <div class="left-text">Power of creativity</div>
+                <div class="right-text">Gowing coding passion</div>
+            </div>
         </div>
     </section>
 
@@ -19,7 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
         const ani = gsap.timeline();
-        ani.to(".box-wrap", {scale: 0.8, duration:1})
+        ani.to(".box-wrap", { scale: 0.8, duration: 1 })
 
         ScrollTrigger.create({
             animation: ani,
@@ -34,4 +47,5 @@
 
     </script>
 </body>
+
 </html>

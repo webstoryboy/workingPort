@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>port3</h1>
+        <div class="mesg"></div>
+        <div class="nav"></div>
+    </header>
+    <!-- //header -->
+
+    <section id="section1">
+        <div class="text" id="textContainer"></div>
+    </section>
+    <!-- //section1 -->
+
+    <section id="section2"></section>
+    <section id="section3"></section>
+    <section id="section4"></section>
+    <section id="section5"></section>
+    <section id="section6"></section>
+
+    <script>
+        const textContainer = document.getElementById('textContainer');
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        function getRandomCharacter() {
+            return characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+
+        function fillContainerWithSpans() {
+            const width = window.innerWidth;
+            const totalSpans = width < 1600 ? 140 : 234; // 화면 너비에 따라 총 span 개수 설정
+
+            // Clear existing spans
+            textContainer.innerHTML = '';
+
+            for (let i = 0; i < totalSpans; i++) {
+                const span = document.createElement('span');
+                span.textContent = getRandomCharacter();
+                textContainer.appendChild(span);
+            }
+        }
+
+        // Initial fill
+        fillContainerWithSpans();
+
+        // Refill on window resize
+        window.addEventListener('resize', fillContainerWithSpans);
+    </script>
+</body>
+
+</html>

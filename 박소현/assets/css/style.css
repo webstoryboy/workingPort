@@ -1,0 +1,207 @@
+@import url(https://websfont.github.io/websfont/websfont.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 330px;
+    height: 100vh;
+    /* background-color: #ccc; */
+}
+
+.main {
+    width: 100%;
+    margin-left: 340px;
+    margin-right: 10px;
+    /* background-color: #ddd; */
+}
+
+#section1 {
+    width: 100%;
+    height: 40vmax;
+    background-color: #222;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+#section2 {
+    height: 30vmax;
+    background-color: #333;
+    border-radius: 10px;
+    background-image: url(https://images.unsplash.com/photo-1718547963089-c625de6c5af7?q=80&w=3544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    position: relative;
+}
+
+#section2>div {
+    color: #E7E8DA;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#section2>div span {
+    font-family: 'Oswald';
+    font-weight: 100;
+    mix-blend-mode: difference;
+}
+
+canvas {
+    font-family: 'Oswald';
+    font-variation-settings: 'wght' 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.article1 {
+    text-align: center;
+}
+
+.article1 h1 {
+    font-family: 'Oswald';
+    font-weight: 100;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+.article1 h1 .logo {
+    vertical-align: -4px;
+}
+
+.article1 .date {
+    font-family: 'Oswald';
+    font-weight: 100;
+}
+
+.article1 .date .time {
+    display: block;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+#section3 {
+    height: 500px;
+}
+
+.article-about {
+    margin-top: 50px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.article-about .img {
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-image: url(https://cafe24.poxo.com/ec01/recsofficial/Eq2JUnbp+f2xrJOy4N2kk3l3qc9lFGy54ikp3si5c7mu6XQWDCfurvAp0DpKbeRsTbtQMI2BILCf5cAa3597NQ==/_/web/upload/NNEditor/20231128/copy-1701144519-EBB095ED9598EC97B02028129.png);
+    background-size: cover;
+    backdrop-filter: grayscale(30%);
+}
+
+.article-about p {
+    width: calc(100% - 110px);
+    font-family: 'nexonLv2';
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+    position: relative;
+}
+
+.article-about p::after {
+    content: '';
+    background-image: url(../assets/img/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 16px;
+    opacity: 0.3;
+}
+
+.article-title {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    box-shadow: inset 0px 0px 0 2px #f6f6f6;
+}
+
+.article-title:hover {
+    box-shadow: inset 0px 0px 0 2px #f0f0f0;
+}
+
+.article-title .img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-image: url(../img/alogo.png);
+    background-size: cover;
+    backdrop-filter: grayscale(30%);
+}
+
+.article-title.i2 .img {
+    background-image: url(../img/alogo2.png);
+}
+
+.article-title p {
+    width: calc(100% - 70px);
+    font-family: 'nexonLv2';
+    font-size: 14px;
+    line-height: 1.4;
+    color: #777;
+    position: relative;
+}
+
+.article-title p span {
+    display: block;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+
+.sub1 {
+    width: 100%;
+    margin-left: 340px;
+    margin-right: 10px;
+}
+
+.section1 {
+    width: 100%;
+    height: 500px;
+    background-color: #ccc;
+}
+
+.section2 {
+    width: 100%;
+    height: 1500px;
+    background-color: #ddd;
+}

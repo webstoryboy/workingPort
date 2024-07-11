@@ -6,81 +6,102 @@
     position: relative;
 }
 
-#section1 h1 {
+.left-img h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 40px;
-    font-size: 14vw;
-    font-family: 'Playfair Display';
-    text-transform: uppercase;
+    bottom: 20px;
+    font-size: 12vw;
+    font-family: 'AmazoTrial-XCnBlkContrast';
     font-weight: 600;
-    letter-spacing: 0.5vw;
+    letter-spacing: -0.7vw;
     z-index: 100;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: #ccc;
+    display: block;
 }
 
-#section1 .left-img {
+.sec1-inner .left-img {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100vh;
-}
-
-#section1 .left-img .bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/bg-left.svg);
-    background-size: 100%;
+    width: 500px;
+    height: 700px;
+    background-image: url(../img/left-bg.svg);
+    background-position: left -40px bottom -40px;
     background-repeat: no-repeat;
-    background-position: left bottom;
 }
 
-.m41024 {
-    position: relative;
-    animation: scale 1s infinite ease-in-out;
-    transform-origin: left center;
+.sec1-inner .left-img .flower1 {
+    background-image: url(../img/left-bg-flower1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    left: 133px;
+    bottom: 281px;
 }
 
-@keyframes scale {
+.sec1-inner .left-img .flower2 {
+    background-image: url(../img/left-bg-flower2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    left: 60px;
+    bottom: 121px;
+}
+
+.sec1-inner .left-img .flower3 {
+    background-image: url(../img/left-bg-flower3.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    left: 190px;
+    bottom: -100px;
+    z-index: 100;
+    animation: down 10s infinite;
+    transform-origin: bottom center;
+}
+
+.sec1-inner .left-img .flower4 {
+    background-image: url(../img/left-bg-flower4.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 120px;
+    height: 300px;
+    position: absolute;
+    left: 40px;
+    bottom: -30px;
+    z-index: 101;
+
+}
+
+.sec1-inner .right-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40vw;
+    height: 70vh;
+}
+
+@keyframes down {
     0% {
-        transform: rotate(0deg);
+        transform: rotateZ(0);
     }
 
     50% {
-        transform: rotate(10deg);
+        transform: rotateZ(5deg);
     }
 
     100% {
-        transform: rotate(0deg);
-    }
-}
-
-#section1 .left-img .bg svg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-#section2 {
-    background-color: #ccc;
-    width: 100%;
-    height: 2000px
-}
-
-@keyframes color {
-    0% {
-        fill: aqua;
-    }
-
-    100% {
-        fill: rgb(255, 51, 0);
+        transform: rotateZ(0);
     }
 }

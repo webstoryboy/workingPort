@@ -12,6 +12,23 @@
 </head>
 
 <body>
+    <header id="header">
+        <div class="left">
+            <span class="music">
+                <img src="assets/img/a.svg" alt="a">
+            </span>
+            <span class="list">
+                <img src="assets/img/b.svg" alt="a">
+            </span>
+        </div>
+        <div class="right">
+            <span class="welcome"></span>
+            <span class="email"></span>
+            <span class="menu"></span>
+        </div>
+    </header>
+    <!-- //header -->
+
     <div id="section1">
         <div class="text">
             <ul class="c-rainbow">
@@ -96,11 +113,166 @@
                 </g>
             </svg>
         </div>
+        <div class="confetti"></div>
         <div class="bg">
             <img src="assets/img/bg.svg" alt="bg">
         </div>
+        <div class="barWrap">
+            <div class="bar">
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+                <span>Scroll 😜</span>
+                <span>Scroll 🤗</span>
+            </div>
+        </div>
     </div>
-    <div id="section2"></div>
+    <!-- //section1 -->
+
+    <div id="section2">
+        <p>
+            안녕하세요.<br>저는 웹 퍼블리셔로 첫 발을 내딛는 예비 퍼블리셔입니다.<br>
+            창의적인 디자인과 기술적인 구현을 통해 사용자들에게 기능적인 구현뿐만 아니라,<br>
+            보는 것도 즐거운 경험을 제공하는 것을 목표로 하고 있습니다.<br>
+            HTML, CSS, Javascript와 같은 웹 기술을 배워 퍼블리싱 능력을 키웠습니다.<br>
+            웹 디자인 및 퍼블리싱 관련 교육 과정을 수료하며<br>최신 웹 트렌드와 기술에 대한 이해를 확장하였습니다.<br>
+            디자인 툴인 Adobe Photoshop, Illustrator, Figma를 사용하여 작업을 하였으며,<br>
+            이러한 디자인 도구에 능숙합니다.<br>
+        </p>
+        <div class="img"></div>
+        <div class="sec-div">
+            <div class="sec-div__inner">
+                <div class="div-red"></div>
+                <div class="div-red"></div>
+            </div>
+            <div class="sec-div__inner">
+                <div class="div-red"></div>
+                <div class="div-red"></div>
+            </div>
+            <div class="sec-div__inner">
+                <div class="div-red"></div>
+                <div class="div-red"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //section2 -->
+
+    <div id="section3">
+
+
+    </div>
+    <!-- //section3 -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf);
+
+        (function () {
+            const wrapper = document.querySelector(".confetti");
+            const isAnimationOk = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+            const icons = [
+                "🎉",
+                "✨",
+                "💜",
+                "🥰",
+                "👸🏻",
+                "💻"
+            ];
+            const iconCount = 18;
+            var elements = [];
+
+            init();
+
+            function init() {
+                for (let i = 0; i < iconCount; i++) {
+                    createIcon();
+                }
+
+                gsap.set(elements, {
+                    transformOrigin: "50% 50%",
+                    scale: 0
+                });
+            }
+
+            function createIcon(icon) {
+                if (icon === null || icon === undefined) {
+                    icon = document.createElement("span");
+                    icon.classList.add("confetti__item");
+                    wrapper.appendChild(icon);
+                    elements.push(icon);
+                }
+
+                icon.innerText = gsap.utils.random(icons);
+                if (isAnimationOk) animateIcon(icon);
+            }
+
+            function animateIcon(icon) {
+                let durationFall = gsap.utils.random(1.75, 2.5);
+                let durationFade = .3;
+                let delay = gsap.utils.random(0, .75);
+                let xDirection = gsap.utils.random(0, 1) > .5 ? 1 : -1;
+                let x = (gsap.utils.random(0, window.outerWidth / 4) + 100) * xDirection;
+                let tl = new gsap.timeline();
+
+                tl.to(icon, {
+                    repeat: -1,
+                    delay: delay,
+                    keyframes: [{
+                        scale: 1,
+                        duration: .1
+                    },
+                    {
+                        y: `random(${-window.outerHeight / 2}, 0)`,
+                        ease: Back.easeOut.config(5),
+                        duration: durationFall
+                    },
+                    {
+                        x: (gsap.utils.random(0, window.outerWidth / 2) + 100) * xDirection,
+                        ease: "Power1.easeOut",
+                        duration: durationFall,
+                        delay: -durationFall
+                    },
+                    {
+                        opacity: 0,
+                        scale: 4,
+                        ease: "Power1.easeOut",
+                        duration: durationFade,
+                        delay: -durationFade
+                    }]
+                }, "<");
+            }
+        }());
+
+
+    </script>
 </body>
 
 </html>

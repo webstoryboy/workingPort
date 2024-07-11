@@ -1,0 +1,142 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'gmarket';
+    padding: 1rem;
+    z-index: 10000;
+}
+
+#header h1 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+#header h1 span {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 8px;
+    font-size: 14px;
+}
+
+#header nav {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #F04822;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#section1 .center {
+    font-size: 20vw;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    width: 100%;
+}
+
+#section1 .center>div.img {
+    width: 40vw;
+    height: 40vw;
+    background-image: url(../img/seo.jpg);
+    background-position: center 100px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transform: scale(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+}
+
+#section1 .center>div.text1 {}
+
+#section1 .center>div.text2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
+    width: 100%;
+    transform: scale(0);
+}
+
+#section1 .center>div.text3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 200;
+    width: 100%;
+    transform: scale(0);
+}
+
+
+/* 
+#section1 .center>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: 'Poppins';
+    letter-spacing: -0.8vw;
+    font-weight: 900;
+    width: 100%;
+    height: auto;
+}
+
+#section1 .center>div.img {
+    width: 40vw;
+    height: 40vw;
+    background-image: url(../img/seo.jpg);
+    background-position: center 100px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+#section1 .center>div.text1 {
+    mix-blend-mode: difference;
+    transform: scale(0);
+}
+
+#section1 .center>div.text2 {
+    transform: scale(0);
+    background-color: #ccc;
+}
+
+#section1 .center>div.text3 {
+    transform: scale(0);
+} */
+
+#section2 {
+    width: 100%;
+    height: 2000px;
+    background-color: #ccc;
+}

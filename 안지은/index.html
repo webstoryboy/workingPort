@@ -43,12 +43,75 @@
     </section>
     <!-- //section1 -->
 
-    <section id="section2"></section>
+    <section id="section2">
+        <h2>design</h2>
+        <div class="article1">
+            <div class="left">
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+            </div>
+            <div class="right text">
+                <h3>Webstandard</h3>
+                <p>
+                    웹에 관심이 많았던 저는 웹디자인을 코딩을 접하게 되었습니다.<br>
+                    배워보지도 못한 영역이라 처음엔 개념이 안 잡혀있어서<br>
+                    어려웠지만, 매일매일 메모장에 그날의 수업을 웹 수업 1일 차,<br>
+                    2일 차 이렇게 적어가며 네이버 클라우드 입니다.
+                </p>
+                <a href="#">view</a>
+            </div>
+        </div>
+
+        <div class="article2">
+            <div class="left text">
+                <h3>Webstandard</h3>
+                <p>
+                    웹에 관심이 많았던 저는 웹디자인을 코딩을 접하게 되었습니다.<br>
+                    배워보지도 못한 영역이라 처음엔 개념이 안 잡혀있어서<br>
+                    어려웠지만, 매일매일 메모장에 그날의 수업을 웹 수업 1일 차,<br>
+                    2일 차 이렇게 적어가며 네이버 클라우드 입니다.
+                </p>
+                <a href="#">view</a>
+            </div>
+            <div class="right">
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article3">
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </section>
+    <!-- //section2 -->
+
     <section id="section3"></section>
     <section id="section4"></section>
     <section id="section5"></section>
     <section id="section6"></section>
 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf);
+    </script>
 </body>
 
 </html>

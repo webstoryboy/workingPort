@@ -1,11 +1,14 @@
 body {
     height: 20000px;
 }
+
 #section1 {
     width: 100%;
     height: 100vh;
     background-color: #000;
+    position: relative;
 }
+
 .box-wrap {
     width: 60vw;
     height: 40vw;
@@ -15,6 +18,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%) scale(1.4);
 }
+
 .box-wrap::before {
     content: '';
     position: absolute;
@@ -26,6 +30,7 @@ body {
     transform: rotate(44.6deg);
     transform-origin: left top;
 }
+
 .box-wrap::after {
     content: '';
     position: absolute;
@@ -37,6 +42,7 @@ body {
     transform: rotate(-44.6deg);
     transform-origin: right top;
 }
+
 .box1 {
     position: absolute;
     left: 50%;
@@ -46,27 +52,113 @@ body {
     width: 80%;
     height: 70%;
     border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
 }
+
+.box1 h1 {
+    font-family: 'AfricaTrial-Rainfall';
+    font-size: 30px;
+}
+
+.box1 .desc {
+    font-family: 'gyeonggiBatang';
+    padding: 5% 10% 10% 10%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.box1 .scroll {
+    font-family: 'NeoGeoTrial-ExtraLight';
+    font-size: 16px;
+    border: 1px solid #fff;
+    padding: 3px 40px;
+    border-radius: 50px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.box1 .scroll::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../svg/arrow.svg);
+    background-size: cover;
+}
+
+.box1 .scroll::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../svg/arrow.svg);
+    background-size: cover;
+}
+
+
+
 .box1::before {
     content: '';
     position: absolute;
     left: -1px;
     bottom: 0;
-    width: 8.65vw;;
+    width: 8.65vw;
     height: 2px;
     background-color: #fff;
     transform: rotate(135deg);
     transform-origin: left bottom;
 }
+
 .box1::after {
     content: '';
     position: absolute;
     right: -1px;
     bottom: 0;
-    width: 8.65vw;;
+    width: 8.65vw;
+    ;
     height: 2px;
     background-color: #fff;
     transform: rotate(225deg);
     transform-origin: right bottom;
 }
 
+
+.box1 .left-text {
+    position: absolute;
+    left: -180px;
+    top: 20%;
+    border: 1px solid #fff;
+    font-size: 6vw;
+    white-space: nowrap;
+    font-family: 'NeoGeoTrial-Regular';
+    background: #000;
+    margin-left: -40px;
+    padding: 0px 30px;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.box1 .right-text {
+    position: absolute;
+    right: -190px;
+    top: 50%;
+    border: 1px solid #fff;
+    font-size: 6vw;
+    white-space: nowrap;
+    font-family: 'NeoGeoTrial-Regular';
+    background: #000;
+    margin-right: 0px;
+    padding: 0px 30px;
+    line-height: 1.5;
+    text-transform: capitalize;
+
+}
