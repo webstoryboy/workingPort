@@ -1,0 +1,64 @@
+body {
+    background-color: #000;
+}
+
+#wrap {
+    width: 100%;
+}
+
+.font-title {
+    width: 100%;
+    text-align: center;
+}
+
+.font-title h1 {
+    background-color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    width: 300px;
+    margin: 30px;
+    border-radius: 40px;
+    font-weight: 100;
+}
+
+.font-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.font-wrap .font {
+    background-color: #ddd;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-wrap .font.s1 {
+    background-color: #0460F5;
+    color: #fff;
+    font-size: 4vw;
+    font-family: 'GmarketSans';
+    flex-direction: column;
+    line-height: 1;
+}
+
+.font-wrap .font.s1 span {
+    display: block;
+}
+
+.font-wrap .font.s2 {
+    font-family: 'jeonHwaSeon';
+    background-color: #F397F9;
+    color: #fff;
+    flex-direction: column;
+    font-size: 11vw;
+    line-height: 0.7;
+    text-transform: capitalize;
+    text-align: center;
+
+}

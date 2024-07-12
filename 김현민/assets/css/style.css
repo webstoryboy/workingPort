@@ -17,7 +17,7 @@
 #header h1 {
     font-size: 20px;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #header h1 span {
@@ -45,6 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #section1 .text {
@@ -62,40 +63,39 @@
     text-transform: uppercase;
 }
 
-#section1 .text>div:nth-child(1) {
+#section1 .text .t1 {
     padding-left: 5vw;
+    overflow: hidden;
 }
 
-#section1 .text>div:nth-child(2) {
+#section1 .text .t2 {
     padding-left: 15vw;
+    overflow: hidden;
 }
 
-#section1 .text>div:nth-child(2) span {
-    position: relative;
-}
-
-#section1 .text>div:nth-child(2) span::after {
-    content: 'pro';
+#section1 .text .t2 span {
     position: absolute;
-    right: -5vw;
-    bottom: -2vw;
+    right: 1vw;
+    bottom: 2vw;
     font-family: 'Dynalight';
     color: #5F2CC6;
     text-transform: lowercase;
+    font-size: 9vw;
 }
 
-#section1 .text>div:nth-child(3) img {
-
+#section1 .text .t3 img {
     position: absolute;
     right: 5vw;
     bottom: 5vw;
     width: 20vw;
     height: 20vw;
+    z-index: 10000;
 }
 
-#section1 .text>div:nth-child(4) {
+#section1 .text .t4 {
     padding-right: 15vw;
     text-align: right;
+    overflow: hidden;
 }
 
 #section1::after {
@@ -187,4 +187,47 @@
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+#section2 {
+    width: 100%;
+    min-height: 1000px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 10% 3%;
+    text-align: center;
+}
+
+#section2 div .ab {
+    color: #FAEDBF;
+    margin-bottom: 7%;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+#section2 div .aa {
+    color: #5F2CC6;
+    font-family: "Thunder";
+    font-size: 4vw;
+    text-transform: uppercase;
+    line-height: 0.7;
+    margin-bottom: 10%;
+}
+
+#section2 div .aa .line {
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+#section2 div .bb {
+    color: #FAEDBF;
+    font-family: 'IropkeBatang';
+}
+
+#section2 div .bb p {
+    margin-bottom: 5%;
 }

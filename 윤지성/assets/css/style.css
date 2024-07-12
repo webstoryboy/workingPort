@@ -14,7 +14,7 @@
 #header h1 {
     color: #fff;
     font-size: 12px;
-    padding: 10px 20px 12px 30px;
+    padding: 12px 20px 12px 30px;
     font-family: 'GmarketSans';
     font-weight: bold;
     text-transform: uppercase;
@@ -29,7 +29,7 @@
     background-size: cover;
     position: absolute;
     left: 10px;
-    top: 11px;
+    top: 12px;
 }
 
 #header .time {
@@ -153,9 +153,16 @@
 }
 
 .footer__info .menu li:nth-child(1) {
-    background-image: url(../img/vite.png);
+    background-image: url(../img/jin.jpg);
+    background-position: center top 0px;
+    background-repeat: no-repeat;
+    border-radius: 35px;
+    transition: all 0.3s;
 }
 
+.footer__info .menu li:nth-child(1):hover {
+    border-radius: 15px;
+}
 
 
 .layer {
@@ -194,8 +201,6 @@
     background-repeat: no-repeat;
     border-radius: 5px;
 }
-
-.layer__contents .head .name {}
 
 .layer__footer {
     position: absolute;
