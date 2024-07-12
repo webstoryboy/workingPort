@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_오른쪽_위" data-name="오른쪽_위" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 35.97 23.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00d675;
+        stroke: #111114;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.07px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M32.53.64c-5.2-.26-11.02-.32-16.01,3.31C9.82,8.83,7.42,18.41.54,22.93c4.21-1.38,7.95.17,11.97.23,5.14.07,10.99-2.48,15.39-6.72,4.4-4.24,7.26-10.08,7.54-15.37"/>
+  <path class="cls-1" d="M34.26,1c-6.19,6.19-13.57,11.14-21.21,14.22"/>
+</svg>

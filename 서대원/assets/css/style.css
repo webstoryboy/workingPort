@@ -1,0 +1,231 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'gmarket';
+    padding: 1rem;
+    z-index: 10000;
+}
+
+#header h1 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+#header h1 span {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 8px;
+    font-size: 14px;
+}
+
+#header nav {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #F04822;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#section1 .center {
+    font-size: 15vw;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    width: 100%;
+}
+
+#section1 .center>div.img {
+    width: 40vw;
+    height: 40vw;
+    background-image: url(../img/seo.jpg);
+    background-position: center 100px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transform: scale(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+}
+
+#section1 .center>div.text1 {
+    overflow: hidden;
+    line-height: 0.95;
+    font-family: 'NeoGeoTrial-ExtraLight';
+    /* background-color: #ccc; */
+}
+
+#section1 .center>div.text2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0.95;
+    font-family: 'NeoGeoTrial-Light';
+}
+
+#section1 .center>div.text3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0.95;
+    font-family: 'NeoGeoTrial-ExtraLight';
+
+}
+
+#section1 .center>div.text4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0.95;
+    font-family: 'NeoGeoTrial-ExtraLight';
+
+}
+
+#section1 .scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding-bottom: 30px;
+    color: #fff;
+    font-family: 'gmarket';
+    font-weight: 900;
+    text-transform: uppercase;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 20px;
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+    }
+}
+
+.stars {
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 0;
+    perspective-origin: 50% 100%;
+    left: 50%;
+    animation: rotate 90s infinite linear;
+}
+
+.star {
+    width: 2px;
+    height: 2px;
+    background: #F7F7B6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0 -300px;
+    transform: translate3d(0, 0, -300px);
+    backface-visibility: hidden;
+}
+
+
+
+/* section2 */
+#section2 {
+    position: relative;
+    z-index: 2000;
+    width: 100%;
+    background-color: #000;
+    margin-top: 100vh;
+    padding-bottom: 40vw;
+}
+
+
+#section2>div {
+    width: 100%;
+    padding: 20vw 0 10vw;
+    color: #fff;
+    font-family: 'NeoGeoTrial-Bold';
+    text-align: center;
+    font-size: 8vw;
+    text-transform: uppercase;
+}
+
+#section2>div p {
+    font-family: 'IropkeBatang';
+    font-size: 14px;
+}
+
+#section2 .t1 {
+    position: relative;
+}
+
+#section2>div h3 {
+    line-height: 0.83;
+    margin-bottom: 2%;
+    overflow: hidden;
+}
+
+#section2 .t1 .img1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 460px;
+    height: 250px;
+    background-color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1682711274476-02947d6b4699?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+#section2 .t1 .img2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    height: 300px;
+    background-color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1718662538800-fa9c94a6a7f6?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
