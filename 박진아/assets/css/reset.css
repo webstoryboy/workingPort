@@ -13,65 +13,42 @@
 }
 
 @font-face {
-    font-family: 'CondensedRegular';
+    font-family: 'NeoGeoTrial-ExtraLight';
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-CondensedRegular.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-CondensedRegular.woff') format('woff');
+    src: url('../fonts/NeoGeoTrial-ExtraLight.woff2') format('woff2');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'ExtendedThin';
+    font-family: 'NeoGeoTrial-Light';
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-ExtendedThin.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-ExtendedThin.woff') format('woff');
+    src: url('../fonts/NeoGeoTrial-Light.woff2') format('woff2');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Regular';
+    font-family: 'AfricaTrial-Cliff';
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-Regular.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-Regular.woff') format('woff');
+    src: url('../fonts/AfricaTrial-Cliff.woff2') format('woff2');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SemiCondensedUltrabold';
+    font-family: 'AfricaTrial-Drylands';
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-SemiCondensedUltrabold.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-SemiCondensedUltrabold.woff') format('woff');
+    src: url('../fonts/AfricaTrial-Drylands.woff2') format('woff2');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SemiExtendedBlack';
+    font-family: 'AfricaTrial-Rainfall';
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-SemiExtendedBlack.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-SemiExtendedBlack.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SuperCondensedLight';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/PPNeueWorld-SuperCondensedLight.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-SuperCondensedLight.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Thin';
-    font-weight: 300;
-    font-style: normal;
-    src: url('../fonts/PPNeueWorld-Thin.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-Thin.woff') format('woff');
+    src: url('../fonts/AfricaTrial-Rainfall.woff2') format('woff2');
     font-display: swap;
 }
 
