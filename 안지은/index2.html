@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style2.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header id="header">
+            <h1>
+                <span>design+coding</span>
+                <em>portfolio</em>
+            </h1>
+            <nav>menu</nav>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <section id="section1">
+                <p class="desc split">
+                    어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고
+                    생각합니다.<br />신입의 열정과 도전정신을 깊숙히 새기며
+                    배움에 있어 <br />겸손함을 유지하며 세부적인 곳까지
+                    파고드는<br />
+                    개발자가 되겠습니다.
+                </p>
+                <div class="text">
+                    <div class="t1 split">Design</div>
+                    <div class="t2 split">Coding</div>
+                    <div class="t3 split">Experience</div>
+                </div>
+            </section>
+            <!-- //section1 -->
+
+            <section id="section2"></section>
+            <section id="section3"></section>
+            <section id="section4"></section>
+            <section id="section5"></section>
+            <section id="section6"></section>
+        </main>
+        <!-- //main -->
+
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script>
+            const targets = gsap.utils.toArray(".split");
+
+            targets.forEach((target) => {
+                let SplitClient = new SplitType(target, {
+                    type: "lines, words, chars",
+                });
+                let lines = SplitClient.lines;
+                let words = SplitClient.words;
+                let chars = SplitClient.chars;
+            });
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        </script>
+
+        <script>
+            gsap.set(".text .t1 .char", { y: 130 });
+            gsap.set(".text .t2 .char", { y: 130 });
+            gsap.set(".text .t3 .char", { y: 130 });
+            gsap.set(".desc .char", { y: 5, rotationx: 40, opacity: 0 });
+            gsap.set("#header", { top: -100 });
+
+            const tl = gsap.timeline();
+            setTimeout(() => {
+                tl.to(".text .t1 .char", {
+                    y: 0,
+                    stagger: 0.05,
+                    duration: 0.6,
+                    ease: "power3.out",
+                });
+                tl.to(".text .t2 .char", {
+                    y: 0,
+                    stagger: 0.05,
+                    duration: 0.6,
+                    ease: "power3.out",
+                });
+                tl.to(".text .t3 .char", {
+                    y: 0,
+                    stagger: 0.05,
+                    duration: 0.6,
+                    ease: "power3.out",
+                });
+                tl.to(".desc .char", {
+                    y: 0,
+                    rotationx: 0,
+                    opacity: 1,
+                    stagger: 0.03,
+                    duration: 0.3,
+                    ease: "power3.out",
+                });
+                tl.to("#header", {
+                    top: 0,
+                    duration: 0.6,
+                    ease: "power3.out",
+                });
+            }, 3000);
+
+            // section1
+            const ani1 = gsap.timeline();
+            ani1.to(".text .t1", { x: -100 }, "a");
+            ani1.to(".text .t2", { x: 200 }, "a");
+            ani1.to(".text .t3", { x: -50 }, "a");
+
+            ScrollTrigger.create({
+                animation: ani1,
+                trigger: "#section1",
+                start: "top top",
+                end: "+=2000",
+                scrub: true,
+                markers: false,
+            });
+        </script>
+    </body>
+</html>

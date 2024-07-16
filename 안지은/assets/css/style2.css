@@ -1,0 +1,72 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ffffff18;
+    backdrop-filter: blur(10px);
+}
+
+#header h1 {
+    font-family: "Poppins";
+    color: #fff;
+    line-height: 0.5;
+}
+
+#header h1 span {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+}
+
+#header h1 em {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 11px;
+}
+
+#header nav {
+    font-family: "Poppins";
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 1px;
+}
+
+#section1 {
+    height: 200vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    padding-top: 60px;
+    line-height: 1;
+    overflow: hidden;
+}
+#section1 p {
+    font-family: "Iropke Batang";
+    width: 400px;
+    line-height: 1.5;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20vh;
+    margin-left: 4vw;
+}
+
+#section1 .text > div {
+    font-family: "NeoGeoTrial-Thin";
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 300;
+    margin-left: 3.5vw;
+    margin-top: 2vw;
+    line-height: 0.85;
+    text-transform: uppercase;
+    overflow: hidden;
+}

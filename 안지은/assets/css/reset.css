@@ -1,64 +1,44 @@
-@import url('https://fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
-@import url('https://websfont.github.io/gmarket/gmarket.css');
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url("https://fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
+@import url("https://websfont.github.io/gmarket/gmarket.css");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
 @font-face {
-    font-family: "nanumSquareNeo";
-    font-weight: 300;
+    font-family: "NeoGeoTrial-Regular";
+    font-weight: normal;
     font-style: normal;
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Light.eot");
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Light.eot?#iefix") format("embedded-opentype"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Light.woff2") format("woff2"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Light.woff") format("woff"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Light.ttf") format("truetype");
+    src: url("../fonts/NeoGeoTrial-Regular.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: "nanumSquareNeo";
-    font-weight: 400;
+    font-family: "NeoGeoTrial-Thin";
+    font-weight: normal;
     font-style: normal;
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Regular.eot");
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Regular.eot?#iefix") format("embedded-opentype"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Regular.woff2") format("woff2"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Regular.woff") format("woff"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Regular.ttf") format("truetype");
+    src: url("../fonts/NeoGeoTrial-Thin.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: "nanumSquareNeo";
-    font-weight: 700;
+    font-family: "NeoGeoTrial-Light";
+    font-weight: normal;
     font-style: normal;
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Bold.eot");
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Bold.eot?#iefix") format("embedded-opentype"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Bold.woff2") format("woff2"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Bold.woff") format("woff"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Bold.ttf") format("truetype");
+    src: url("../fonts/NeoGeoTrial-Light.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: "nanumSquareNeo";
-    font-weight: 800;
+    font-family: "NeoGeoTrial-ExtraLight";
+    font-weight: normal;
     font-style: normal;
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-ExtraBold.eot");
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-ExtraBold.eot?#iefix") format("embedded-opentype"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff2") format("woff2"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff") format("woff"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-ExtraBold.ttf") format("truetype");
+    src: url("../fonts/NeoGeoTrial-ExtraLight.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: "nanumSquareNeo";
-    font-weight: 900;
+    font-family: "NeoGeoTrial-Thin";
+    font-weight: normal;
     font-style: normal;
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Black.eot");
-    src: url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Black.eot?#iefix") format("embedded-opentype"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Black.woff2") format("woff2"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Black.woff") format("woff"),
-        url("https://websfont.github.io/nanumSquareNeo/nanumSquareNeo-Black.ttf") format("truetype");
+    src: url("../fonts/NeoGeoTrial-Thin.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -119,7 +99,9 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: 'Major Mono Display', NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-family: "Major Mono Display", NexonLv1GothicLow, -apple-system,
+        BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica,
+        "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
