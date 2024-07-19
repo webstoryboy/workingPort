@@ -1,125 +1,192 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
 
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <body>
+        <header id="header">
+            <h1>developer <span>portfolio</span></h1>
+            <nav>menu<span>click</span></nav>
+        </header>
+        <!-- //header -->
 
-<body>
-
-    <header id="header">
-        <h1>developer <span>portfolio</span></h1>
-        <nav>menu<span>click</span></nav>
-    </header>
-    <!-- //header -->
-
-    <section id="section1">
-        <div class="text">
-            <h1>PORTFOLIO</h1>
-            <p>Frontend</p>
-        </div>
-        <canvas id="stars"></canvas>
-    </section>
-    <!-- //section1 -->
-
-    <footer id="footer">
-        <div class="left">
-            <div class="up">
-                <span>01</span>
-                <span>web frontand developer</span>
+        <section id="section1">
+            <div class="text">
+                <h1 class="split">PORTFOLIO</h1>
             </div>
-            <div class="down">
-                <span>LONDON, UNITED KINGDOM, WC2H 9JQ</span>
-                <span>scroll</span>
+            <canvas id="stars"></canvas>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="textLine">
+                <div>SEOUL<span class="line l1">></span>BASE CODING</div>
+                <div>DEVELOPER<span class="line l2">.</span>FRONTAND</div>
+                <div>CREATIVE<span class="line l3">!</span>FULLSTACK</div>
+                <p>
+                    문제를 해결하기 위해서라면 밤을 새우는 것도 마다하지 않는,<br />기술적 도전을 즐기며, 문제를 해결하는 과정에서 얻는
+                    성취감을 사랑하는 개발자입니다.
+                </p>
             </div>
-        </div>
-        <div class="center">
-            <h5>web frontand developer</h5>
-            <!-- <p>
-                어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.
-            </p> -->
-        </div>
-        <div class="right">
-            <span>main</span>
-        </div>
-    </footer>
+        </section>
+        <!-- //section2 -->
 
-    <section id="section2"></section>
-    <section id="section3"></section>
-    <section id="section4"></section>
-    <section id="section5"></section>
+        <section id="section3"></section>
+        <section id="section4"></section>
+        <section id="section5"></section>
 
-    <script>
-        const stars = document.getElementById('stars');
-        const starsCtx = stars.getContext('2d');
+        <footer id="footer">
+            <div class="left">
+                <div class="up">
+                    <span>01</span>
+                    <span>web frontand developer</span>
+                </div>
+                <div class="down">
+                    <span>LONDON, UNITED KINGDOM, WC2H 9JQ</span>
+                    <span>scroll</span>
+                </div>
+            </div>
+            <div class="center">
+                <h5>web frontand developer</h5>
+            </div>
+            <div class="right">
+                <span>main</span>
+            </div>
+        </footer>
 
-        let screen, starsElements, starsParams = { speed: 2, number: 300, extinction: 4 };
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script>
+            const lenis = new Lenis();
 
-        setupStars();
-        updateStars();
-
-        window.onresize = function () {
-            setupStars();
-        };
-
-        function Star() {
-            this.x = Math.random() * stars.width;
-            this.y = Math.random() * stars.height;
-            this.z = Math.random() * stars.width;
-
-            this.move = function () {
-                this.z -= starsParams.speed;
-                if (this.z <= 0) {
-                    this.z = stars.width;
-                }
-            };
-
-            this.show = function () {
-                let x, y, rad, opacity;
-                x = (this.x - screen.c[0]) * (stars.width / this.z);
-                x = x + screen.c[0];
-                y = (this.y - screen.c[1]) * (stars.width / this.z);
-                y = y + screen.c[1];
-                rad = stars.width / this.z;
-                opacity = (rad > starsParams.extinction) ? 1.5 * (2 - rad / starsParams.extinction) : 1;
-
-                starsCtx.beginPath();
-                starsCtx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
-                starsCtx.arc(x, y, rad, 0, Math.PI * 2);
-                starsCtx.fill();
-            }
-        }
-
-        function setupStars() {
-            screen = {
-                w: window.innerWidth,
-                h: window.innerHeight,
-                c: [window.innerWidth * 0.5, window.innerHeight * 0.5]
-            };
-            window.cancelAnimationFrame(updateStars);
-            stars.width = screen.w;
-            stars.height = screen.h;
-            starsElements = [];
-            for (let i = 0; i < starsParams.number; i++) {
-                starsElements[i] = new Star();
-            }
-        }
-
-        function updateStars() {
-            starsCtx.fillStyle = "#1F2635";
-            starsCtx.fillRect(0, 0, stars.width, stars.height);
-            starsElements.forEach(function (s) {
-                s.show();
-                s.move();
+            lenis.on("scroll", (e) => {
+                console.log(e);
             });
-            window.requestAnimationFrame(updateStars);
-        }
-    </script>
-</body>
 
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            const targets = gsap.utils.toArray(".split");
+
+            targets.forEach((target) => {
+                let SplitClient = new SplitType(target, {
+                    type: "lines, words, chars",
+                });
+                let lines = SplitClient.lines;
+                let words = SplitClient.words;
+                let chars = SplitClient.chars;
+            });
+        </script>
+
+        <script>
+            gsap.set(".text h1 .char", { opacity: 0, y: 100 });
+            gsap.set("#header", { top: -100 });
+            gsap.set("#footer", { bottom: -200 });
+            gsap.set("#stars", { opacity: 0 });
+
+            const tl = gsap.timeline();
+
+            setTimeout(() => {
+                tl.to(".text h1 .char", { y: 0, stagger: 0.04, opacity: 1, duration: 0.5, ease: "circ.out" });
+                tl.to("#header", { top: 0, duration: 0.4, ease: "power4.out" });
+                tl.to("#footer", { bottom: 0, duration: 0.4, ease: "power4.out" });
+                tl.to("#stars", { opacity: 1, duration: 1 });
+            }, 3000);
+
+            const ani3 = gsap.timeline();
+
+            ani3.to("#footer .left", { x: -400, duration: 0.4, ease: "power4.out" }, "a");
+            ani3.to("#footer .right", { x: 400, duration: 0.4, ease: "power4.out" }, "a");
+            ani3.to("#footer .center", { y: 200, duration: 0.4, ease: "power4.out" }, "a");
+
+            ScrollTrigger.create({
+                animation: ani3,
+                trigger: "#section1",
+                start: "top top",
+                scrub: true,
+                markers: false,
+            });
+        </script>
+
+        <script>
+            const stars = document.getElementById("stars");
+            const starsCtx = stars.getContext("2d");
+
+            let screen,
+                starsElements,
+                starsParams = { speed: 1, number: 100, extinction: 4 };
+
+            setupStars();
+            updateStars();
+
+            window.onresize = function () {
+                setupStars();
+            };
+
+            function Star() {
+                this.x = Math.random() * stars.width;
+                this.y = Math.random() * stars.height;
+                this.z = Math.random() * stars.width;
+
+                this.move = function () {
+                    this.z -= starsParams.speed;
+                    if (this.z <= 0) {
+                        this.z = stars.width;
+                    }
+                };
+
+                this.show = function () {
+                    let x, y, rad, opacity;
+                    x = (this.x - screen.c[0]) * (stars.width / this.z);
+                    x = x + screen.c[0];
+                    y = (this.y - screen.c[1]) * (stars.width / this.z);
+                    y = y + screen.c[1];
+                    rad = stars.width / this.z;
+                    opacity = rad > starsParams.extinction ? 1.5 * (2 - rad / starsParams.extinction) : 1;
+
+                    starsCtx.beginPath();
+                    starsCtx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
+                    starsCtx.arc(x, y, rad, 0, Math.PI * 2);
+                    starsCtx.fill();
+                };
+            }
+
+            function setupStars() {
+                screen = {
+                    w: window.innerWidth,
+                    h: window.innerHeight,
+                    c: [window.innerWidth * 0.5, window.innerHeight * 0.5],
+                };
+                window.cancelAnimationFrame(updateStars);
+                stars.width = screen.w;
+                stars.height = screen.h;
+                starsElements = [];
+                for (let i = 0; i < starsParams.number; i++) {
+                    starsElements[i] = new Star();
+                }
+            }
+
+            function updateStars() {
+                starsCtx.fillStyle = "#1F2635";
+                starsCtx.fillRect(0, 0, stars.width, stars.height);
+                starsElements.forEach(function (s) {
+                    s.show();
+                    s.move();
+                });
+                window.requestAnimationFrame(updateStars);
+            }
+        </script>
+    </body>
 </html>

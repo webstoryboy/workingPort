@@ -1,24 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @font-face {
-    font-family: 'AmazoTrial-XCnBlkContrastIt';
+    font-family: "IropkeBatang";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/AmazoTrial-XCnBlkContrastIt.woff2') format('woff2');
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "FabringoRegular";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/FabringoRegular.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AmazoTrial-XCnBlkContrast';
+    font-family: "AmazoTrial-XCnBlkContrastIt";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/AmazoTrial-XCnBlkContrast.woff2') format('woff2');
+    src: url("../fonts/AmazoTrial-XCnBlkContrastIt.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AmazoTrial-CondBoldContrast';
+    font-family: "AmazoTrial-XCnBlkContrast";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/AmazoTrial-CondBoldContrast.woff2') format('woff2');
+    src: url("../fonts/AmazoTrial-XCnBlkContrast.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AmazoTrial-CondBoldContrast";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/AmazoTrial-CondBoldContrast.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -79,7 +101,8 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo",
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

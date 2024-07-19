@@ -29,8 +29,7 @@
                 <h1 class="split">frontend developer</h1>
                 <p class="split">
                     나는 공간을 만드는 것을 좋아한다.<br />
-                    내가 만든 공간 속에서 누군가가 영감을 받거나 마음을 움직이게
-                    하는 것이 목표다.
+                    내가 만든 공간 속에서 누군가가 영감을 받거나 마음을 움직이게 하는 것이 목표다.
                 </p>
             </div>
 
@@ -252,33 +251,66 @@
         <!-- //section1 -->
 
         <section id="section2">
-            <div class="number dddd">
-                <div class="back">1</div>
+            <div class="number">
+                <div class="back">about</div>
             </div>
-            <div class="number2 dddd">
-                <div class="front">
-                    <svg width="620" height="140" viewBox="0 0 620 140">
-                        <text
-                            x="30"
-                            y="90"
-                            fill="none"
-                            stroke="blue"
-                            stroke-width="2"
-                            font-size="300"
-                            font-family="'Leckerli One', cursive"
-                        >
-                            1
-                        </text>
-                    </svg>
-                </div>
+            <div class="number absolute">
+                <div class="front">about</div>
             </div>
             <div class="bgWrap">
-                <div class="bg"></div>
+                <div class="bg">
+                    <h2>WHY TO<br />BEGIN?</h2>
+                    <div class="right">
+                        <div class="text">
+                            <div>
+                                <p>
+                                    <span> 1. 문제 해결 능력 향상 </span>
+                                    코딩은 문제 해결을 위한 논리적 사고를 요구합니다. 프로그래밍을 통해 복잡한 문제를 작은 단위로 나누고,
+                                    각각의 문제를 해결하는 과정을 반복하게 됩니다. 이 과정에서 논리적 사고와 문제 해결 능력이 크게
+                                    향상됩니다. 이는 단지 컴퓨터 과학 분야에만 국한되지 않고, 다양한 분야에서 응용될 수 있는 귀중한
+                                    기술입니다.
+                                </p>
+
+                                <p>
+                                    <span>2. 창의력 발휘</span>
+                                    코딩은 창의적인 작업입니다. 프로그래머는 무에서 유를 창조하는 사람들로, 아이디어를 구체화하고 현실로
+                                    만드는 과정을 거칩니다. 앱 개발, 웹사이트 구축, 게임 디자인 등 다양한 프로젝트를 통해 자신의 창의력을
+                                    발휘할 수 있습니다. 또한, 새로운 도구와 기술을 학습하고 응용하면서 끊임없이 자신을 발전시킬 수 있습니다.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    <span>3. 경제적 기회</span> 코딩 기술은 현대 경제에서 매우 중요한 자산입니다. 디지털 경제가 성장하면서
+                                    코딩 능력을 가진 사람들의 수요가 급증하고 있습니다. 소프트웨어 개발자, 데이터 과학자, 시스템 관리자 등
+                                    다양한 직업군에서 높은 연봉과 좋은 근무 조건을 제공받을 수 있습니다. 또한, 프리랜서로서 독립적으로
+                                    일하거나 스타트업을 창업하여 새로운 기회를 창출할 수도 있습니다.
+                                </p>
+                                <p>
+                                    <span>4. 자동화 및 효율성 증대</span> 코딩을 통해 반복적인 작업을 자동화할 수 있습니다. 이는 개인의 일상
+                                    생활뿐만 아니라 기업의 운영에도 큰 영향을 미칩니다. 예를 들어, 데이터를 자동으로 처리하고 분석하는
+                                    스크립트를 작성하면 시간을 절약하고 효율성을 크게 높일 수 있습니다. 이는 비용 절감과 생산성 향상으로
+                                    이어질 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="img">
+                            <div>
+                                <img src="./assets/img/face01.jpg" alt="face01" />
+                            </div>
+                            <p>
+                                나는 공간을 만드는 것을 좋아한다.<br />
+                                내가 만든 공간 속에서 누군가가 영감을 받거나 마음을 움직이게 하는 것이 목표다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- //section2 -->
 
         <section id="section3"></section>
+        <!-- //section3 -->
+
         <section id="section4"></section>
         <section id="section5"></section>
         <section id="section6"></section>
@@ -288,8 +320,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
         <script src="https://unpkg.com/split-type"></script>
         <script>
+            const lenis = new Lenis();
+
+            lenis.on("scroll", (e) => {
+                console.log(e);
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
             const targets = gsap.utils.toArray(".split");
 
             targets.forEach((target) => {
@@ -301,13 +347,14 @@
                 let chars = SplitClient.chars;
             });
 
-            gsap.set(".text h1 .char", { y: 400 });
+            gsap.set(".text h1 .char", { y: 400, opacity: 0 });
             gsap.set(".text p .char", { opacity: 0, y: 20 });
 
             setTimeout(() => {
                 const tl = gsap.timeline();
                 tl.to(".text h1 .char", {
                     y: 0,
+                    opacity: 1,
                     stagger: {
                         amount: 4,
                         from: "random",
@@ -328,7 +375,7 @@
 
             gsap.registerPlugin(ScrollTrigger);
 
-            gsap.utils.toArray(".dddd").forEach((panel, i) => {
+            gsap.utils.toArray(".number").forEach((panel, i) => {
                 ScrollTrigger.create({
                     trigger: panel,
                     start: "top top",
@@ -389,16 +436,10 @@
                 }
             );
 
-            let leftWall = Bodies.rectangle(
-                0 - THICCNESS / 2,
-                matterContainer.clientHeight / 2,
-                THICCNESS,
-                matterContainer.clientHeight,
-                {
-                    isStatic: true,
-                    render: { strokeStyle: "transparent" },
-                }
-            );
+            let leftWall = Bodies.rectangle(0 - THICCNESS / 2, matterContainer.clientHeight / 2, THICCNESS, matterContainer.clientHeight, {
+                isStatic: true,
+                render: { strokeStyle: "transparent" },
+            });
 
             let rightWall = Bodies.rectangle(
                 matterContainer.clientWidth + THICCNESS / 2,
@@ -428,14 +469,8 @@
             Composite.add(engine.world, mouseConstraint);
 
             // allow scroll through the canvas
-            mouseConstraint.mouse.element.removeEventListener(
-                "mousewheel",
-                mouseConstraint.mouse.mousewheel
-            );
-            mouseConstraint.mouse.element.removeEventListener(
-                "DOMMouseScroll",
-                mouseConstraint.mouse.mousewheel
-            );
+            mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+            mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
 
             // run the renderer
             Render.run(render);
@@ -455,15 +490,8 @@
 
                     setTimeout(() => {
                         let vertices = Svg.pathToVertices(path);
-                        let scaleFactor =
-                            (matterContainer.clientWidth *
-                                SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) /
-                            SVG_WIDTH_IN_PX;
-                        vertices = Vertices.scale(
-                            vertices,
-                            scaleFactor,
-                            scaleFactor
-                        );
+                        let scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
+                        vertices = Vertices.scale(vertices, scaleFactor, scaleFactor);
                         let svgBody = Bodies.fromVertices(
                             matterContainer.clientWidth * Math.random(), // 무작위 x 위치
                             (matterContainer.clientHeight * Math.random()) / 4, // 무작위 y 위치 (상단 1/4 범위 내)
@@ -485,24 +513,17 @@
             }
 
             function createCircle() {
-                let circleDiameter =
-                    matterContainer.clientWidth *
-                    SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH;
-                let circle = Bodies.circle(
-                    matterContainer.clientWidth / 2,
-                    10,
-                    circleDiameter / 2,
-                    {
-                        friction: 0.3,
-                        frictionAir: 0.00001,
-                        restitution: 0.8,
-                        render: {
-                            fillStyle: "#F14C43",
-                            strokeStyle: "#202022",
-                            lineWidth: 3,
-                        },
-                    }
-                );
+                let circleDiameter = matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH;
+                let circle = Bodies.circle(matterContainer.clientWidth / 2, 10, circleDiameter / 2, {
+                    friction: 0.3,
+                    frictionAir: 0.00001,
+                    restitution: 0.8,
+                    render: {
+                        fillStyle: "#F14C43",
+                        strokeStyle: "#202022",
+                        lineWidth: 3,
+                    },
+                });
                 Composite.add(engine.world, circle);
             }
 
@@ -513,10 +534,7 @@
                     if (body.isStatic === true) return;
                     const { min, max } = body.bounds;
                     const bodyWidth = max.x - min.x;
-                    let scaleFactor =
-                        (matterContainer.clientWidth *
-                            SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) /
-                        bodyWidth;
+                    let scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / bodyWidth;
 
                     Body.scale(body, scaleFactor, scaleFactor);
                 });
@@ -526,28 +544,14 @@
                 render.canvas.width = matterContainer.clientWidth;
                 render.canvas.height = matterContainer.clientHeight;
 
-                Body.setPosition(
-                    ground,
-                    Vector.create(
-                        matterContainer.clientWidth / 2,
-                        matterContainer.clientHeight + THICCNESS / 2
-                    )
-                );
+                Body.setPosition(ground, Vector.create(matterContainer.clientWidth / 2, matterContainer.clientHeight + THICCNESS / 2));
 
-                Body.setPosition(
-                    rightWall,
-                    Vector.create(
-                        matterContainer.clientWidth + THICCNESS / 2,
-                        matterContainer.clientHeight / 2
-                    )
-                );
+                Body.setPosition(rightWall, Vector.create(matterContainer.clientWidth + THICCNESS / 2, matterContainer.clientHeight / 2));
 
                 scaleBodies();
             }
 
-            window.addEventListener("resize", () =>
-                handleResize(matterContainer)
-            );
+            window.addEventListener("resize", () => handleResize(matterContainer));
 
             // 물체를 랜덤하게 떨어뜨리기 시작
             createSvgBodiesRandomly();

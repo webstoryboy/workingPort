@@ -1,4 +1,7 @@
 body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     background: #111;
 }
 
@@ -15,8 +18,8 @@ body {
 }
 
 #header h1 {
-    font-family: 'PP NeueBit';
-    color: #FFACAC;
+    font-family: "PP NeueBit";
+    color: #ffacac;
     font-size: 18px;
     line-height: 0.8;
     margin: 20px;
@@ -24,7 +27,7 @@ body {
 }
 
 #header h1::before {
-    content: '';
+    content: "";
     background-image: url(../img/star2.svg);
     background-repeat: no-repeat;
     background-size: 60%;
@@ -50,12 +53,12 @@ body {
 }
 
 #header nav li {
-    color: #FFACAC;
+    color: #ffacac;
 }
 
 #header nav li a {
     padding: 10px 20px;
-    font-family: 'PP NeueBit';
+    font-family: "PP NeueBit";
     opacity: 0.5;
     text-transform: uppercase;
 }
@@ -74,6 +77,7 @@ body {
     background-position: center center;
     border-radius: 50px;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 #section1 {
@@ -84,7 +88,7 @@ body {
 }
 
 #section1::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -98,7 +102,7 @@ body {
 
 #section1 .top {
     width: 100vw;
-    height: 55vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +115,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
-    height: 30vh;
+    height: 25vh;
 }
 
 .menu.is-dragging {
@@ -149,7 +153,7 @@ body {
     }
 }
 
-.menu--item:nth-child(n+10):before {
+.menu--item:nth-child(n + 10):before {
     content: counter(count);
 }
 
@@ -172,8 +176,8 @@ body {
     overflow: hidden;
     pointer-events: none;
     transform-origin: center;
-    color: #FFACAC;
-    font-family: 'PP NeueBit';
+    color: #ffacac;
+    font-family: "PP NeueBit";
 }
 
 .menu--item figure img {
@@ -196,7 +200,7 @@ body {
     left: 1vw;
     display: inline-block;
     content: "0" counter(count);
-    color: #FFACAC;
+    color: #ffacac;
     font-size: 2vw;
     line-height: 1;
 }
@@ -242,10 +246,9 @@ body {
     }
 }
 
-
 #section1 .bom {
     width: 100vw;
-    height: 45vh;
+    height: 40vh;
 }
 
 #section1 .bom .title {
@@ -253,8 +256,8 @@ body {
 }
 
 #section1 .bom .title span {
-    font-family: 'PP NeueBit';
-    color: #FFACAC;
+    font-family: "PP NeueBit";
+    color: #ffacac;
     font-size: 10vw;
     padding: 0 20px;
     text-transform: uppercase;
@@ -263,11 +266,11 @@ body {
 
 #section1 .bom .desc {
     width: 70%;
-    color: #FFACAC;
+    color: #ffacac;
     text-align: center;
     margin-inline-start: auto;
     margin-inline-end: auto;
-    font-family: 'maruBuri';
+    font-family: "maruBuri";
     font-weight: 200;
     font-size: 14px;
 }
@@ -275,7 +278,6 @@ body {
 #section1 .bom .title span:nth-child(2) {
     opacity: 1;
 }
-
 
 #footer {
     position: fixed;
@@ -285,7 +287,7 @@ body {
     height: 36px;
     line-height: 30px;
     border-top: 1px solid #ffacac31;
-    color: #FFACAC;
+    color: #ffacac;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -296,11 +298,11 @@ body {
     padding-left: 10px;
     font-size: 12px;
     display: inline-block;
-    animation: marquee 10s linear infinite
+    animation: marquee 10s linear infinite;
 }
 
 #footer span::after {
-    content: '';
+    content: "";
     background-image: url(../img/star.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -320,8 +322,6 @@ body {
         transform: translateX(-100%);
     }
 }
-
-
 
 .container-animation {
     position: fixed;

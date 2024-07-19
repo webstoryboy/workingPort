@@ -5,14 +5,10 @@
     font-weight: 300;
     font-style: normal;
     src: url("https://websfont.github.io/gmarket/gmarket-Light.eot");
-    src: url("https://websfont.github.io/gmarket/gmarket-Light.eot?#iefix")
-            format("embedded-opentype"),
-        url("https://websfont.github.io/gmarket/gmarket-Light.woff2")
-            format("woff2"),
-        url("https://websfont.github.io/gmarket/gmarket-Light.woff")
-            format("woff"),
-        url("https://websfont.github.io/gmarket/gmarket-Light.ttf")
-            format("truetype");
+    src: url("https://websfont.github.io/gmarket/gmarket-Light.eot?#iefix") format("embedded-opentype"),
+        url("https://websfont.github.io/gmarket/gmarket-Light.woff2") format("woff2"),
+        url("https://websfont.github.io/gmarket/gmarket-Light.woff") format("woff"),
+        url("https://websfont.github.io/gmarket/gmarket-Light.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -21,14 +17,10 @@
     font-weight: 500;
     font-style: normal;
     src: url("https://websfont.github.io/gmarket/gmarket-Medium.eot");
-    src: url("https://websfont.github.io/gmarket/gmarket-Medium.eot?#iefix")
-            format("embedded-opentype"),
-        url("https://websfont.github.io/gmarket/gmarket-Medium.woff2")
-            format("woff2"),
-        url("https://websfont.github.io/gmarket/gmarket-Medium.woff")
-            format("woff"),
-        url("https://websfont.github.io/gmarket/gmarket-Medium.ttf")
-            format("truetype");
+    src: url("https://websfont.github.io/gmarket/gmarket-Medium.eot?#iefix") format("embedded-opentype"),
+        url("https://websfont.github.io/gmarket/gmarket-Medium.woff2") format("woff2"),
+        url("https://websfont.github.io/gmarket/gmarket-Medium.woff") format("woff"),
+        url("https://websfont.github.io/gmarket/gmarket-Medium.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -37,14 +29,10 @@
     font-weight: 700;
     font-style: normal;
     src: url("https://websfont.github.io/gmarket/gmarket-Bold.eot");
-    src: url("https://websfont.github.io/gmarket/gmarket-Bold.eot?#iefix")
-            format("embedded-opentype"),
-        url("https://websfont.github.io/gmarket/gmarket-Bold.woff2")
-            format("woff2"),
-        url("https://websfont.github.io/gmarket/gmarket-Bold.woff")
-            format("woff"),
-        url("https://websfont.github.io/gmarket/gmarket-Bold.ttf")
-            format("truetype");
+    src: url("https://websfont.github.io/gmarket/gmarket-Bold.eot?#iefix") format("embedded-opentype"),
+        url("https://websfont.github.io/gmarket/gmarket-Bold.woff2") format("woff2"),
+        url("https://websfont.github.io/gmarket/gmarket-Bold.woff") format("woff"),
+        url("https://websfont.github.io/gmarket/gmarket-Bold.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -58,6 +46,34 @@
 @font-face {
     font-family: "Cara-Mia-Icons";
     src: url("../fonts/Cara-Mia-Icons.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SwisspoTrial-SemiCondMedTall";
+    src: url("../fonts/SwisspoTrial-SemiCondMedTall.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SwisspoTrial-CondensedBold";
+    src: url("../fonts/SwisspoTrial-CondensedBold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SwisspoTrial-CondensedLight";
+    src: url("../fonts/SwisspoTrial-CondensedLight.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SwisspoTrial-ThinTall";
+    src: url("../fonts/SwisspoTrial-ThinTall.woff2") format("woff2");
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -120,8 +136,7 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont,
-        "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo",
+    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo",
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

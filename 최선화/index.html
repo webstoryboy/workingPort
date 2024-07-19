@@ -1,153 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        #particles {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            filter: url("#goo");
-        }
-
-        svg {
-            display: block;
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            transform: translateZ(0px);
-            fill: #0038E9;
-        }
-    </style>
-</head>
-
-<body>
-    <header id="header">
-        <h1>Creative<span>Dev</span></h1>
-        <nav>menu</nav>
-    </header>
-    <!-- //header -->
-
-    <section id="section1">
-        <div class="text">
-            <div>the</div>
-            <div>createive</div>
-            <div>portfolio</div>
-        </div>
-        <div id="particles"></div>
-        <svg>
-            <defs>
-                <filter id="goo">
-                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" />
-                    <feColorMatrix in="blur" result="colormatrix" type="matrix"
-                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" />
-                    <feBlend in="SourceGraphic" in2="colormatrix" />
-                </filter>
-            </defs>
-        </svg>
-    </section>
-    <!-- //section1 -->
-
-    <section id="section2"></section>
-    <section id="section3"></section>
-    <section id="section4"></section>
-    <section id="section5"></section>
-    <section id="section6"></section>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-        const circle = '<svg viewBox="0 0 67.4 67.4"><circle class="circle" cx="33.7" cy="33.7" r="33.7"/></svg>'
-
-        class Particle {
-
-            constructor(svg, coordinates, friction) {
-                this.svg = svg
-                this.steps = ($(window).height()) / 2
-                this.item = null
-                this.friction = friction
-                this.coordinates = coordinates
-                this.position = this.coordinates.y
-                this.dimensions = this.render()
-                this.move()
-                this.rotation = Math.random() > 0.5 ? "-" : "+"
-                this.scale = 0.4 + (Math.random() * 2)
-                this.siner = $(window).width() / 2.5 * Math.random()
-            }
-            destroy() {
-                this.item.remove()
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <style>
+            #particles {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                filter: url("#goo");
             }
 
-            move() {
-                this.position = this.position - this.friction
-                let top = this.position;
-                let left = this.coordinates.x + Math.sin(this.position * Math.PI / this.steps) * this.siner;
-                this.item.css({
-                    transform: "translateX(" + left + "px) translateY(" + top + "px) scale(" + this.scale + ") rotate(" + (this.rotation) + (this.position + this.dimensions.height) + "deg)"
-                })
+            svg {
+                display: block;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                transform: translateZ(0px);
+                fill: #0038e9;
+            }
+        </style>
+    </head>
 
-                if (this.position < -(this.dimensions.height)) {
-                    this.destroy()
-                    return false
-                } else {
-                    return true
+    <body>
+        <header id="header">
+            <h1>Creative<span>Dev</span></h1>
+            <nav>menu</nav>
+        </header>
+        <!-- //header -->
+
+        <section id="section1">
+            <div class="text">
+                <div class="t1 split">the</div>
+                <div class="t2 split">createive</div>
+                <div class="t3 split">portfolio</div>
+            </div>
+            <div id="particles"></div>
+            <svg>
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" />
+                        <feColorMatrix in="blur" result="colormatrix" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" />
+                        <feBlend in="SourceGraphic" in2="colormatrix" />
+                    </filter>
+                </defs>
+            </svg>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <div class="circle5">
+                <div class="bg"></div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3"></section>
+        <!-- //section3 -->
+
+        <section id="section4"></section>
+        <section id="section5"></section>
+        <section id="section6"></section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            const targets = gsap.utils.toArray(".split");
+            let SplitClient = new SplitType(targets, { type: "lines, words, chars" });
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        </script>
+
+        <script>
+            gsap.set("#particles", { opacity: 0 });
+            gsap.set(".text .t1 .char", { opacity: 0, x: -100 });
+            gsap.set(".text .t2 .char", { opacity: 0, x: -10, scale: 0.8 });
+            gsap.set(".text .t3 .char", { opacity: 0, y: 20 });
+            gsap.set("#header", { top: -150 });
+
+            const tl = gsap.timeline();
+            setTimeout(() => {
+                tl.to(".text .t1 .char", { opacity: 1, x: 0 });
+                tl.to(".text .t2 .char", { opacity: 1, x: 0, stagger: 0.06, scale: 1, ease: "circ.out" });
+                tl.to(".text .t3 .char", { opacity: 1, y: 0, duration: 0.4 });
+                tl.to("#header", { top: 0, ease: "circ.out" });
+                tl.to("#particles", { opacity: 1, duration: 1 });
+            }, 3000);
+
+            gsap.set(".circle1", { scale: 0 });
+            gsap.set(".circle2", { scale: 0 });
+            gsap.set(".circle3", { scale: 0 });
+            gsap.set(".circle4", { scale: 0 });
+            gsap.set(".circle5", { scale: 0 });
+
+            const ani1 = gsap.timeline();
+            ani1.to(".circle1", { left: "0%", top: "0%", scale: 1 });
+            ani1.to(".circle2", { left: "100%", top: "0%", scale: 1 });
+            ani1.to(".circle3", { left: "0%", top: "90%", scale: 1 });
+            ani1.to(".circle4", { left: "100%", top: "90%", scale: 1 });
+            ani1.to(".circle5", { scale: 2 });
+            ani1.to(".text .t1 .char", { opacity: 0, x: -100 });
+            ani1.to(".text .t2 .char", { opacity: 0, x: -10, stagger: 0.06, scale: 0, ease: "circ.out" });
+            ani1.to(".text .t3 .char", { opacity: 0, y: 20 });
+
+            ScrollTrigger.create({
+                animation: ani1,
+                trigger: "#section2",
+                start: "top top",
+                end: "+=2000",
+                pin: true,
+                markers: true,
+            });
+        </script>
+
+        <script>
+            const circle = '<svg viewBox="0 0 67.4 67.4"><circle class="circle" cx="33.7" cy="33.7" r="33.7"/></svg>';
+
+            class Particle {
+                constructor(svg, coordinates, friction) {
+                    this.svg = svg;
+                    this.steps = $(window).height() / 2;
+                    this.item = null;
+                    this.friction = friction;
+                    this.coordinates = coordinates;
+                    this.position = this.coordinates.y;
+                    this.dimensions = this.render();
+                    this.move();
+                    this.rotation = Math.random() > 0.5 ? "-" : "+";
+                    this.scale = 0.4 + Math.random() * 2;
+                    this.siner = ($(window).width() / 2.5) * Math.random();
                 }
-            }
+                destroy() {
+                    this.item.remove();
+                }
 
-            render() {
-                this.item = $(this.svg, {
-                    css: {
-                        transform: "translateX(" + this.coordinates.x + "px) translateY(" + this.coordinates.y + "px)"
+                move() {
+                    this.position = this.position - this.friction;
+                    let top = this.position;
+                    let left = this.coordinates.x + Math.sin((this.position * Math.PI) / this.steps) * this.siner;
+                    this.item.css({
+                        transform:
+                            "translateX(" +
+                            left +
+                            "px) translateY(" +
+                            top +
+                            "px) scale(" +
+                            this.scale +
+                            ") rotate(" +
+                            this.rotation +
+                            (this.position + this.dimensions.height) +
+                            "deg)",
+                    });
+
+                    if (this.position < -this.dimensions.height) {
+                        this.destroy();
+                        return false;
+                    } else {
+                        return true;
                     }
-                })
-                $("#particles").append(this.item)
-                return {
-                    width: this.item.width(),
-                    height: this.item.height()
+                }
+
+                render() {
+                    this.item = $(this.svg, {
+                        css: {
+                            transform: "translateX(" + this.coordinates.x + "px) translateY(" + this.coordinates.y + "px)",
+                        },
+                    });
+                    $("#particles").append(this.item);
+                    return {
+                        width: this.item.width(),
+                        height: this.item.height(),
+                    };
                 }
             }
-        }
 
+            let isPaused = false;
+            window.onblur = function () {
+                isPaused = true;
+            }.bind(this);
+            window.onfocus = function () {
+                isPaused = false;
+            }.bind(this);
 
-        let isPaused = false;
-        window.onblur = function () {
-            isPaused = true;
-        }.bind(this)
-        window.onfocus = function () {
-            isPaused = false;
-        }.bind(this)
+            //-------------------------------
+            let particles = [];
 
-        //-------------------------------
-        let particles = []
+            setInterval(function () {
+                if (!isPaused) {
+                    particles.push(
+                        new Particle(
+                            circle,
+                            {
+                                x: Math.random() * $(window).width(),
+                                y: $(window).height() + 100,
+                            },
+                            1 + Math.random()
+                        )
+                    );
+                }
+            }, 880);
 
-        setInterval(function () {
-            if (!isPaused) {
-                particles.push(
-                    new Particle(circle, {
-                        "x": (Math.random() * $(window).width()),
-                        "y": $(window).height() + 100
-                    }, (1 + Math.random()))
-                )
+            function update() {
+                particles = particles.filter(function (p) {
+                    return p.move();
+                });
+                requestAnimationFrame(update.bind(this));
             }
-        }, 180)
-
-        function update() {
-            particles = particles.filter(function (p) {
-                return p.move()
-            })
-            requestAnimationFrame(update.bind(this))
-        }
-        update()
-    </script>
-</body>
-
+            update();
+        </script>
+    </body>
 </html>
