@@ -188,6 +188,18 @@ body {
     border-radius: 1px;
     color: #fff;
     font-family: "nanumSquareNeo";
+    transition: all 0.3s ease-out;
+}
+
+.layer.op0 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.layer.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 120px;
 }
 
 .layer__contents {
@@ -980,10 +992,8 @@ body:not(.dark) .theme-button-icon.dark {
     position: relative;
     width: 100%;
     height: 100%;
-    -webkit-mask-image: radial-gradient(#fff, #fff),
-        radial-gradient(#fff 2.4%, transparent 0);
-    mask-image: radial-gradient(#fff, #fff),
-        radial-gradient(#fff 2.4%, transparent 0);
+    -webkit-mask-image: radial-gradient(#fff, #fff), radial-gradient(#fff 2.4%, transparent 0);
+    mask-image: radial-gradient(#fff, #fff), radial-gradient(#fff 2.4%, transparent 0);
     -webkit-mask-composite: xor;
     mask-composite: substract;
     -webkit-mask-position: 50% 50%;
@@ -1015,12 +1025,7 @@ body:not(.dark) .theme-button-icon.dark {
             transparent 56.25% 93.75%,
             rgba(255, 255, 255, 0.1)
         ),
-        radial-gradient(
-            farthest-side,
-            transparent 33%,
-            rgba(255, 255, 255, 0.1) 33% calc(33% + 1px),
-            transparent 0
-        ),
+        radial-gradient(farthest-side, transparent 33%, rgba(255, 255, 255, 0.1) 33% calc(33% + 1px), transparent 0),
         radial-gradient(farthest-side, transparent 95%, #17151b 95% 100%),
         radial-gradient(
             farthest-side,
@@ -1038,16 +1043,8 @@ body:not(.dark) .theme-button-icon.dark {
             rgba(255, 255, 255, 0.006) 82% calc(82% + 1px),
             transparent 0
         ),
-        repeating-radial-gradient(
-            farthest-side,
-            rgba(255, 255, 255, 0.006) 0 1px,
-            transparent 1px 2px
-        ),
-        repeating-radial-gradient(
-            farthest-side,
-            rgba(255, 255, 255, 0.006) 0 1px,
-            transparent 1px 5px
-        ),
+        repeating-radial-gradient(farthest-side, rgba(255, 255, 255, 0.006) 0 1px, transparent 1px 2px),
+        repeating-radial-gradient(farthest-side, rgba(255, 255, 255, 0.006) 0 1px, transparent 1px 5px),
         repeating-radial-gradient(farthest-side, #131118, #131118 12.5%);
     box-shadow: inset 0 0 0 1px #06040d, inset 0 0 0 2px #474649;
     transition: transform 0.4s;
