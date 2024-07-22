@@ -17,7 +17,7 @@
             </h1>
             <nav class="nav">
                 <ul>
-                    <li class="active"><a href="main.html">001/Main</a></li>
+                    <li class="active"><a href="main.html">001/about</a></li>
                     <li><a href="work.html">002/Work</a></li>
                     <li><a href="team.html">003/Team</a></li>
                     <li><a href="comment.html">004/Comment</a></li>
@@ -35,10 +35,42 @@
                 <div class="slide js-slide">
                     <div class="slide__content">
                         <figure class="slide__img js-slide__img">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo1.jpg" />
+                            <img src="./assets/img/a.jpeg" />
                         </figure>
                         <figure class="slide__img js-slide__img">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo2.jpg" />
+                            <img
+                                src="https://images.unsplash.com/photo-1721309900218-650ebdacb288?q=80&w=3389&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            />
+                        </figure>
+                    </div>
+
+                    <div class="slider__text js-slider__text">
+                        <div class="slider__text-line fw100 js-slider__text-line">
+                            <div>I enjoy</div>
+                        </div>
+                        <div class="slider__text-line fw100 js-slider__text-line">
+                            <div>and love coding.</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>코딩을</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>즐기고 좋아합니다.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide js-slide">
+                    <div class="slide__content">
+                        <figure class="slide__img js-slide__img">
+                            <img
+                                src="https://images.unsplash.com/photo-1721153225946-4b8e0b2b1af6?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            />
+                        </figure>
+                        <figure class="slide__img js-slide__img">
+                            <img
+                                src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            />
                         </figure>
                     </div>
 
@@ -61,22 +93,26 @@
                 <div class="slide js-slide">
                     <div class="slide__content">
                         <figure class="slide__img js-slide__img">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo3.jpg" />
-                        </figure>
-                        <figure class="slide__img js-slide__img">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo4.jpg" />
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="slide js-slide">
-                    <div class="slide__content">
-                        <figure class="slide__img js-slide__img">
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo5.jpg" />
                         </figure>
                         <figure class="slide__img js-slide__img">
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo6.jpg" />
                         </figure>
+                    </div>
+
+                    <div class="slider__text js-slider__text">
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>Black is</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>timeless. Black is</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>the colour of</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>Eternity.</div>
+                        </div>
                     </div>
                 </div>
 
@@ -294,7 +330,10 @@
                         this.textures.push(texture);
                     });
 
-                    this.disp = loader.load("https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/rock-_disp.png", this.render);
+                    this.disp = loader.load(
+                        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/rock-_disp.png",
+                        this.render
+                    );
                     this.disp.magFilter = this.disp.minFilter = THREE.LinearFilter;
                     this.disp.wrapS = this.disp.wrapT = THREE.RepeatWrapping;
                 }
