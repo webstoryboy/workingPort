@@ -52,8 +52,8 @@ body {
 #mainIntro {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/bg1.jpg);
-    background-position: center center;
+    /* background-image: url(../img/bg1.jpg);
+    background-position: center center; */
     background-size: cover;
     position: relative;
     z-index: 2;
@@ -68,6 +68,14 @@ body {
     height: 100%;
     background-color: #00000021;
     z-index: -1;
+}
+
+#mainIntro .videoBG {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
 }
 
 .about {
@@ -255,6 +263,105 @@ body {
     background-image: url("../img/close.svg");
     background-size: cover;
     cursor: pointer;
+}
+
+.portlayer {
+    width: 750px;
+    height: 600px;
+    position: absolute;
+    z-index: 10000;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 80px;
+    color: #fff;
+    font-family: "nanumSquareNeo";
+    transition: all 0.3s ease-out;
+}
+.portlayer .port {
+    background-color: #223167a8;
+    backdrop-filter: blur(30px);
+    height: calc(100% - 60px);
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: flex;
+}
+
+.portlayer .port .c1 {
+    width: 250px;
+    height: 100%;
+}
+.portlayer .port .c1 .dot {
+    background-color: red;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    z-index: 1000;
+}
+.portlayer .port .c1 nav ul {
+    padding: 40px;
+}
+.portlayer .port .c1 nav li {
+    font-family: '"nanumSquareNeo"';
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.portlayer .port .c1 nav li input {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+.portlayer .port .c2 {
+    width: 500px;
+    height: 100%;
+}
+
+.portlayer .port .c2 .title {
+    width: 100%;
+    padding: 14px 20px 12px;
+    background-color: #ffffff08;
+}
+
+.portlayer .port .c2 .cont {
+    display: flex;
+    height: calc(100% - 40px);
+}
+.portlayer .port .c2 .cont .left {
+    width: 50%;
+    height: 100%;
+    background-color: #0000002e;
+}
+.portlayer .port .c2 .cont .left li {
+    background-color: #ffffff0a;
+    padding: 7px 14px 5px;
+}
+.portlayer .port .c2 .cont .left li:nth-child(even) {
+    background-color: #00000048;
+    backdrop-filter: blur(5px);
+}
+.portlayer .port .c2 .cont .right {
+    width: 50%;
+}
+
+.portlayer .port .c2 .cont .right .img {
+    border: 1px solid #cccccc2d;
+    height: 300px;
+    margin: 10px;
+}
+.portlayer .port .c2 .cont .right p {
+    margin: 10px;
+    font-size: 14px;
+}
+.portlayer .port .c2 .cont .right a {
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #cccccc2d;
+    padding: 7px;
+    margin-left: 10px;
 }
 
 /* youtube */
