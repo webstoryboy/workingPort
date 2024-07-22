@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
 
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <body>
+        <div id="wrap">
+            <div class="pattern" id="pattern"></div>
 
-<body>
-    <div id="wrap">
-        <div class="pattern" id="pattern"></div>
-    </div>
+            <header id="header">
+                <div class="box1">
+                    <h1 class="btop bbom dotwrap">
+                        <span class="dot left dotA"></span>
+                        <span class="dot right"></span>
+                        <span class="dot leftBot"></span>
+                        <span class="dot rightBot dotA"></span>
+                        portfolio
+                    </h1>
+                </div>
+                <div class="box2">
+                    <div class="btop bbom dotwrap flex">
+                        <span class="dot left"></span>
+                        <span class="dot right"></span>
+                        <span class="dot leftBot dotA"></span>
+                        <span class="dot rightBot"></span>
+                        <div class="left bright w50 h50">dd</div>
+                        <div class="right w50 h50 time"><span>12:23:22</span></div>
+                    </div>
+                </div>
+                <div class="box3 mt10">
+                    <div class="btop bbom dotwrap flex">
+                        <span class="dot left"></span>
+                        <span class="dot right dotA"></span>
+                        <span class="dot leftBot"></span>
+                        <span class="dot rightBot dotA"></span>
+                        <div class="left bright w40 h100"></div>
+                        <div class="right w60 h100"></div>
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
 
-    <header id="header">
-        <div class="box1 ">
-            <h1 class="btop bbom">portfolio</h1>
+            <main id="contents">
+                <section class="view"></section>
+                <nav class="nav"></nav>
+            </main>
+            <!-- //contents -->
+
+            <footer id="footer"></footer>
+            <!-- //footter -->
         </div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-    </header>
 
-    <script>
-        function createSparkles() {
-            const pattern = document.getElementById('pattern');
-            const sparkleSize = 20; // 스파클 간격 (px)
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            const numColumns = Math.floor(width / sparkleSize);
-            const numRows = Math.floor(height / sparkleSize);
-            const totalSparkles = numColumns * numRows;
+        <script>
+            function createSparkles() {
+                const pattern = document.getElementById("pattern");
+                const sparkleSize = 20; // 스파클 간격 (px)
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                const numColumns = Math.floor(width / sparkleSize);
+                const numRows = Math.floor(height / sparkleSize);
+                const totalSparkles = numColumns * numRows;
 
-            for (let i = 0; i < totalSparkles; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                pattern.appendChild(sparkle);
+                for (let i = 0; i < totalSparkles; i++) {
+                    const sparkle = document.createElement("div");
+                    sparkle.className = "sparkle";
+                    pattern.appendChild(sparkle);
+                }
             }
-        }
 
-        window.onload = createSparkles;
-    </script>
-</body>
-
+            window.onload = createSparkles;
+        </script>
+    </body>
 </html>

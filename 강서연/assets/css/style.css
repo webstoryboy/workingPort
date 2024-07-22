@@ -1,6 +1,5 @@
 html,
 body {
-    background-color: black;
     margin: 0;
     padding: 0;
 }
@@ -8,10 +7,11 @@ body {
 .pattern {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to top, #051833 0%, #200533 70%);
+    background: linear-gradient(to top, #000 0%, #111 70%);
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    pointer-events: none;
 }
 
 .sparkle {
@@ -21,13 +21,13 @@ body {
     transform: rotate(45deg);
 }
 
-.sparkle:nth-child(2n+0) {
+.sparkle:nth-child(2n + 0) {
     -webkit-animation: shine 2.2s linear infinite alternate;
     animation: shine 2.2s linear infinite alternate;
     margin: 1.25em;
 }
 
-.sparkle:nth-child(2n+1) {
+.sparkle:nth-child(2n + 1) {
     -webkit-animation: shine 2.2s 0.6s linear infinite alternate;
     animation: shine 2.2s 1.1s linear infinite alternate;
 }
@@ -44,14 +44,18 @@ body {
 
 @keyframes shine {
     50% {
-        background-color: rgb(20, 5, 35);
+        background-color: #000;
     }
 
     100% {
         background-color: powderblue;
     }
 }
-
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 #wrap {
     position: absolute;
     left: 0;
@@ -65,12 +69,40 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 350px;
+    width: 300px;
+    height: 100vh;
+    background-color: #00000022;
+}
+
+#footer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
     height: 100vh;
     background-color: #ffffff0e;
 }
 
-#header .box1 {
+#contents {
+    position: fixed;
+    left: 300px;
+    right: 300px;
+    top: 0;
+    width: calc(100% - 600px);
+    height: 100vh;
+    background-color: #e044446d;
+}
+#contents .view {
+    width: 100%;
+    height: 80vh;
+}
+#contents .nav {
+    width: 100%;
+    height: 20vh;
+    background-color: #dddddd2c;
+}
+
+#header {
     padding: 20px;
 }
 
@@ -78,20 +110,110 @@ body {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Jersey 10 Charted';
-    font-family: 'Nixie One';
-    font-size: 30px;
+    font-size: 36px;
     letter-spacing: 1px;
+    font-family: "Chopsic";
+}
+
+#header .box2 {
+    margin-top: 10px;
+}
+.time {
+    color: #66a5b6;
+    font-size: 20px;
+    font-family: "Orbitron";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
 }
 
 :root {
-    --linecolor: #67676770;
+    --linecolor: #70707070;
 }
 
+.dotwrap {
+    position: relative;
+}
+.dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: block;
+}
+.dotA {
+    animation: dot 2s infinite;
+}
+
+@keyframes dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot.left {
+    left: 0;
+    top: -2px;
+}
+.dot.right {
+    right: 0;
+    top: -2px;
+}
+.dot.leftBot {
+    left: 0;
+    bottom: -2px;
+}
+.dot.rightBot {
+    right: 0;
+    bottom: -2px;
+}
 .btop {
-    border-top: 1px solid var(--linecolor)
+    border-top: 1px solid var(--linecolor);
 }
 
 .bbom {
-    border-bottom: 1px solid var(--linecolor)
+    border-bottom: 1px solid var(--linecolor);
+}
+
+.bright {
+    border-right: 1px solid var(--linecolor);
+}
+
+.flex {
+    display: flex;
+}
+
+.w40 {
+    width: 40%;
+}
+.w50 {
+    width: 50%;
+}
+.w60 {
+    width: 60%;
+}
+.h50 {
+    height: 50px;
+}
+.h60 {
+    height: 60px;
+}
+.h70 {
+    height: 70px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.mt10 {
+    margin-top: 10px;
 }

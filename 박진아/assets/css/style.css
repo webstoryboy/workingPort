@@ -1,5 +1,5 @@
 #header h1 {
-    font-family: 'AfricaTrial-Rainfall';
+    font-family: "AfricaTrial-Rainfall";
     font-size: 14vw;
     position: absolute;
     left: 50%;
@@ -41,13 +41,11 @@
 
 #header .menu ul li {
     padding: 10px;
-    font-family: 'NeoGeoTrial-Light';
+    font-family: "NeoGeoTrial-Light";
     text-transform: uppercase;
     color: #000;
     font-size: 14px;
 }
-
-
 
 #section1 {
     width: 100%;
@@ -70,7 +68,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
 }
 
 #section2 {
@@ -81,7 +79,7 @@
 
 #section2 .text-wrap {
     color: #fff;
-    font-family: 'NeoGeoTrial-Light';
+    font-family: "NeoGeoTrial-Light";
     max-width: 1200px;
     margin: 0 auto;
     font-size: 90px;
@@ -115,7 +113,6 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
 }
 
 #section2 .text-wrap .sp3 {
@@ -136,7 +133,7 @@
     font-size: 16px;
     text-align: center;
     padding: 20vw 0 15vw;
-    font-family: 'Abel';
+    font-family: "Abel";
     color: #fff;
     overflow: hidden;
     line-height: 1;
@@ -152,9 +149,8 @@
     margin-left: auto;
     padding-right: 5vw;
     font-size: 26px;
-    font-family: 'NeoGeoTrial-Light';
+    font-family: "NeoGeoTrial-Light";
     margin-bottom: 10vw;
-
 }
 
 #section2 .img {
@@ -171,13 +167,157 @@
 
 #section2 .img .ment {
     width: 40%;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     line-height: 1.6;
-
 }
 
 @media (max-width: 960px) {
     #section1 .eye {
         background-size: 400px;
     }
+}
+
+#section3 {
+    width: 100%;
+    height: 1000px;
+    background-color: #000;
+}
+#section4 {
+    width: 100%;
+    height: 1000px;
+    background-color: #000;
+}
+#section5 {
+    width: 100%;
+    height: 1000px;
+    background-color: #000;
+}
+
+#section5 .title {
+    display: flex;
+    align-items: end;
+    width: 1200px;
+    margin: 0 auto;
+}
+#section5 .title h3 {
+    color: #fff;
+    font-family: "NeoGeoTrial-Light";
+    font-size: 90px;
+    line-height: 1;
+}
+
+#section5 .title input {
+    width: 100%;
+    border: 1px solid #000;
+    margin-left: 100px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 8px;
+}
+
+#section5 .commentBox {
+    margin-top: 10px;
+}
+
+.masonry {
+    -moz-column-count: 1;
+    column-count: 1;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    counter-reset: item-counter;
+}
+@media screen and (min-width: 400px) {
+    .masonry {
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+@media screen and (min-width: 600px) {
+    .masonry {
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+@media screen and (min-width: 800px) {
+    .masonry {
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .masonry {
+        -moz-column-count: 5;
+        column-count: 5;
+    }
+}
+
+.item {
+    box-sizing: border-box;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+    padding: 10px;
+    counter-increment: item-counter;
+}
+.item__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    font-size: 40px;
+    color: #360007;
+    background: currentColor;
+    box-sizing: border-box;
+    color: #720026;
+}
+.item__content:hover {
+    background: #9b0034;
+}
+.item__content:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    background-color: #222;
+    content: counter(item-counter);
+}
+.item__content:after {
+    color: #1c0004;
+    content: "ಠ‿ಠ";
+}
+.item__content--small {
+    color: #ce4257;
+    height: 100px;
+}
+.item__content--small:hover {
+    background: #d66274;
+}
+.item__content--small:after {
+    content: "♥◡♥";
+}
+.item__content--medium {
+    color: #ffc093;
+    height: 175px;
+}
+.item__content--medium:hover {
+    background: #ffd8bc;
+}
+.item__content--medium:after {
+    content: "◔ᴗ◔";
+}
+.item__content--large {
+    color: #ff7f51;
+    height: 280px;
+}
+.item__content--large:hover {
+    background: #ff9d7a;
+}
+.item__content--large:after {
+    content: "ಠ_๏";
 }
