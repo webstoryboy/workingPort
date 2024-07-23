@@ -95,7 +95,7 @@ body {
 }
 #contents .view {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     padding: 20px;
     position: relative;
     z-index: 1;
@@ -103,9 +103,14 @@ body {
 }
 
 #contents .nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
     width: 100%;
     height: 20vh;
-    background-color: #dddddd8c;
+    background-color: #00000067;
+    backdrop-filter: blur(10px);
 }
 
 .music-veiw {
@@ -150,6 +155,13 @@ body {
     letter-spacing: 1px;
     font-family: "Chopsic";
     -webkit-text-stroke: 1px #fff;
+}
+
+.leftNamePicture .left .img {
+    background-image: url(../img/se.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .time {
