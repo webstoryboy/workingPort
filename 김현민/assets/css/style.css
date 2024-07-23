@@ -230,9 +230,9 @@
 
 #section3 {
     width: 100%;
-    background: url(../img/bg3.jpg) no-repeat center top;
-    background-size: 100%;
-    padding: 10% 5%;
+    height: 100vh;
+    background: #000 url(../img/bg3.jpg) no-repeat center top;
+    background-size: cover;
 }
 
 #section3 .title {
