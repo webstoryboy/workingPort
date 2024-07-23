@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     pointer-events: none;
+    z-index: -1;
 }
 
 .sparkle {
@@ -51,11 +52,11 @@ body {
         background-color: powderblue;
     }
 }
-body {
+/* body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
+} */
 #wrap {
     position: absolute;
     left: 0;
@@ -80,7 +81,7 @@ body {
     top: 0;
     width: 300px;
     height: 100vh;
-    background-color: #ffffff0e;
+    /* background-color: #ffffff0e; */
 }
 
 #contents {
@@ -90,16 +91,34 @@ body {
     top: 0;
     width: calc(100% - 600px);
     height: 100vh;
-    background-color: #e044446d;
+    /* background-color: #e044446d; */
 }
 #contents .view {
     width: 100%;
     height: 80vh;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    overflow-y: scroll;
 }
+
 #contents .nav {
     width: 100%;
     height: 20vh;
-    background-color: #dddddd2c;
+    background-color: #dddddd8c;
+}
+
+.music-veiw {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: #00000012; */
+    /* backdrop-filter: blur(10px); */
+}
+.music-veiw p {
+    padding: 20px;
+    font-family: "IropkeBatang";
+    color: #fff;
 }
 
 #header {
@@ -107,20 +126,35 @@ body {
 }
 
 #header .box1 h1 {
-    color: #fff;
+    /* color: #fff; */
     text-transform: uppercase;
     text-align: center;
     font-size: 36px;
     letter-spacing: 1px;
     font-family: "Chopsic";
+    -webkit-text-stroke: 1px #fff;
 }
 
 #header .box2 {
     margin-top: 10px;
 }
+
+#footer {
+    padding: 20px;
+}
+
+#footer h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-family: "Chopsic";
+    -webkit-text-stroke: 1px #fff;
+}
+
 .time {
     color: #66a5b6;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Orbitron";
     display: flex;
     align-items: center;
@@ -131,9 +165,9 @@ body {
 :root {
     --linecolor: #70707070;
 }
-
 .dotwrap {
     position: relative;
+    z-index: 10;
 }
 .dot {
     position: absolute;
@@ -178,19 +212,16 @@ body {
 .btop {
     border-top: 1px solid var(--linecolor);
 }
-
 .bbom {
     border-bottom: 1px solid var(--linecolor);
 }
-
 .bright {
     border-right: 1px solid var(--linecolor);
 }
-
 .flex {
     display: flex;
+    height: 100%;
 }
-
 .w40 {
     width: 40%;
 }
@@ -209,11 +240,9 @@ body {
 .h70 {
     height: 70px;
 }
-
 .h100 {
     height: 100px;
 }
-
 .mt10 {
     margin-top: 10px;
 }
