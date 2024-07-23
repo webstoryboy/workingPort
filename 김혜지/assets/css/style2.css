@@ -22,7 +22,6 @@
     fill: #2da94f;
     stroke: #2da94f;
 }
-
 .x {
     fill: #fdbd00;
 }
@@ -84,16 +83,74 @@
 }
 
 #section1 .title {
-    font-size: 12vw;
+    font-size: 10vw;
     padding-bottom: 30vh;
     font-family: "lotteriaChab";
     text-transform: uppercase;
     z-index: 1000;
-    color: #417cec;
+    color: #f1574f;
+    -webkit-text-stroke: 2px #000;
+}
+#section1 .sun {
+    width: 450px;
+    margin: 0 auto -30px;
+}
+#Layer_1 {
+    position: relative;
+    z-index: 1000;
+}
+#Layer_2 {
+    animation: rotation 4s infinite;
+}
+#Layer_3 {
+    animation: upDown 3s infinite;
+    position: relative;
+    z-index: -1;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 #section2 {
-    background-color: #fff;
+    background-color: #fcd8da;
     width: 100%;
     height: 100vh;
+    padding-top: 40px;
+}
+#section2 > div {
+    font-size: 10vw;
+    line-height: 0.8;
+    /* background-color: #ccc; */
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-top: 1vw;
+}
+#section2 > div .box {
+    width: 400px;
+    height: 7.1vw;
+    margin: 0 10px;
+    display: inline-block;
+    background-color: #000;
 }

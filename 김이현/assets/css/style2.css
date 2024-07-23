@@ -62,6 +62,11 @@
     align-items: end;
     font-size: 14px;
     padding: 1px 5px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: #e7e4df;
 }
 #section1 .bom .title span {
     flex: 1;
@@ -114,5 +119,144 @@
 }
 
 #section2 {
+    background-color: #e7e4df;
+}
+
+#section2 .title {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    height: 4vh;
+    font-family: "Abel";
+    display: flex;
+    align-items: end;
+    font-size: 14px;
+    padding: 1px 5px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: #e7e4df;
+}
+#section2 .title span {
+    flex: 1;
+    text-align: center;
+}
+#section2 .title span:first-child {
+    text-align: left;
+}
+#section2 .title span:last-child {
+    text-align: right;
+}
+#section2 .cont {
+    display: flex;
+    align-items: start;
+    border-bottom: 1px solid #000;
+}
+#section2 .cont .left {
+    width: 45%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+#section2 .cont .right {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1%;
+    font-size: 6vw;
+    line-height: 0.91;
+    font-family: "NeoGeoTrial-Light";
+}
+#section2 .cont .right span {
+    color: rgb(252, 150, 47);
+}
+
+#section2 .cont .right div:last-child {
+    margin-top: 10px;
+}
+
+#section3 {
     height: 2000px;
+    background-color: #e7e4df;
+}
+
+#section3 .title {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    height: 4vh;
+    font-family: "Abel";
+    display: flex;
+    align-items: end;
+    font-size: 14px;
+    padding: 1px 5px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: #e7e4df;
+}
+#section3 .title span {
+    flex: 1;
+    text-align: center;
+}
+#section3 .title span:first-child {
+    text-align: left;
+}
+#section3 .title span:last-child {
+    text-align: right;
+}
+
+#section3 .cont {
+    width: 100%;
+    height: 46vh;
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+
+#section3 .left {
+    width: 30%;
+    height: 100%;
+    /* border-right: 1px solid #000; */
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    font-family: "NeoGeoTrial-Regular";
+    padding: 1%;
+}
+#section3 .left h3 {
+    padding-right: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #222;
+}
+#section3 .left li {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #666;
+}
+#section3 .right {
+    width: 70%;
+    padding: 5% 2%;
+    font-family: "NeoGeoTrial-Light";
+}
+#section3 .right > ul {
+}
+#section3 .right > ul > li {
+    border-top: 1px solid #000;
+    margin-top: 3px;
+}
+#section3 .right > ul > li > ul {
+    text-align: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: -20px;
+}
+#section3 .right > ul > li > ul > li {
+    border-top: 1px solid #000;
+    padding: 3px 0;
+    color: #888;
+}
+#section3 .right > ul > li > ul > li:first-child {
+    border-top: 0;
 }
