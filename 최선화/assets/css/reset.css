@@ -1,65 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @font-face {
-    font-family: 'CondensedRegular';
+    font-family: "CondensedRegular";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-CondensedRegular.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-CondensedRegular.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-CondensedRegular.woff2") format("woff2"),
+        url("../fonts/PPNeueWorld-CondensedRegular.woff") format("woff");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'ExtendedThin';
+    font-family: "ExtendedThin";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-ExtendedThin.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-ExtendedThin.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-ExtendedThin.woff2") format("woff2"),
+        url("../fonts/PPNeueWorld-ExtendedThin.woff") format("woff");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Regular';
+    font-family: "Regular";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-Regular.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-Regular.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-Regular.woff2") format("woff2"),
+        url("../fonts/PPNeueWorld-Regular.woff") format("woff");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SemiCondensedUltrabold';
+    font-family: "SemiCondensedUltrabold";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-SemiCondensedUltrabold.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-SemiCondensedUltrabold.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-SemiCondensedUltrabold.woff2") format("woff2"),
+        url("../fonts/PPNeueWorld-SemiCondensedUltrabold.woff") format("woff");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SemiExtendedBlack';
+    font-family: "SemiExtendedBlack";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-SemiExtendedBlack.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-SemiExtendedBlack.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-SemiExtendedBlack.woff2") format("woff2"),
+        url("../fonts/PPNeueWorld-SemiExtendedBlack.woff") format("woff");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SuperCondensedLight';
+    font-family: "SuperCondensedLight";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-SuperCondensedLight.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-SuperCondensedLight.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-SuperCondensedLight.woff2") format("woff2"),
+        url("../fonts/PPNeueWorld-SuperCondensedLight.woff") format("woff");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Thin';
+    font-family: "Thin";
     font-weight: 300;
     font-style: normal;
-    src: url('../fonts/PPNeueWorld-Thin.woff2') format('woff2'),
-        url('../fonts/PPNeueWorld-Thin.woff') format('woff');
+    src: url("../fonts/PPNeueWorld-Thin.woff2") format("woff2"), url("../fonts/PPNeueWorld-Thin.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ChosunNm";
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -120,7 +131,8 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica,
+        "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
