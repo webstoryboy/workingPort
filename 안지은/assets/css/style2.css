@@ -70,3 +70,82 @@
     text-transform: uppercase;
     overflow: hidden;
 }
+#section2 {
+}
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1420px) {
+    .container {
+        width: 96%;
+    }
+}
+.sec2__inner {
+    padding: 200px 0;
+}
+.sec2__inner h2 {
+    font-size: 12.8vmax;
+    margin-left: -0.6vw;
+    font-family: "NeoGeoTrial-Thin";
+    text-transform: uppercase;
+}
+.sec2__inner .article1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10vw;
+    margin-top: -7vw;
+    justify-content: space-between;
+}
+.sec2__inner .article1 .left {
+    width: 50%;
+    background-color: #d1d1d1;
+}
+.sec2__inner .article1 .right {
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.sec2__inner .article2 .right h3 {
+}
+.sec2__inner .article2 .right p {
+}
+.sec2__inner .article2 .right a {
+}
+
+.sec2__inner .article2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 100px;
+}
+.sec2__inner .article2 .left {
+    width: 60%;
+    height: 600px;
+    background-color: #d1d1d1;
+}
+.sec2__inner .article2 .right {
+    width: 30%;
+    height: 600px;
+    background-color: #8e8181;
+    display: flex;
+}
+
+.sec2__inner .article3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.sec2__inner .article3 .left {
+    width: 70%;
+    height: 600px;
+    background-color: #d1d1d1;
+}
+.sec2__inner .article3 .right {
+    width: 30%;
+    height: 600px;
+    background-color: #8e8181;
+}

@@ -12,19 +12,12 @@
         <div id="section2">
             <div class="titleWrap">
                 <h2 class="split">I am Park So-hyun,<br />who plans, designs, and develops.</h2>
-                <p class="split">
+                <p class="desc split">
                     안녕하세요. 디자인 대학을 졸업하고 3년 동안 그래픽 및 웹 디자이너로 일한 경험이 있습니다. <br />
                     디자이너로서 다양한 프로젝트를 수행하며, 독창적이고 세련된 결과물을 만들어내는 데 자부심을 느낍니다.
                     <br />
                     함께 멋진 결과를 만들어나가길 기대합니다.
                 </p>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="home.html">home</a></li>
-                        <li><a href="skill.html">skill</a></li>
-                        <li><a href="project.html">project</a></li>
-                    </ul>
-                </nav>
             </div>
 
             <main id="main">
@@ -143,6 +136,13 @@
             </main>
 
             <div class="bottomWrap">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="skill.html">skill</a></li>
+                        <li><a href="project.html">project</a></li>
+                    </ul>
+                </nav>
                 <h3 class="split">planning desinger</h3>
             </div>
         </div>
@@ -164,14 +164,55 @@
             gsap.set(".titleWrap p .line", { opacity: 0, y: 5 });
             gsap.set(".menu li", { opacity: 0, y: 5 });
             gsap.set(".bottomWrap h3 .char", { y: 200 });
+            gsap.set(".profile .ab-Img1", { opacity: 0 });
+            gsap.set(".profile .ab-Img2", { opacity: 0 });
+            gsap.set(".profile .ab-Img3", { opacity: 0 });
+            gsap.set(".profile .ab-Img4", { opacity: 0 });
+            gsap.set(".profile .ab-Img5", { opacity: 0 });
+            gsap.set(".profile .ab-Img6", { opacity: 0 });
+            gsap.set(".profile .ab-Img7", { opacity: 0 });
+            gsap.set(".profile .ab-Img8", { opacity: 0 });
+            gsap.set(".profile .ab-Img9", { opacity: 0 });
+            gsap.set(".profile .ab-Img10", { opacity: 0 });
+            gsap.set(".profile .ab-Img11", { opacity: 0 });
+            gsap.set(".profile .ab-Img12", { opacity: 0 });
+            gsap.set(".profile .ab-Img13", { opacity: 0 });
+            gsap.set(".profile .ab-Img14", { opacity: 0 });
+            gsap.set(".profile .ab-Img15", { opacity: 0 });
+            gsap.set(".profile .ab-Img16", { opacity: 0 });
+            gsap.set(".profile .ab-Img17", { opacity: 0 });
+            gsap.set(".profile .ab-Img18", { opacity: 0 });
+            gsap.set(".profile .ab-Img19", { opacity: 0 });
+            gsap.set(".profile .ab-Img20", { opacity: 0 });
+            gsap.set(".profile .ab-Img21", { opacity: 0 });
+            gsap.set(".profile .ab-Img22", { opacity: 0 });
+            gsap.set(".profile .ab-Img23", { opacity: 0 });
+            gsap.set(".profile .ab-Img24", { opacity: 0 });
+            gsap.set(".profile .ab-Img25", { opacity: 0 });
+            gsap.set(".profile .ab-Img26", { opacity: 0 });
+            gsap.set(".profile .ab-Img27", { opacity: 0 });
+            gsap.set(".profile .ab-Img28", { opacity: 0 });
+            gsap.set(".profile .ab-Img29", { opacity: 0 });
+            gsap.set(".profile .ab-Img30", { opacity: 0 });
+            gsap.set(".profile .ab-Img31", { opacity: 0 });
+            gsap.set(".profile .ab-Img32", { opacity: 0 });
+            gsap.set(".profile .ab-Img33", { opacity: 0 });
+            gsap.set(".profile .ab-Img34", { opacity: 0 });
+            gsap.set(".profile .ab-Img35", { opacity: 0 });
 
             const tl = gsap.timeline();
 
             setTimeout(() => {
                 tl.to(".titleWrap h2 .char", { opacity: 1, y: 0, stagger: 0.03, duration: 0.5, ease: "power4.out" });
                 tl.to(".titleWrap p .line", { opacity: 1, y: 0, stagger: 0.5, duration: 0.5, ease: "power2.out" });
-                tl.to(".menu li", { opacity: 1, y: 0, stagger: 0.5, duration: 0.5, ease: "power2.out" });
+                tl.to(".menu li", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" });
                 tl.to(".bottomWrap h3 .char", { y: 0, stagger: 0.02, duration: 0.5, ease: "power4.out" });
+                tl.to(".profile .ab-Img1", { opacity: 1 });
+                tl.to(".profile .ab-Img2", { opacity: 1, duration: 1 });
+                tl.to(".profile .ab-Img5", { opacity: 1 });
+                tl.to(".profile .ab-Img6", { opacity: 1 });
+                tl.to(".profile .ab-Img7", { opacity: 1 });
+                tl.to(".profile .ab-Img8", { opacity: 1 });
             }, 3000);
         </script>
 

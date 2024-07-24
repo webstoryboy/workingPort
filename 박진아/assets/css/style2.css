@@ -32,8 +32,6 @@
     padding: 10px;
     font-size: 18px;
 }
-#header nav li a {
-}
 
 #section1 {
     width: 100%;
@@ -48,6 +46,7 @@
     justify-content: center;
     font-family: "IropkeBatang";
     text-align: center;
+    z-index: 13000;
 }
 #section1 .desc {
     font-size: 16px;
@@ -72,10 +71,12 @@
 
 #section2 {
     width: 100%;
-    height: 4000px;
     background-color: #000;
     color: #fff;
     padding: 20% 5%;
+    position: relative;
+    z-index: 2000;
+    /* margin-bottom: 100vh; */
 }
 .about .title {
     font-family: "Abel";
@@ -119,4 +120,119 @@
     left: 10%;
     top: 5%;
     transform: rotate(45deg);
+}
+
+/* skillWrap */
+.skillWrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.skillWrap .skill .num {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 16px;
+    font-family: "Abel";
+    color: #555;
+}
+.skillWrap .skill {
+    position: relative;
+    perspective: 1000px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.skillWrap .skill .front,
+.skillWrap .skill .back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 1s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    padding: 7%;
+    border: 1px solid #363636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Flamenco";
+    font-size: 50px;
+}
+.skillWrap .skill .back {
+    transform: rotateY(-180deg);
+    font-size: 14px;
+}
+.skillWrap .skill:hover .front {
+    transform: rotateY(180deg);
+}
+.skillWrap .skill:hover .back {
+    transform: rotateY(0);
+}
+
+#section3 {
+    width: 400%;
+    height: 100vh;
+    background-image: url(../img/bg-min.jpg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    /* position: fixed;
+    left: 0;
+    top: 0; */
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+#section3 h3 {
+    font-size: 40vw;
+    font-family: "NeoGeoTrial-ExtraLight";
+    text-transform: uppercase;
+    padding-left: 100vw;
+    letter-spacing: 14vw;
+    color: #fff;
+}
+.projectWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: #ccc; */
+}
+.projectWrap .project {
+    width: 600px;
+    height: 800px;
+    background-color: #00000032;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.projectWrap .project.p1 {
+    left: 40%;
+    top: 50%;
+}
+.projectWrap .project.p2 {
+    left: 60%;
+    top: 60%;
+}
+.projectWrap .project.p3 {
+    left: 80%;
+}
+.projectWrap .project.p4 {
+    left: 100%;
+}
+.projectWrap .project.p5 {
+    left: 120%;
 }

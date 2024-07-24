@@ -1,54 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap");
 
 @font-face {
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     font-weight: normal;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf') format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot");
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf") format("truetype");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'NeoGeoTrial-ExtraLight';
+    font-family: "NeoGeoTrial-Black";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/NeoGeoTrial-ExtraLight.woff2') format('woff2');
+    src: url("../fonts/NeoGeoTrial-Black.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'NeoGeoTrial-Light';
+    font-family: "NeoGeoTrial-Light";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/NeoGeoTrial-Light.woff2') format('woff2');
+    src: url("../fonts/NeoGeoTrial-Light.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AfricaTrial-Cliff';
+    font-family: "AfricaTrial-Cliff";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/AfricaTrial-Cliff.woff2') format('woff2');
+    src: url("../fonts/AfricaTrial-Cliff.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AfricaTrial-Drylands';
+    font-family: "AfricaTrial-Drylands";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/AfricaTrial-Drylands.woff2') format('woff2');
+    src: url("../fonts/AfricaTrial-Drylands.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AfricaTrial-Rainfall';
+    font-family: "AfricaTrial-Rainfall";
     font-weight: normal;
     font-style: normal;
-    src: url('../fonts/AfricaTrial-Rainfall.woff2') format('woff2');
+    src: url("../fonts/AfricaTrial-Rainfall.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -109,7 +110,8 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica,
+        "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

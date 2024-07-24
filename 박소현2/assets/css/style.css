@@ -2,7 +2,7 @@
     text-align: center;
     padding: 3vw;
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
 }
 .titleWrap h2 {
     font-family: "Playfair Display";
@@ -15,6 +15,9 @@
 .titleWrap p {
     font-family: "IropkeBatang";
     font-size: 15px;
+}
+.titleWrap .menu {
+    margin-bottom: 2%;
 }
 .titleWrap .menu ul {
     display: flex;
@@ -36,12 +39,36 @@
     background-color: #000;
     color: #fff;
 }
+
 .bottomWrap {
     position: absolute;
     left: 50%;
     bottom: 3vw;
     transform: translateX(-50%);
     z-index: 4000;
+}
+.bottomWrap .menu {
+    margin-bottom: 2%;
+}
+.bottomWrap .menu ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.bottomWrap .menu li a {
+    padding: 2px 14px;
+    border: 1px dashed #000;
+    border-radius: 50px;
+    font-family: "Abel";
+    margin: 2px;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+.bottomWrap .menu li a:hover {
+    background-color: #000;
+    color: #fff;
 }
 .bottomWrap h3 {
     font-family: "Bodoni Moda SC";
@@ -54,16 +81,19 @@
     overflow: hidden;
 }
 
-@media (max-width: 1730px) {
+@media (max-width: 1430px) {
+    .bottomWrap h3 {
+        font-size: 80px;
+    }
 }
 @media (max-width: 960px) {
     .bottomWrap h3 {
-        font-size: 90px;
+        font-size: 60px;
     }
 }
 @media (max-width: 768px) {
     .bottomWrap h3 {
-        font-size: 70px;
+        font-size: 50px;
     }
     .titleWrap {
         padding-top: 50px;
@@ -71,16 +101,13 @@
     .titleWrap h2 {
         font-size: 34px;
     }
-    .bottomWrap {
-        bottom: 30px;
+    .titleWrap .desc {
+        display: none;
     }
 }
 @media (max-width: 600px) {
     .bottomWrap h3 {
         font-size: 40px;
-    }
-    .titleWrap p br {
-        display: none;
     }
 }
 @media (max-width: 400px) {
@@ -112,11 +139,22 @@ p {
     overflow: hidden;
     position: relative;
 }
-
+#skiilMain {
+    width: 1920px;
+    height: 70vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.SsvgWrap {
+    width: 100%;
+    height: 100%;
+}
 .SsvgWrap .svg1 {
     width: 700px;
     right: 5%;
-    bottom: -3%;
+    bottom: -12%;
 }
 
 .SsvgWrap .svg2 {
@@ -124,6 +162,9 @@ p {
     left: 5%;
     top: 30%;
     transform: rotateY(180deg);
+}
+
+.SsvgWrap .ani1 {
 }
 
 @media (max-width: 1730px) {
@@ -226,8 +267,15 @@ p {
 
 /* section2 */
 #main {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3000;
+    /* background-color: #ccc; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #main .profile {
     width: 500px;
@@ -245,13 +293,11 @@ p {
 }
 #main .profile .ab-Img1 {
     z-index: 2000;
-    margin-bottom: 10vh;
 }
 #main .profile .ab-Img2 {
     z-index: 1000;
     width: 350px;
     background-color: #ededed1d;
-    margin-bottom: 10vh;
 }
 #main .profile .ab-Img2 img {
     position: absolute;
@@ -263,6 +309,30 @@ p {
     z-index: 10000;
     right: 30px;
     top: 30px;
+}
+#main .profile .ab-Img4 {
+    z-index: 10000;
+    left: 130px;
+    top: 30px;
+    width: 50px;
+}
+#main .profile .ab-Img5 {
+    z-index: 10000;
+    left: 130px;
+    bottom: 50px;
+    width: 50px;
+}
+#main .profile .ab-Img6 {
+    z-index: 10000;
+    left: 190px;
+    bottom: 70px;
+    width: 60px;
+}
+#main .profile .ab-Img7 {
+    z-index: 10000;
+    left: 10px;
+    bottom: 70px;
+    width: 60px;
 }
 #main .profile .ab-Img9 {
     z-index: 10000;
@@ -278,6 +348,10 @@ p {
 #main .profile .ab-Img1,
 #main .profile .ab-Img2,
 #main .profile .ab-Img3,
+#main .profile .ab-Img4,
+#main .profile .ab-Img5,
+#main .profile .ab-Img6,
+#main .profile .ab-Img7,
 #main .profile .ab-Img9,
 #main .profile .ab-Img10 {
     position: absolute;

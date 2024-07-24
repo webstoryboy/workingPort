@@ -10,36 +10,68 @@
 
     <body>
         <div id="section3">
-            <div class="container">
-                <div class="titleWrap">
-                    <h2>I am Park So-hyun,<br />who plans, designs, and develops.</h2>
-                    <p>
-                        안녕하세요. 디자인 대학을 졸업하고 3년 동안 그래픽 및 웹 디자이너로 일한 경험이 있습니다. <br />
-                        저의 능력을 정리해봤습니다. 하나씩 클릭하면 알 수 있어요! <br />
-                        함께 멋진 결과를 만들어나가길 기대합니다.
-                    </p>
-                    <nav class="menu">
-                        <ul>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="home.html">home</a></li>
-                            <li><a href="project.html">project</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="titleWrap">
+                <h2 class="split">I am Park So-hyun,<br />who plans, designs, and develops.</h2>
+                <p class="split">
+                    안녕하세요. 디자인 대학을 졸업하고 3년 동안 그래픽 및 웹 디자이너로 일한 경험이 있습니다. <br />
+                    저의 능력을 정리해봤습니다. 하나씩 클릭하면 알 수 있어요! <br />
+                    함께 멋진 결과를 만들어나가길 기대합니다.
+                </p>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="project.html">project</a></li>
+                    </ul>
+                </nav>
+            </div>
 
+            <main id="skiilMain">
                 <div class="SsvgWrap">
                     <div class="svg1 abs">
                         <img src="assets/img/skill/castle-1.svg" alt="castle" />
                     </div>
-                    <div class="svg2 abs">
+                    <div class="svg2 abs ani1">
                         <img src="assets/img/skill/bird-1.svg" alt="bird" />
                     </div>
                 </div>
+            </main>
 
-                <div class="bottomWrap">
-                    <h3>smart skill</h3>
-                </div>
+            <div class="bottomWrap">
+                <h3 class="split">smart skill</h3>
             </div>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+
+        <script>
+            const targets = gsap.utils.toArray(".split");
+            let SplitClient = new SplitType(targets, { type: "lines, words, chars" });
+            let lines = SplitClient.lines;
+            let words = SplitClient.words;
+            let chars = SplitClient.chars;
+        </script>
+
+        <script>
+            gsap.set(".titleWrap h2 .char", { opacity: 0, y: 10 });
+            gsap.set(".titleWrap p .line", { opacity: 0, y: 5 });
+            gsap.set(".menu li", { opacity: 0, y: 5 });
+            gsap.set(".bottomWrap h3 .char", { y: 200 });
+            gsap.set(".SsvgWrap .svg1", { opacity: 0, y: 15 });
+            gsap.set(".SsvgWrap .svg2", { opacity: 0, y: 5 });
+
+            const tl = gsap.timeline();
+
+            setTimeout(() => {
+                tl.to(".titleWrap h2 .char", { opacity: 1, y: 0, stagger: 0.03, duration: 0.5, ease: "power4.out" });
+                tl.to(".titleWrap p .line", { opacity: 1, y: 0, stagger: 0.5, duration: 0.5, ease: "power2.out" });
+                tl.to(".menu li", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" });
+                tl.to(".bottomWrap h3 .char", { y: 0, stagger: 0.02, duration: 0.5, ease: "power4.out" });
+                tl.to(".SsvgWrap .svg1", { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+                tl.to(".SsvgWrap .svg2", { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+            }, 3000);
+        </script>
     </body>
 </html>
