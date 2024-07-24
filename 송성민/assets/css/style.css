@@ -8,7 +8,7 @@ body {
 #header {
     position: fixed;
     left: 0;
-    top: 10px;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,28 +42,28 @@ body {
     display: block;
 }
 
-#header nav {
+#header .mainNav {
     border: 1px solid #ffacac93;
     padding: 0.8rem 2.2rem;
     border-radius: 100px;
 }
 
-#header nav ul {
+#header .mainNav ul {
     display: flex;
 }
 
-#header nav li {
+#header .mainNav li {
     color: #ffacac;
 }
 
-#header nav li a {
+#header .mainNav li a {
     padding: 10px 20px;
     font-family: "PP NeueBit";
     opacity: 0.5;
     text-transform: uppercase;
 }
 
-#header nav li.active a {
+#header .mainNav li.active a {
     opacity: 1;
 }
 
@@ -290,6 +290,7 @@ body {
     color: #ffacac;
     white-space: nowrap;
     overflow: hidden;
+    z-index: 1000;
 }
 
 #footer span {

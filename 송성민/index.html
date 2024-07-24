@@ -15,7 +15,7 @@
                 <span>DEVELOPER</span>
                 <span>PORTFOLIO</span>
             </h1>
-            <nav class="nav">
+            <nav class="mainNav">
                 <ul>
                     <li class="active"><a href="main.html">001/Main</a></li>
                     <li><a href="work.html">002/Work</a></li>
@@ -95,10 +95,8 @@
                     <span>about</span>
                 </div>
                 <div class="desc">
-                    아직 부족한 부분이 많다 생각하여 스터디 모임에
-                    참여했습니다.<br />
-                    하루 8시간씩 공부하며 나머지 3개의 사이트와 메인
-                    포트폴리오를 제작했습니다.<br />
+                    아직 부족한 부분이 많다 생각하여 스터디 모임에 참여했습니다.<br />
+                    하루 8시간씩 공부하며 나머지 3개의 사이트와 메인 포트폴리오를 제작했습니다.<br />
                     저처럼 추가적으로 포트폴리오를 만들고 공부를 하기 위한<br />
                     취업하신 참여하신 분들도 계셨습니다.
                 </div>
@@ -220,11 +218,7 @@ Vars
                     },
                     modifiers: {
                         x: (x, target) => {
-                            const s = gsap.utils.wrap(
-                                -itemWidth,
-                                wrapWidth - itemWidth,
-                                parseInt(x)
-                            );
+                            const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x));
                             return `${s}px`;
                         },
                     },
