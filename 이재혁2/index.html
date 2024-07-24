@@ -27,20 +27,8 @@
                                 stroke-width="1"
                             >
                                 <g>
-                                    <line
-                                        class="diagonal-1"
-                                        x1="0"
-                                        y1="0"
-                                        x2="1920"
-                                        y2="911"
-                                    ></line>
-                                    <line
-                                        class="diagonal-2"
-                                        x1="1920"
-                                        y1="0"
-                                        x2="0"
-                                        y2="911"
-                                    ></line>
+                                    <line class="diagonal-1" x1="0" y1="0" x2="1920" y2="911"></line>
+                                    <line class="diagonal-2" x1="1920" y1="0" x2="0" y2="911"></line>
                                 </g>
                             </svg>
                         </div>
@@ -50,30 +38,40 @@
                             <div class="section1__contents">
                                 <div class="center">
                                     <p class="p1 split">
-                                        어떤 일이라도 노력하고 즐기면 그 결과는
-                                        빛을 바란다고 생각합니다.<br />
-                                        신입의 열정과 도전정신을 깊숙히 새기며
-                                        배움에 있어 겸손함을 유지하며<br />
-                                        세부적인 곳까지 파고드는 개발자가
-                                        되겠습니다.
+                                        어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.<br />
+                                        신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며<br />
+                                        세부적인 곳까지 파고드는 개발자가 되겠습니다.
                                     </p>
                                     <!-- <span class="scroll">scroll down</span> -->
                                 </div>
                                 <div class="text">
                                     <!-- <span class="lMoon"></span>
                                     <span class="rMoon"></span> -->
-                                    <div class="left">
+                                    <!-- <div class="left">
                                         Power Coding Creativity
                                     </div>
                                     <div class="right">
                                         Gowing Coding Passion
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </section>
                         <!-- //section1 -->
 
-                        <section id="section2"></section>
+                        <section id="section2">
+                            <div class="section2__border"></div>
+                            <div class="section2__contents">
+                                <div class="about">
+                                    <div>1</div>
+                                    <div>
+                                        <h2>실무 경험을 바탕으로 더 빠르게 배워가는 개발자</h2>
+                                        <div class="svg"></div>
+                                        <span></span>
+                                    </div>
+                                    <div>3</div>
+                                </div>
+                            </div>
+                        </section>
                         <section id="section3"></section>
                         <section id="section4"></section>
                     </div>
@@ -139,14 +137,26 @@
 
             gsap.to("#section1", {
                 scale: 0.7,
-                duration: 10,
+                duration: 5,
                 scrollTrigger: {
                     trigger: "#section1",
                     start: "top+=2000px",
+                    end: "bottom+=2000px",
+                    markers: true,
+                    scrub: 4,
+                },
+            });
+
+            gsap.to("#section2", {
+                width: "80vw",
+                height: "80vh",
+                duration: 5,
+                scrollTrigger: {
+                    trigger: "#section2",
+                    start: "top+=2000px",
                     end: "bottom+=4000px",
                     markers: true,
-                    scrub: 6,
-                    toggleClass: "active",
+                    scrub: 4,
                 },
             });
         </script>
