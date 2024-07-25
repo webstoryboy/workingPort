@@ -393,23 +393,71 @@ body {
     left: 0;
     top: 2%;
 }
+.comment li .title {
+    color: #ffacac;
+    position: absolute;
+    left: auto;
+    top: 24px;
+}
+.comment li .ment {
+    color: #ffacac;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    width: 300px;
+    border: 1px solid #ffacac78;
+    padding: 10px;
+    background-color: #00000021;
+    backdrop-filter: blur(10px);
+    font-family: "scoreDream";
+}
+
 .comment li.c1 .num {
+    left: 0;
+}
+.comment li.c1 .title {
+    right: 0%;
+    color: #ffacac;
 }
 .comment li.c2 .num {
     left: 10%;
 }
+.comment li.c2 .title {
+    right: 10%;
+    color: #ffacac;
+}
 .comment li.c3 .num {
     left: 20%;
+}
+.comment li.c3 .title {
+    right: 20%;
+    color: #ffacac;
 }
 .comment li.c4 .num {
     left: 30%;
 }
+.comment li.c4 .title {
+    right: 30%;
+    color: #ffacac;
+}
 .comment li.c5 .num {
     left: 40%;
+}
+.comment li.c5 .title {
+    right: 40%;
+    color: #ffacac;
 }
 .comment li.c6 .num {
     left: 50%;
 }
+.comment li.c6 .title {
+    right: 50%;
+    color: #ffacac;
+}
 .comment li.c7 .num {
     left: 60%;
+}
+.comment li.c7 .title {
+    right: 60%;
+    color: #ffacac;
 }
