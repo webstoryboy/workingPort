@@ -84,7 +84,31 @@
         <!-- //section3 -->
 
         <section id="section4"></section>
-        <section id="section5"></section>
+        <!-- //section4 -->
+
+        <section id="section5">
+            <div class="container">
+                <div class="sec5__inner">
+                    <p class="sub"><span class="dot"></span>6개월 동안 작업한 작업물입니다.</p>
+                    <div class="article">
+                        <div class="imgWrap">
+                            <div class="img"></div>
+                        </div>
+                        <h3 class="title dotWrap"><span class="dot w15"></span>지난 6개월간의 기록.</h3>
+                        <p>
+                            이 사이트는 HTML5, CSS3, 그리고 JAVASCRIPT를 사용하여 개발했습니다.<br />6개월 동안 제작한
+                            사이트들이 아이콘 형태로 모여 있어, 각 사이트로 쉽게 접근할 수 있습니다.
+                        </p>
+                        <div class="link">
+                            <a href="#">사이트 보기</a>
+                            <a href="#">소스 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section5 -->
+
         <section id="section6"></section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -148,6 +172,30 @@
                 scrub: true,
                 pin: true,
                 anticipatePin: 1,
+                markers: false,
+            });
+
+            const ani3 = gsap.timeline();
+
+            ani3.to(".sec5__inner .article .imgWrap .img", { top: "-10%", scale: 1.1, duration: 2, ease: "linear" });
+
+            ScrollTrigger.create({
+                animation: ani3,
+                trigger: ".sec5__inner .article .imgWrap .img",
+                start: "top 10%",
+                end: "bottom bottom",
+                scrub: 4,
+                markers: true,
+            });
+
+            ani3.to(".article .title .dot", { x: 400, duration: 1, ease: "power2.out" });
+
+            ScrollTrigger.create({
+                animation: ani3,
+                trigger: "#section5",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
                 markers: true,
             });
         </script>

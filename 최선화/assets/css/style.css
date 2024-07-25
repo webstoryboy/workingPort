@@ -126,3 +126,109 @@
     position: relative;
     z-index: 2000;
 }
+
+.container {
+    width: 1400px;
+    margin: 100px auto;
+}
+
+#section1,
+#section2,
+#section3,
+#section4 {
+    display: none;
+}
+
+#section5 {
+    width: 100%;
+    height: 2000px;
+    background-color: #fff;
+}
+.sec5__inner {
+    /* background-color: #eaeaea; */
+}
+.sec5__inner .sub {
+    font-family: "ChosunNm";
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20vh;
+}
+.dotWrap {
+    position: relative;
+}
+.dot {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    padding-left: 20px;
+    display: inline-block;
+}
+.dot::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #0038e9;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+.dot.w15::before {
+    width: 15px;
+    height: 15px;
+}
+.sec5__inner .article .imgWrap {
+    width: 45%;
+    aspect-ratio: 9/12;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.sec5__inner .article .imgWrap .img {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    background: url(../img/bg01.jpg) center center no-repeat;
+}
+
+.sec5__inner .article h3 {
+    font-family: "IropkeBatang";
+    color: #0038e9;
+    font-size: 34px;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.sec5__inner .article p {
+    font-family: "IropkeBatang";
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+.sec5__inner .article .link {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-family: "IropkeBatang";
+}
+.sec5__inner .article .link a {
+    position: relative;
+    margin-right: 30px;
+}
+.sec5__inner .article .link a::after {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("../img/arrow.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: -20px;
+    top: 2px;
+    transition: all 0.3s;
+}
+.sec5__inner .article .link a:hover::after {
+    transform: rotate(-45deg);
+}
