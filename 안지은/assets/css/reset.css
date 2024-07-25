@@ -1,6 +1,7 @@
 @import url("https://fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
-@import url("https://websfont.github.io/gmarket/gmarket.css");
+@import url("https://websfont.github.io/websfont/websfont.css");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
 @font-face {
     font-family: "NeoGeoTrial-Regular";
@@ -99,9 +100,8 @@ textarea {
     font-size: 16px;
     line-height: 1.4;
     color: #202020;
-    font-family: "Major Mono Display", NexonLv1GothicLow, -apple-system,
-        BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica,
-        "Apple SD Gothic Neo", sans-serif;
+    font-family: "Major Mono Display", NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic",
+        "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

@@ -346,3 +346,70 @@ body {
     width: 10%;
     height: 10vh;
 }
+
+#section2 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#section2::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000000ae;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#section3 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 2%;
+    min-height: 100vh;
+}
+#section3 h2 {
+    font-size: 80px;
+    color: #ffacac;
+    font-family: "scoreDream";
+    font-weight: 200;
+    padding-top: 50px;
+}
+.comment {
+    margin-top: 100px;
+    border-top: 1px solid #ffacac78;
+}
+.comment li {
+    border-bottom: 1px solid #ffacac78;
+    min-height: 100px;
+    position: relative;
+}
+.comment li .num {
+    color: #ffacac;
+    position: absolute;
+    left: 0;
+    top: 2%;
+}
+.comment li.c1 .num {
+}
+.comment li.c2 .num {
+    left: 10%;
+}
+.comment li.c3 .num {
+    left: 20%;
+}
+.comment li.c4 .num {
+    left: 30%;
+}
+.comment li.c5 .num {
+    left: 40%;
+}
+.comment li.c6 .num {
+    left: 50%;
+}
+.comment li.c7 .num {
+    left: 60%;
+}
