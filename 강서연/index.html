@@ -56,7 +56,7 @@
                         <span class="dot leftBot"></span>
                         <span class="dot rightBot dotA"></span>
                     </div>
-                    <div class="music-veiw">
+                    <!-- <div class="music-veiw">
                         <div class="img1">
                             <img src="./assets/img/bg01.png" alt="" />
                         </div>
@@ -84,9 +84,47 @@
                             개발을 하고는 했는데 프로토타입을 통해서 체계적인 구조를 세우는 방법과 실제로 시연해봄으로써
                             발생할 수 있는 버그/예외 케이스 등에 대해 예측 할 수 있었습니다.
                         </p>
-                    </div>
+                    </div> -->
                 </section>
-                <nav class="nav"></nav>
+                <nav class="nav">
+                    <ul>
+                        <li class="btn lineWrap">
+                            C1
+                            <span class="line topLeft"></span>
+                            <span class="line topRight"></span>
+                            <span class="line botLeft"></span>
+                            <span class="line botRight"></span>
+                        </li>
+                        <li class="btn lineWrap">
+                            C1
+                            <span class="line topLeft"></span>
+                            <span class="line topRight"></span>
+                            <span class="line botLeft"></span>
+                            <span class="line botRight"></span>
+                        </li>
+                        <li class="btn lineWrap">
+                            C1
+                            <span class="line topLeft"></span>
+                            <span class="line topRight"></span>
+                            <span class="line botLeft"></span>
+                            <span class="line botRight"></span>
+                        </li>
+                        <li class="btn lineWrap">
+                            C1
+                            <span class="line topLeft"></span>
+                            <span class="line topRight"></span>
+                            <span class="line botLeft"></span>
+                            <span class="line botRight"></span>
+                        </li>
+                        <li class="btn lineWrap">
+                            C1
+                            <span class="line topLeft"></span>
+                            <span class="line topRight"></span>
+                            <span class="line botLeft"></span>
+                            <span class="line botRight"></span>
+                        </li>
+                    </ul>
+                </nav>
             </main>
             <!-- //contents -->
 
@@ -105,21 +143,21 @@
         </div>
 
         <script>
-            function createSparkles() {
-                const pattern = document.getElementById("pattern");
-                const sparkleSize = 20; // 스파클 간격 (px)
-                const width = window.innerWidth;
-                const height = window.innerHeight;
-                const numColumns = Math.floor(width / sparkleSize);
-                const numRows = Math.floor(height / sparkleSize);
-                const totalSparkles = numColumns * numRows;
+            // function createSparkles() {
+            //     const pattern = document.getElementById("pattern");
+            //     const sparkleSize = 20; // 스파클 간격 (px)
+            //     const width = window.innerWidth;
+            //     const height = window.innerHeight;
+            //     const numColumns = Math.floor(width / sparkleSize);
+            //     const numRows = Math.floor(height / sparkleSize);
+            //     const totalSparkles = numColumns * numRows;
 
-                for (let i = 0; i < totalSparkles; i++) {
-                    const sparkle = document.createElement("div");
-                    sparkle.className = "sparkle";
-                    pattern.appendChild(sparkle);
-                }
-            }
+            //     for (let i = 0; i < totalSparkles; i++) {
+            //         const sparkle = document.createElement("div");
+            //         sparkle.className = "sparkle";
+            //         pattern.appendChild(sparkle);
+            //     }
+            // }
 
             window.onload = createSparkles;
         </script>
