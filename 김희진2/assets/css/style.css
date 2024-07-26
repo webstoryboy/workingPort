@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 @font-face {
-    font-family: 'iceJaram-Rg';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+    font-family: "iceJaram-Rg";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    background: #F2EEE4;
-    color: #F14620;
+    background: #f2eee4;
+    color: #f14620;
 }
 
 #header {
@@ -24,8 +24,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #F14620;
-    font-family: 'PPSupplyMono';
+    border-bottom: 1px solid #f14620;
+    font-family: "PPSupplyMono";
     z-index: 1000;
 }
 
@@ -53,18 +53,17 @@ body {
     text-align: right;
 }
 
-
 .weather {
     position: fixed;
     top: 80px;
     right: 20px;
-    border: 1px solid #F14620;
+    border: 1px solid #f14620;
     z-index: 10000;
     background-color: transparent;
     backdrop-filter: blur(10px);
     padding: 10px 20px;
 
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
 }
 
 #section1 {
@@ -74,7 +73,7 @@ body {
 #section1 .desc {
     font-size: 3.8vw;
     line-height: 1.2;
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
     font-weight: 100;
     letter-spacing: -0.2vw;
 }
@@ -96,9 +95,8 @@ body {
     width: 40vw;
     background-color: #000;
     overflow: hidden;
-    border: 20px solid #F14620;
+    border: 20px solid #f14620;
 }
-
 
 #section2 {
     width: 100%;
@@ -110,10 +108,14 @@ body {
 }
 
 #section2 .about1 {
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
     text-align: center;
+    font-size: 30px;
 }
 
+#section2 .about1 p {
+    font-size: 24px;
+}
 
 #section2 .about2 {
     position: absolute;
@@ -121,32 +123,42 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #cccccc49;
+    background-color: #ffbaaa42;
 }
 
-#section2 .about2>div {
+#section2 .about2 > div {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
-    height: 400px;
-    background-color: #fff;
+    aspect-ratio: 3.4/5;
+    border: 5px solid #f14620;
 }
 
-#section2 .about2>div.img1 {}
+#section2 .about2 > div.img1 {
+    background-image: url("https://seodaewon1.github.io/meo-port/assets/img/KakaoTalk_20240725_092842023.jpg");
+    background-size: cover;
+    background-position: center center;
+}
 
-#section2 .about2>div.img2 {}
+#section2 .about2 > div.img2 {
+}
 
-#section2 .about2>div.img3 {}
+#section2 .about2 > div.img3 {
+}
 
-#section2 .about2>div.img4 {}
+#section2 .about2 > div.img4 {
+}
 
-#section2 .about2>div.img5 {}
+#section2 .about2 > div.img5 {
+}
 
-#section2 .about2>div.img6 {}
+#section2 .about2 > div.img6 {
+}
 
-#section2 .about2>div.img7 {}
+#section2 .about2 > div.img7 {
+}
 
 #section2 h4 {
     font-size: 30px;
@@ -159,13 +171,14 @@ body {
     font-weight: bold;
 }
 
-#section3 {}
+#section3 {
+}
 
 #section3 h4 {
     padding: 16px 23px 0;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
 }
 
 .port-wrap {
@@ -184,7 +197,7 @@ body {
 }
 
 .port-wrap .port::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -205,14 +218,13 @@ body {
     color: #fff;
     width: 100%;
     padding: 0;
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
     font-size: 50px;
-
 }
 
 .port-wrap .port .info p {
     color: #fff;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     width: 100%;
 }
 
@@ -245,11 +257,8 @@ body {
     text-align: center;
     line-height: 100px;
     margin-top: 10px;
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
 }
-
-
-
 
 #section4 {
     padding: 7% 5%;
@@ -258,7 +267,7 @@ body {
 #section4 .desc {
     font-size: 3.8vw;
     line-height: 1.2;
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
     font-weight: 100;
     letter-spacing: -0.2vw;
 }
@@ -275,7 +284,7 @@ body {
 }
 
 #section4 .list li {
-    border-bottom: 1px solid #F14620;
+    border-bottom: 1px solid #f14620;
     position: relative;
 }
 
@@ -288,11 +297,10 @@ body {
 #section4 .list li em {
     display: block;
     font-weight: bold;
-
 }
 
 #section4 .list li strong {
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     padding-bottom: 10px;
     display: block;
 }
@@ -305,26 +313,23 @@ body {
 }
 
 #section4 .list li .icon svg {
-    fill: #F14620
+    fill: #f14620;
 }
-
-
 
 /* section5 */
 #section5 {
     padding: 20% 5% 7% 5%;
-    background-color: #F14620;
+    background-color: #f14620;
     color: #fff;
 }
 
 #section5 .desc {
     font-size: 3.8vw;
     line-height: 1.2;
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
     font-weight: 100;
     letter-spacing: -0.2vw;
 }
-
 
 .sec5-text {
     display: flex;
@@ -334,12 +339,10 @@ body {
 .sec5-text .text-left {
     width: 55%;
     /* background-color: #cccc; */
-
-
 }
 
 .sec5-text .text-left h3 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: #fff;
     font-size: 8vw;
     line-height: 0.9;
@@ -357,7 +360,7 @@ body {
 }
 
 .sec5-text .text-right dt {
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
     font-size: 50px;
     margin-top: 50px;
 }
@@ -367,7 +370,7 @@ body {
 }
 
 .sec5-text .text-right dd {
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     font-size: 20px;
     margin-bottom: 5px;
     position: relative;
@@ -375,7 +378,7 @@ body {
 }
 
 .sec5-text .text-right dd::before {
-    content: '';
+    content: "";
     background-image: url(../img/check.svg);
     width: 18px;
     height: 18px;
@@ -386,19 +389,17 @@ body {
     border-radius: 3px;
 }
 
-
-
 /* section6 */
 #section6 {
     padding: 5% 5% 7% 5%;
     background-color: #222;
-    color: #F2EEE4;
+    color: #f2eee4;
 }
 
 #section6 .desc {
     font-size: 3.8vw;
     line-height: 1.2;
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
     font-weight: 100;
     letter-spacing: -0.2vw;
 }
@@ -410,12 +411,11 @@ body {
 
 .sec6-text .text-left {
     width: 55%;
-
 }
 
 .sec6-text .text-left h3 {
-    font-family: 'Poppins';
-    color: #F2EEE4;
+    font-family: "Poppins";
+    color: #f2eee4;
     font-size: 8vw;
     line-height: 0.9;
     font-weight: 800;
@@ -432,7 +432,7 @@ body {
 }
 
 .sec6-text .text-right dt {
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
     font-size: 50px;
     margin-top: 50px;
 }
@@ -442,7 +442,7 @@ body {
 }
 
 .sec6-text .text-right dd {
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     font-size: 20px;
     margin-bottom: 5px;
     position: relative;
@@ -450,7 +450,7 @@ body {
 }
 
 .sec6-text .text-right dd::before {
-    content: '';
+    content: "";
     background-image: url(../img/check.svg);
     width: 18px;
     height: 18px;
@@ -461,7 +461,8 @@ body {
     border-radius: 3px;
 }
 
-.comment-wrap {}
+.comment-wrap {
+}
 
 .comment-wrap .comment {
     margin-top: 100px;
@@ -474,7 +475,7 @@ body {
 .comment-wrap .comment .title {
     font-size: 8vw;
     line-height: 1;
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
     display: inline-block;
 }
 
@@ -484,7 +485,7 @@ body {
 
 .comment-wrap .comment .auth {
     display: inline-block;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     margin-bottom: 10px;
     font-size: 14px;
     opacity: 0.4;
@@ -493,27 +494,28 @@ body {
 .comment-wrap .comment .cont {
     position: relative;
     padding-left: 40px;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     font-size: 20px;
     word-break: keep-all;
 }
 
 .comment-wrap .comment .cont::before {
-    content: '';
+    content: "";
     background-image: url(../img/terminal.svg);
     width: 30px;
     height: 30px;
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #F2EEE4;
+    background-color: #f2eee4;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
 }
 
-.comment-wrap .comment form {}
+.comment-wrap .comment form {
+}
 
 .comment-wrap .comment form legend {
     display: none;
@@ -532,7 +534,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
     margin-bottom: 10px;
 }
 
@@ -542,7 +544,7 @@ body {
     border: 1px solid #cccccc7c;
     width: 49%;
     padding: 10px;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
 }
 
 .comment__form .text textarea {
@@ -552,8 +554,7 @@ body {
     width: 100%;
     resize: none;
     padding: 10px;
-    font-family: 'IropkeBatang';
-
+    font-family: "IropkeBatang";
 }
 
 .comment__form button {
@@ -563,9 +564,8 @@ body {
     width: 100%;
     padding: 10px;
     color: #cccccc7c;
-    font-family: 'IropkeBatang';
+    font-family: "IropkeBatang";
 }
-
 
 #section7 {
     display: flex;
@@ -573,7 +573,7 @@ body {
     justify-content: center;
     height: 100vh;
     font-size: 30px;
-    font-family: 'PPSupplyMono';
+    font-family: "PPSupplyMono";
 }
 
 #section7 {
@@ -604,7 +604,6 @@ body {
     text-emphasis-color: #000;
 }
 
-
 .modal__wrap {
     display: none;
 }
@@ -618,7 +617,6 @@ body {
     background-color: #0000008e;
     width: 100%;
     height: 100vh;
-
 }
 
 .modal__wrap .modal .modal__inner {
@@ -632,7 +630,6 @@ body {
     border: 1px solid #ffffffaf;
     border-radius: 10px;
     overflow: hidden;
-
 }
 
 .modal__inner {
@@ -642,8 +639,8 @@ body {
 .modal__inner .modal__left {
     width: 50%;
     height: 100%;
-    background-image: url('https://springsummer.imgix.net/uploads/Magasin-01.png?auto=compress%2Cformat&fit=clip&q=35&w=2600');
-    background-image: url('../img/Frame02.jpg');
+    background-image: url("https://springsummer.imgix.net/uploads/Magasin-01.png?auto=compress%2Cformat&fit=clip&q=35&w=2600");
+    background-image: url("../img/Frame02.jpg");
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -663,11 +660,10 @@ body {
     background-color: #ffffff;
     backdrop-filter: blur(20px);
     padding: 20px;
-
 }
 
 .modal__inner .modal__right h4 {
-    font-family: 'iceJaram-Rg';
+    font-family: "iceJaram-Rg";
     font-size: 30px;
 }
 

@@ -1,3 +1,24 @@
+.responsive.c1920 {
+    border: 1px solid #fff;
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000000;
+}
+.responsive.c1440 {
+    border: 1px solid #fff;
+    width: 1440px;
+    height: 768px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000000;
+}
+
 .titleWrap {
     text-align: center;
     padding: 3vw;
@@ -147,86 +168,92 @@ p {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.SsvgWrap {
+
+/* SsvgWrap */
+.skillWrap {
     width: 100%;
     height: 100%;
+    position: relative;
 }
-.SsvgWrap .svg1 {
+
+.skillWrap .skill {
+    position: absolute;
+}
+.skillWrap .skill.s1 {
     width: 700px;
-    right: 5%;
-    bottom: -12%;
+    right: 1%;
 }
-
-.SsvgWrap .svg2 {
-    width: 180px;
-    left: 5%;
-    top: 30%;
+.skillWrap .skill.s2 {
+    width: 200px;
     transform: rotateY(180deg);
+    left: 1%;
+    top: 20%;
 }
 
-.SsvgWrap .ani1 {
-}
-
-@media (max-width: 1730px) {
-    .SsvgWrap .svg1 {
-        width: 600px;
-        right: 5%;
-        bottom: -3%;
-    }
-    .SsvgWrap .svg2 {
-        width: 160px;
-        left: 10%;
-        top: 30%;
+@media (max-width: 1940px) {
+    #skiilMain {
+        width: 100%;
     }
 }
 
-@media (max-width: 960px) {
-    .SsvgWrap .svg1 {
-        width: 500px;
-        right: 5%;
-        bottom: 3%;
+@media (max-width: 1700px) {
+    #skiilMain {
+        width: 100%;
     }
-    .SsvgWrap .svg2 {
-        width: 140px;
-        left: 15%;
-        top: 30%;
+    .skillWrap .skill.s1 {
+        width: 650px;
+        right: 3%;
+    }
+    .skillWrap .skill.s2 {
+        width: 190px;
+        left: 3%;
     }
 }
-
+@media (max-width: 1440px) {
+    .skillWrap .skill.s1 {
+        width: 550px;
+    }
+    .skillWrap .skill.s2 {
+        width: 170px;
+    }
+}
+@media (max-width: 1024px) {
+    .skillWrap .skill.s1 {
+        width: 450px;
+    }
+    .skillWrap .skill.s2 {
+        width: 130px;
+    }
+}
 @media (max-width: 768px) {
-    .SsvgWrap .svg1 {
-        width: 400px;
-        right: 5%;
-        bottom: 15%;
+    .skillWrap .skill.s1 {
+        width: 350px;
+        top: 15%;
     }
-    .SsvgWrap .svg2 {
-        width: 120px;
-        left: 15%;
-        top: 30%;
+    .skillWrap .skill.s2 {
+        width: 110px;
     }
 }
 
 @media (max-width: 600px) {
-    .SsvgWrap .svg1 {
-        width: 400px;
-        bottom: 5%;
+    .tty {
+        display: none;
     }
-    .SsvgWrap .svg2 {
-        width: 120px;
-        left: 15%;
-        top: 40%;
+    .skillWrap .skill.s1 {
+        width: 350px;
+        top: 15%;
+    }
+    .skillWrap .skill.s2 {
+        width: 110px;
     }
 }
-
 @media (max-width: 400px) {
-    .SsvgWrap .svg1 {
+    .skillWrap .skill.s1 {
         width: 300px;
-        bottom: 5%;
+        top: 20%;
     }
-    .SsvgWrap .svg2 {
-        width: 100px;
-        left: 15%;
-        top: 40%;
+    .skillWrap .skill.s2 {
+        width: 90px;
     }
 }
 
