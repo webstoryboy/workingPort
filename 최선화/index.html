@@ -90,21 +90,47 @@
             <div class="container">
                 <div class="sec5__inner">
                     <p class="sub"><span class="dot"></span>6개월 동안 작업한 작업물입니다.</p>
-                    <div class="article">
+                    <div class="article a1">
                         <div class="imgWrap">
-                            <div class="img"></div>
+                            <div class="img parallax__item__img"></div>
+                            <div class="link">
+                                <a href="#">사이트 보기</a>
+                                <a href="#">소스 보기</a>
+                            </div>
                         </div>
                         <h3 class="title dotWrap"><span class="dot w15"></span>지난 6개월간의 기록.</h3>
                         <p>
                             이 사이트는 HTML5, CSS3, 그리고 JAVASCRIPT를 사용하여 개발했습니다.<br />6개월 동안 제작한
                             사이트들이 아이콘 형태로 모여 있어, 각 사이트로 쉽게 접근할 수 있습니다.
                         </p>
+                        <p>
+                            처음엔 힘들었지만.. 어떻게 해서 이렇게 만들고 저러허게 만들었습니다. <br />재밌고.
+                            재밌었습니다. 이렇게 해서 저러허게 해써 했습니다.<br />
+                            이런식으로 함다면 개발자가 되서 이렇게 하겠습니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- //article1 -->
+                <div class="article2 parallax__item__desc">
+                    <div class="imgWrap">
+                        <div class="img parallax__item__img"></div>
                         <div class="link">
                             <a href="#">사이트 보기</a>
                             <a href="#">소스 보기</a>
                         </div>
                     </div>
+                    <h3 class="title dotWrap"><span class="dot right w15"></span>웹표준 코딩을 하다보면서.</h3>
+                    <p>
+                        이 사이트는 HTML5, CSS3, 그리고 JAVASCRIPT를 사용하여 개발했습니다.<br />6개월 동안 제작한
+                        사이트들이 아이콘 형태로 모여 있어, 각 사이트로 쉽게 접근할 수 있습니다.
+                    </p>
+                    <p>
+                        처음엔 힘들었지만.. 어떻게 해서 이렇게 만들고 저러허게 만들었습니다. <br />재밌고. 재밌었습니다.
+                        이렇게 해서 저러허게 해써 했습니다.<br />
+                        이런식으로 함다면 개발자가 되서 이렇게 하겠습니다.
+                    </p>
                 </div>
+                <!-- //article2 -->
             </div>
         </section>
         <!-- //section5 -->
@@ -175,29 +201,56 @@
                 markers: false,
             });
 
-            const ani3 = gsap.timeline();
+            // 미디어 쿼리 객체 생성
+            const mediaQuery = window.matchMedia("(min-width: 960px)");
 
-            ani3.to(".sec5__inner .article .imgWrap .img", { top: "-10%", scale: 1.1, duration: 2, ease: "linear" });
+            function applyParallaxEffect() {
+                // 애니메이션 적용
+                gsap.utils.toArray(".parallax__item__img").forEach((item) => {
+                    if (item.scrollTrigger) {
+                        item.scrollTrigger.kill();
+                    }
 
-            ScrollTrigger.create({
-                animation: ani3,
-                trigger: ".sec5__inner .article .imgWrap .img",
-                start: "top 10%",
-                end: "bottom bottom",
-                scrub: 4,
-                markers: true,
-            });
+                    gsap.to(item, {
+                        yPercent: mediaQuery.matches ? -40 : 0,
+                        ease: "none",
+                        duration: 0.5,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top bottom",
+                            end: "bottom top",
+                            markers: true,
+                            scrub: 0.5,
+                        },
+                    });
+                });
+                gsap.utils.toArray(".parallax__item__desc").forEach((item) => {
+                    if (item.scrollTrigger) {
+                        item.scrollTrigger.kill();
+                    }
 
-            ani3.to(".article .title .dot", { x: 400, duration: 1, ease: "power2.out" });
+                    gsap.to(item, {
+                        yPercent: mediaQuery.matches ? -80 : 0,
+                        ease: "none",
+                        duration: 0.5,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top bottom",
+                            end: "bottom top",
+                            markers: true,
+                            scrub: 0.5,
+                        },
+                    });
+                });
 
-            ScrollTrigger.create({
-                animation: ani3,
-                trigger: "#section5",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-                markers: true,
-            });
+                ScrollTrigger.refresh();
+            }
+
+            // 처음 로드 시 실행
+            applyParallaxEffect();
+
+            // 화면 크기가 변경될 때마다 실행
+            mediaQuery.addEventListener("resize", applyParallaxEffect);
         </script>
 
         <script>
