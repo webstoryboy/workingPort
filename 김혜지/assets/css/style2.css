@@ -94,7 +94,7 @@
     position: sticky;
     left: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 10000;
     border-top: 4px solid #000;
     border-bottom: 4px solid #000;
 }
@@ -173,7 +173,10 @@
     height: 7.5vw;
     margin: 0 10px;
     display: inline-block;
-    background-color: #000;
+    background-image: url("https://images.unsplash.com/photo-1721020028427-a2d7ab52e35e?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
     padding-top: 0.2vw;
     color: #000;
@@ -184,7 +187,10 @@
     height: 7.5vw;
     margin: 0 10px;
     display: inline-block;
-    background-color: #000;
+    background-image: url("https://images.unsplash.com/photo-1720769909488-2e6c9ab26665?q=80&w=2657&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
     padding-top: 0.2vw;
     color: #000;
@@ -195,7 +201,10 @@
     height: 7.5vw;
     margin: 0 10px;
     display: inline-block;
-    background-color: #000;
+    background-image: url("https://images.unsplash.com/photo-1701146460495-371cf8971e89?q=80&w=2492&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
     padding-top: 0.2vw;
     color: #000;
@@ -206,7 +215,10 @@
     height: 7.5vw;
     margin: 0 10px;
     display: inline-block;
-    background-color: #000;
+    background-image: url("https://images.unsplash.com/photo-1610908483124-19d9848c5d78?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
     padding-top: 0.2vw;
     color: #000;
@@ -307,8 +319,8 @@
 
 /* section3 */
 #section3 {
-    height: 3000px;
     background-color: #ff99c8;
+    padding-bottom: 400px;
 }
 #section3 .title {
     text-align: center;
@@ -388,4 +400,117 @@
     top: 20%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+}
+
+#section4 {
+    background-color: #fcd8da;
+    position: relative;
+}
+
+.bar.sec4 {
+    width: 100%;
+    height: 80px;
+    background-color: #37bff3;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+}
+
+#section4 .title {
+    text-align: center;
+    font-family: "lotteriaChab";
+    text-transform: uppercase;
+    color: #945e9a;
+    -webkit-text-stroke: 2px #000;
+    font-size: 10vw;
+    padding: 10vw 0 0;
+    line-height: 1;
+}
+#section4 .sub {
+    text-align: center;
+    font-family: "yache";
+    display: block;
+    font-size: 40px;
+    margin-bottom: 200px;
+}
+#section4 .img1 {
+    width: 230px;
+    position: absolute;
+    left: 52%;
+    top: 260px;
+}
+#section4 .img2 {
+    width: 50px;
+    position: absolute;
+    left: 22%;
+    top: 190px;
+}
+
+.workWrap {
+    display: flex;
+    margin: 0 auto;
+    width: 1060px;
+    justify-content: space-between;
+    position: relative;
+}
+.workWrap .left {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+}
+.workWrap .right {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+}
+.workWrap .center1 {
+    width: 1000px;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    background-image: url(../img/site2.png);
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    border: 4px solid #000;
+    transform: rotate(-5deg);
+    border-radius: 20px;
+    position: relative;
+}
+
+.workWrap .info1 {
+    background-color: #fff;
+    color: #000;
+    width: 40%;
+    border-radius: 20px;
+    position: absolute;
+    right: -150px;
+    bottom: 140px;
+    font-family: "yache";
+    padding: 20px;
+    border: 4px solid #000;
+}
+.workWrap .info1 h3 {
+    color: #000;
+    font-family: "yache";
+}
+
+.workWrap .info1 a {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.workWrap .center2 {
+    width: 1000px;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    background-image: url(../img/site1.png);
+    background-size: cover;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    border: 4px solid #000;
+    transform: rotate(10deg);
+    border-radius: 20px;
 }
