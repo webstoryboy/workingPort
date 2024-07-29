@@ -257,12 +257,83 @@
     display: block;
     font-family: "Bebas Neue", sans-serif;
 }
+#section1,
+#section2,
+#section3,
+#section4 {
+    display: none;
+}
+#section5 {
+    width: 3000px;
+}
 #section5 .desc {
     position: absolute;
-    right: 5%;
+    left: 170px;
     top: 5%;
     width: 45%;
     text-align: right;
     font-family: "nanumSquareNeo";
     color: #d2d2d2;
+}
+
+.sec5-work {
+    margin-left: 70vw;
+}
+.sec5-work .work1 {
+    background-color: #fff;
+    position: relative;
+    margin-top: 170px;
+}
+.sec5-work .work1 .img {
+    width: 500px;
+    aspect-ratio: 8/13;
+    background-image: url("https://portfolio-64.vercel.app/assets/img/game1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.sec5-work .work1 .info {
+    position: absolute;
+    right: -300px;
+    bottom: 100px;
+    color: #fff;
+    font-family: "nanumSquareNeo";
+}
+.sec5-work .work1 .info h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.sec5-work .work1 .info h3 span {
+    display: block;
+    font-weight: 900;
+}
+.sec5-work .work1 a {
+    position: absolute;
+    left: -70px;
+    top: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(250, 68, 68);
+    color: rgb(250, 68, 68);
+    border-radius: 50%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    padding-top: 35px;
+    font-family: "nanumSquareNeo";
+    font-size: 24px;
+    font-weight: 900;
+}
+.sec5-work .work1 a span {
+    display: block;
+    font-size: 18px;
+    font-weight: 300px;
+}
+.sec5-work .work2 {
+}
+.sec5-work .work3 {
+}
+.sec5-work .work4 {
 }
