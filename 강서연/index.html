@@ -7,11 +7,12 @@
 
         <link rel="stylesheet" href="assets/css/reset.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet" />
     </head>
 
     <body>
         <div id="wrap">
-            <div class="pattern" id="pattern"></div>
+            <!-- <div class="pattern" id="pattern"></div> -->
 
             <header id="header">
                 <div class="box1">
@@ -42,7 +43,61 @@
                         <div class="left bright w40 h100">
                             <div class="img"></div>
                         </div>
-                        <div class="right w60 h100"></div>
+                        <div class="anitext right w60 h100">
+                            <div class="control"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box4 mt10">
+                    <div class="btop dotwrap flex leftNamePicture">
+                        <span class="dot left"></span>
+                        <span class="dot right dotA"></span>
+                        <span class="dot leftBot dotA"></span>
+                        <span class="dot rightBot dotA"></span>
+                        <div class="h280">
+                            <div id="musicBox">
+                                <div id="wrapper">
+                                    <div id="blurbContainer">
+                                        <span>Arasaka Corporation</span>
+                                        <span id="acr">ATA CGD CSAPGM LDD WZF ATA CGD</span>
+                                    </div>
+                                    <span id="textOuter">Pacifica District</span>
+                                    <div id="modal">
+                                        <span id="textInner">Music</span>
+                                        <div id="inner">
+                                            <span class="play">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="1.5"
+                                                    stroke="#fff"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span id="extra"></span>
+                                </div>
+                                <ul class="list">
+                                    <li>1</li>
+                                    <li class="active">2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    <li>8</li>
+                                    <li>9</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -208,7 +263,81 @@
             //     }
             // }
 
-            window.onload = createSparkles;
+            // window.onload = createSparkles;
+
+            document.querySelector("#acr");
+
+            const numAcronyms = 8;
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            const updateAcronyms = () => {
+                const words = acr.textContent.split(" ");
+                // shuffle the array of words
+                const shuffledWords = shuffleArray(words);
+                const newContent = shuffledWords.slice(0, numAcronyms).join(" ");
+
+                acr.textContent = newContent;
+            };
+
+            setInterval(updateAcronyms, 50);
+
+            const terminal = document.querySelector(".anitext");
+            const body = document.getElementsByTagName("body")[0];
+            let newLine = document.createElement("p");
+            const skipBtn = document.querySelector(".control span");
+            terminal.appendChild(newLine);
+
+            let str = `"Jack menembakkan winchester 1873 hasil peninggalan ayah 1873 hasil"`;
+
+            sayItSlowly("Emily", "seoyun", str);
+
+            function sayItSlowly(user, place, str) {
+                let username = `${user}@${place}:`;
+                let arr = `${username}${str}`.split("");
+                let counter = 0;
+                let isPaused = false;
+
+                let interval = setInterval(function () {
+                    if (!isPaused) {
+                        printChar(arr[counter]);
+                        counter++;
+                    }
+
+                    if (counter === arr.length) {
+                        clearInterval(interval);
+                        skipBtn.textContent = ".";
+                        skipBtn.classList.remove("hidden");
+                    }
+
+                    if (terminal.clientHeight > body.clientHeight / 2) {
+                        if (arr[counter] === " ") {
+                            // toggle alway toggling and wont stop, we need to toggle skipBTN outside interval
+                            isPaused = true;
+                            skipBtn.classList.remove("hidden");
+
+                            skipBtn.addEventListener("click", function () {
+                                newLine.textContent = `${username}`;
+                                skipBtn.classList.add("hidden");
+                                isPaused = false;
+                            });
+                        }
+                    }
+                }, 50);
+            }
+
+            function pause() {
+                clearInterval(interval);
+            }
+
+            function printChar(char) {
+                newLine.textContent += char;
+            }
         </script>
     </body>
 </html>

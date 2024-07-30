@@ -1,10 +1,24 @@
+:root {
+    --red: #fff;
+    --blue: #33dcee;
+    --dark-red: #0b0403;
+}
 html,
 body {
     margin: 0;
     padding: 0;
 }
+body {
+    background: radial-gradient(#ffffff45 0px, transparent 1px), #0b0403;
+    background-position: 0 0;
+    background-size: 30px 30px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
 
-.pattern {
+/* .pattern {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to top, #000 0%, #111 70%);
@@ -13,7 +27,7 @@ body {
     flex-wrap: wrap;
     pointer-events: none;
     z-index: -1;
-}
+} */
 
 .sparkle {
     width: 1px;
@@ -57,14 +71,14 @@ body {
     height: 100vh;
     overflow: hidden;
 } */
-#wrap {
+/* #wrap {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
     z-index: -1;
-}
+} */
 
 #header {
     position: fixed;
@@ -156,6 +170,25 @@ body {
     padding: 20px;
 }
 
+.anitext {
+    padding: 10px;
+    color: #ffffffaf;
+    font-size: 12px;
+}
+
+.control {
+    /* height: 10%; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+    font-family: "DM Mono";
+    overflow: hidden;
+}
+
+.control span {
+    cursor: pointer;
+}
+
 #footer h2 {
     text-transform: uppercase;
     text-align: center;
@@ -170,6 +203,8 @@ body {
     background-size: cover;
     width: 100%;
     height: 100%;
+    filter: contrast(50%);
+    filter: saturate(0%);
 }
 
 .time {
@@ -196,6 +231,7 @@ body {
     border-radius: 50%;
     background-color: #fff;
     display: block;
+    z-index: 1000;
 }
 .dotA {
     animation: dot 2s infinite;
@@ -262,6 +298,12 @@ body {
 }
 .h100 {
     height: 100px;
+}
+.h200 {
+    height: 200px;
+}
+.h280 {
+    height: 280px;
 }
 .mt10 {
     margin-top: 10px;
@@ -351,4 +393,121 @@ body {
     position: absolute;
     right: 0;
     bottom: -6px;
+}
+
+#musicBox {
+    position: relative;
+    height: 200px;
+    aspect-ratio: 1;
+    perspective: 1000px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+#musicBox .list {
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+}
+#musicBox .list li.active {
+    background-color: #fff;
+    color: #000;
+    border-radius: 2px;
+}
+#wrapper {
+    transform: rotateX(-5deg) rotateY(10deg);
+}
+#modal {
+    background: var(--red);
+    height: 200px;
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 93%, 0 68%, 0 65%, 5% 60%, 5% 31%, 0 24%);
+}
+#textInner {
+    position: absolute;
+    top: 4px;
+    color: var(--red);
+    left: 8px;
+    z-index: 20;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+#textOuter {
+    color: var(--red);
+    float: right;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+#blurbContainer {
+    position: absolute;
+    top: -18px;
+    display: flex;
+    color: var(--red);
+    justify-content: flex-end;
+    font-size: 0.5rem;
+    min-width: 200px;
+    right: -23px;
+    gap: 7px;
+    width: 500px;
+}
+#blurbContainer :last-child {
+    width: 16px;
+    overflow-wrap: break-word;
+    font-size: 0.4rem;
+}
+#blurbContainer :first-child {
+    white-space: nowrap;
+}
+#extra {
+    height: 5px;
+    width: 40px;
+    background: var(--red);
+    position: absolute;
+    right: 0;
+    margin-top: -1px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 37% 100%);
+}
+#modal:after {
+    width: 97%;
+    height: 8px;
+    background: var(--red);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+}
+#inner {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 93%, 0 68%, 0 65%, 5% 60%, 5% 31%, 0 24%);
+    height: 99%;
+    width: 98%;
+    background: #000;
+    background: url("https://cdn-l-cyberpunk.cdprojektred.com/gallery/1080p/Cyberpunk2077-A_beautiful_beast-RGB-en.jpg")
+        center/ cover;
+}
+#inner .play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+#inner .play svg {
+    width: 18px;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+svg {
+    width: 100%;
 }
