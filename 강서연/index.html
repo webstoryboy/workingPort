@@ -30,8 +30,8 @@
                         <span class="dot right"></span>
                         <span class="dot leftBot dotA"></span>
                         <span class="dot rightBot"></span>
-                        <div class="left bright w50 h50">dd</div>
-                        <div class="right w50 h50 time"><span>12:23:22</span></div>
+                        <div class="left bright w50 h50 about"><span>01</span>about<i>Kang Sang Yun</i></div>
+                        <div class="right w50 h50 time"><span id="current-time">12:23:22</span></div>
                     </div>
                 </div>
                 <div class="box3 mt10">
@@ -64,7 +64,7 @@
                                     </div>
                                     <span id="textOuter">Pacifica District</span>
                                     <div id="modal">
-                                        <span id="textInner">Music</span>
+                                        <span id="textInner"><span class="pageNum">02</span>Music</span>
                                         <div id="inner">
                                             <span class="play">
                                                 <svg
@@ -338,6 +338,19 @@
             function printChar(char) {
                 newLine.textContent += char;
             }
+
+            // 시간 표시
+            function updateTime() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, "0");
+                const minutes = String(now.getMinutes()).padStart(2, "0");
+                const seconds = String(now.getSeconds()).padStart(2, "0");
+                const currentTime = `${hours}:${minutes}:${seconds}`;
+                document.getElementById("current-time").textContent = currentTime;
+            }
+
+            setInterval(updateTime, 1000); // 1초마다 updateTime 함수를 호출
+            updateTime(); // 페이지가 로드되면 즉시 현재 시간을 표시
         </script>
     </body>
 </html>

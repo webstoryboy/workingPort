@@ -197,6 +197,31 @@ body {
     font-family: "Chopsic";
     -webkit-text-stroke: 1px #fff;
 }
+.about {
+    color: #fff;
+    font-family: "Orbitron";
+    padding-top: 10px;
+    font-size: 12px;
+}
+.about span,
+.pageNum {
+    background: #fff;
+    color: #000;
+    line-height: 0.8;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 0 3px;
+    border-radius: 2px;
+    font-family: "Orbitron";
+    font-weight: 100;
+}
+.about i {
+    display: block;
+    font-size: 10px;
+    color: #ffffffbf;
+    font-style: normal;
+    padding-left: 26px;
+}
 
 .leftNamePicture .left .img {
     background-image: url(../img/se.png);
@@ -208,13 +233,13 @@ body {
 }
 
 .time {
-    color: #66a5b6;
+    color: #7ce0fe;
     font-size: 22px;
     font-family: "Orbitron";
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
+    font-weight: 100;
 }
 
 :root {
