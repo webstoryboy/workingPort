@@ -215,12 +215,21 @@ body {
     font-family: "Orbitron";
     font-weight: 100;
 }
+
 .about i {
     display: block;
     font-size: 10px;
     color: #ffffffbf;
     font-style: normal;
     padding-left: 26px;
+}
+.box5 .about i {
+    padding-left: 31px;
+}
+.box5-line {
+    border: 1px solid #fff;
+    height: 200px;
+    width: 100%;
 }
 
 .leftNamePicture .left .img {
@@ -535,4 +544,194 @@ body {
 }
 svg {
     width: 100%;
+}
+
+.box6__inner {
+}
+.skill-box ul {
+    display: flex;
+    margin: 5px 0;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: space-between;
+    padding: 4px;
+}
+.skill-box ul li {
+    border: 0.5px solid #ffffff41;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    padding: 2px;
+    position: relative;
+}
+.skill-box ul li:hover {
+    border: 1px solid #ffffff87;
+}
+.skill-box ul li span {
+    color: #ffffffaf;
+    font-size: 12px;
+    line-height: 1;
+    font-family: "NexonLv1GothicLow";
+}
+.skill-box ul li .tit {
+    color: #ffffffd3;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.skill-box ul li i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.skill-box ul li .num {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    font-size: 8px;
+}
+
+.skill-box ul li .skill-line {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 8px;
+    height: 40px;
+    /* background-color: #ccc; */
+    display: flex;
+    align-items: end;
+    flex-direction: column-reverse;
+}
+.skill-box ul li .skill-line span {
+    width: 100%;
+    height: 2px;
+    background-color: #969696;
+    display: block;
+    margin-bottom: 1px;
+}
+
+/* hover animation */
+.skill-box ul li .conerwrap span {
+    border-color: #000;
+    transition: all 0.3s;
+}
+.skill-box ul li .conerwrap span:nth-child(1) {
+    transition-delay: 0.1s;
+}
+.skill-box ul li .conerwrap span:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.skill-box ul li .conerwrap span:nth-child(3) {
+    transition-delay: 0.3s;
+}
+.skill-box ul li .conerwrap span:nth-child(4) {
+    transition-delay: 0.4s;
+}
+.skill-box ul li:hover .conerwrap span {
+    border-color: #ffffff;
+}
+.skill-box ul li .skill-line span:nth-child(1).active {
+    transition: all 0.3s 0.5s;
+}
+.skill-box ul li .skill-line span:nth-child(2).active {
+    transition: all 0.3s 0.6s;
+}
+.skill-box ul li .skill-line span:nth-child(3).active {
+    transition: all 0.3s 0.7s;
+}
+.skill-box ul li .skill-line span:nth-child(4).active {
+    transition: all 0.3s 0.8s;
+}
+.skill-box ul li .skill-line span:nth-child(5).active {
+    transition: all 0.3s 0.9s;
+}
+.skill-box ul li .skill-line span:nth-child(6).active {
+    transition: all 0.3s 1s;
+}
+.skill-box ul li .skill-line span:nth-child(7).active {
+    transition: all 0.3s 1.1s;
+}
+.skill-box ul li .skill-line span:nth-child(8).active {
+    transition: all 0.3s 1.2s;
+}
+.skill-box ul li .skill-line span:nth-child(9).active {
+    transition: all 0.3s 1.3s;
+}
+.skill-box ul li .skill-line span:nth-child(10).active {
+    transition: all 0.3s 1.4s;
+}
+
+.skill-box ul li:hover .skill-line span:nth-child(1).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(2).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(3).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(4).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(5).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(6).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(7).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(8).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(9).active {
+    background-color: #f00;
+}
+.skill-box ul li:hover .skill-line span:nth-child(10).active {
+    background-color: #f00;
+}
+
+/* conerwrap */
+.conerwrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.conerwrap .conerTL {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+.conerwrap .conerTR {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.conerwrap .conerBL {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.conerwrap .conerBR {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
