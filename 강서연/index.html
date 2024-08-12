@@ -425,7 +425,7 @@
                                     <span></span>
                                 </div>
                             </li>
-                            <li class="btn lineWrap">
+                            <li class="btn lineWrap active">
                                 B1
                                 <span class="line topLeft"></span>
                                 <span class="line topRight"></span>
@@ -537,7 +537,13 @@
                         story
                     </h2>
                 </div>
-                <div class="box22 btop bbom mt10">
+                <div class="box22 btop bbom mt10 dotwrap">
+                    <div>
+                        <span class="dot left dotA"></span>
+                        <span class="dot right dotA"></span>
+                        <span class="dot leftBot dotA"></span>
+                        <span class="dot rightBot dotA"></span>
+                    </div>
                     <div id="figure">
                         <div id="f1">
                             <span class="f1-1"></span>
@@ -611,7 +617,6 @@
                                 <span class="f4-4-2"><b></b></span>
                             </div>
                         </div>
-
                         <div id="f5">
                             <span class="f5-1"><b>1</b></span>
                             <span class="f5-2"><b>3</b></span>
@@ -631,6 +636,98 @@
                             <span class="f5-16"><b>9</b></span>
                             <span class="f5-17"><b>1</b></span>
                             <span class="f5-18"><b>2</b></span>
+                        </div>
+                        <div id="f6"></div>
+                        <div id="f7">
+                            <span class="f7-1"></span>
+                            <span class="f7-2"></span>
+                        </div>
+                    </div>
+                    <div id="a1">
+                        <span class="a1-1">@webs</span>
+                        <span class="a1-2"> <b class="a1-2-1">01</b>:<b class="a1-2-2">01</b> </span>
+                        <span class="a1-3">
+                            <b class="a1-3-1">1982</b>/<b class="a1-3-2">04</b>/<b class="a1-3-3">03</b>
+                        </span>
+                    </div>
+                    <div id="a2">
+                        <span class="a2-1"></span>
+                    </div>
+                    <div id="a3">
+                        <span class="a3-1"></span>
+                    </div>
+                    <div id="a4">
+                        <span class="a4-1">PORT</span>
+                        <span class="a4-2">Devlopoer</span>
+                    </div>
+                </div>
+
+                <div class="box5 mt10 box55">
+                    <div class="btop bbom dotwrap flex">
+                        <span class="dot left"></span>
+                        <span class="dot right dotA"></span>
+                        <span class="dot leftBot"></span>
+                        <span class="dot rightBot"></span>
+                        <div class="left bright w50 h50 about"><span>05</span>Youtube<i>search</i></div>
+                        <div class="right w50 h50 time current-time3">
+                            <span>😍</span>
+                            <span>😜</span>
+                            <span>🤩</span>
+                            <span>🤪</span>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="Youtube search" />
+                        <button class="btn"></button>
+                    </div>
+                    <div class="search__list">
+                        <div class="btop bbom dotwrap flex">
+                            <span class="dot left"></span>
+                            <span class="dot right dotA"></span>
+                            <span class="dot leftBot dotA"></span>
+                            <span class="dot rightBot"></span>
+                            <ul>
+                                <li>
+                                    <span class="num">01.</span>
+                                    <span class="img"></span>
+                                    playlist 도입부가 너무 좋아 미쳐버린 팝송만 모아봤어요 | 제발 한번만 들어주세요
+                                </li>
+                                <li>
+                                    <span class="num">02.</span>
+                                    <span class="img"></span>
+                                    1초만 들어도 바로 따라부르는 띵곡 팝송☁ | 한국인이라면 무조건 좋아하는 그 시절 팝송
+                                </li>
+                                <li>
+                                    <span class="num">03.</span>
+                                    <span class="img"></span>
+                                    요즘 듣는 신나는 케이팝 노동요 - 여돌 여름 케이팝 ~ 여돌 남돌 케이팝 노동요
+                                </li>
+                                <li>
+                                    <span class="num">04.</span>
+                                    <span class="img"></span>
+                                    마음이 몽글몽글☁️ 신나고 싶은데 시끄러운건 싫어 ❕
+                                </li>
+                                <li>
+                                    <span class="num">05.</span>
+                                    <span class="img"></span>
+                                    playlist 도입부가 너무 좋아 미쳐버린 팝송만 모아봤어요 | 제발 한번만 들어주세요
+                                </li>
+                                <li>
+                                    <span class="num">06.</span>
+                                    <span class="img"></span>
+                                    1초만 들어도 바로 따라부르는 띵곡 팝송☁ | 한국인이라면 무조건 좋아하는 그 시절 팝송
+                                </li>
+                                <li>
+                                    <span class="num">07.</span>
+                                    <span class="img"></span>
+                                    요즘 듣는 신나는 케이팝 노동요 - 여돌 여름 케이팝 ~ 여돌 남돌 케이팝 노동요
+                                </li>
+                                <li>
+                                    <span class="num">08.</span>
+                                    <span class="img"></span>
+                                    마음이 몽글몽글☁️ 신나고 싶은데 시끄러운건 싫어 ❕
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -656,6 +753,24 @@
             // }
 
             // window.onload = createSparkles;
+
+            document.addEventListener("DOMContentLoaded", function () {
+                function getRandomNumber(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+
+                setInterval(function () {
+                    // 시간 부분을 랜덤으로 변경
+                    document.querySelector(".a1-2-1").textContent = getRandomNumber(0, 23).toString().padStart(2, "0");
+                    document.querySelector(".a1-2-2").textContent = getRandomNumber(0, 59).toString().padStart(2, "0");
+
+                    // 날짜 부분을 랜덤으로 변경
+                    document.querySelector(".a1-3-1").textContent = getRandomNumber(1970, 2030).toString() + "/";
+                    document.querySelector(".a1-3-2").textContent =
+                        getRandomNumber(1, 12).toString().padStart(2, "0") + "/";
+                    document.querySelector(".a1-3-3").textContent = getRandomNumber(1, 31).toString().padStart(2, "0");
+                }, 200); // 1초에 5번 업데이트 (1000ms / 5 = 200ms)
+            });
 
             document.querySelector("#acr");
 

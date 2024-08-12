@@ -1,3 +1,18 @@
+#header {
+    position: fixed;
+    right: 10px;
+    top: 0px;
+    z-index: 20000;
+}
+#header ul {
+    display: flex;
+}
+#header li {
+    padding: 10px;
+    font-size: 40px;
+    font-family: "yache";
+}
+
 #section1 {
     background-color: #fcd8da;
     width: 100%;
